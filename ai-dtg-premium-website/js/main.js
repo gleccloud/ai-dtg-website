@@ -309,6 +309,7 @@ const translations = {
         cta_btn_solutions: "솔루션 보기",
         // Footer
         footer_logo: "GLEC AI DTG 솔루션",
+        footer_company_label: "회사:",
         footer_email_label: "이메일:",
         footer_business_label: "사업자 번호:",
         footer_address_label: "주소:",
@@ -662,6 +663,7 @@ const translations = {
         cta_btn_solutions: "View Solutions",
         // Footer
         footer_logo: "GLEC AI DTG SOLUTIONS",
+        footer_company_label: "Company:",
         footer_email_label: "Email:",
         footer_business_label: "Business Number:",
         footer_address_label: "Address:",
@@ -1015,6 +1017,7 @@ const translations = {
         cta_btn_solutions: "查看解决方案",
         // Footer
         footer_logo: "GLEC AI DTG 解决方案",
+        footer_company_label: "公司:",
         footer_email_label: "电子邮件:",
         footer_business_label: "商业登记号:",
         footer_address_label: "地址:",

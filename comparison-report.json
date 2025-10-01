@@ -1,0 +1,67 @@
+{
+  "timestamp": "2025-10-01T12:19:58.147Z",
+  "production": {
+    "url": "https://dtg.glec.io/",
+    "sections": 7,
+    "navItems": 8
+  },
+  "local": {
+    "url": "http://127.0.0.1:8093/index.html",
+    "sections": 13,
+    "navItems": 8
+  },
+  "issues": [],
+  "recommendations": [
+    {
+      "type": "ARCHITECTURE",
+      "recommendation": "New sections in local that should be organized under menus: company-overview, solutions, certifications, timeline, tech-differentiation, team"
+    },
+    {
+      "type": "MENU_STRUCTURE",
+      "recommendation": "Create \"Our Solutions\" dropdown menu with items:\n  - AI Transformation (#transformation)\n  - AI DTG (#ai-dtg)\n  - AI Dashboard (#ai-dashboard)\n  - Core Technology (#technology)"
+    },
+    {
+      "type": "MENU_STRUCTURE",
+      "recommendation": "Create \"Who We Are\" dropdown menu with items:\n  - Company Overview (#company-overview)\n  - Team (#team)\n  - Timeline (#timeline)\n  - Certifications (#certifications)"
+    },
+    {
+      "type": "MENU_STRUCTURE",
+      "recommendation": "Keep as standalone menu items:\n  - Home (#home)\n  - CES 2026 (#ces2026)\n  - Contact (#cta)"
+    }
+  ],
+  "sectionComparison": {
+    "prodSections": [
+      "home",
+      "transformation",
+      "ai-dtg",
+      "ai-dashboard",
+      "technology",
+      "cta",
+      "ces2026"
+    ],
+    "localSections": [
+      "home",
+      "company-overview",
+      "solutions",
+      "certifications",
+      "timeline",
+      "tech-differentiation",
+      "team",
+      "transformation",
+      "ai-dtg",
+      "ai-dashboard",
+      "technology",
+      "cta",
+      "ces2026"
+    ],
+    "missing": [],
+    "extra": [
+      "company-overview",
+      "solutions",
+      "certifications",
+      "timeline",
+      "tech-differentiation",
+      "team"
+    ]
+  }
+}

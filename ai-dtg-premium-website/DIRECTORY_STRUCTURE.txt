@@ -1,0 +1,104 @@
+GLEC AI DTG Multi-Page Website Structure
+=========================================
+
+ai-dtg-premium-website/
+│
+├── index.html                          # Home page (6.6 KB)
+├── solutions.html                      # Solutions page (23 KB)
+├── about.html                          # About page (34 KB)
+├── ces2026.html                        # CES 2026 page (10 KB)
+├── contact.html                        # Contact page (7.9 KB)
+│
+├── css/
+│   └── shared-styles.css               # Shared CSS (73 KB, 2422 lines)
+│
+├── js/
+│   └── main.js                         # Shared JavaScript (61 KB, 1045 lines)
+│
+├── assets/
+│   ├── videos/
+│   │   ├── KakaoTalk_20250814_145521290.mp4    # Hero video
+│   │   ├── KakaoTalk_20250814_145511097.mp4    # AI Transformation
+│   │   ├── 0819.mp4                            # DTG product
+│   │   ├── GLEC_AI_video.mov                   # GLEC AI demo
+│   │   ├── GLEC_API_video.mov                  # GLEC API demo
+│   │   └── 화면 기록 2025-08-19 오후 11.41.20.mov # Dashboard
+│   │
+│   └── hardware/
+│       ├── beetle_x31_1080.jpg                 # DTG product image
+│       ├── beetle_x31_B_1080.jpg               # Dashboard image
+│       └── og-thumbnail.png                    # Open Graph thumbnail
+│
+├── MULTIPAGE_CONVERSION_SUMMARY.md     # Conversion documentation
+├── DIRECTORY_STRUCTURE.txt             # This file
+├── generate_pages.py                   # Python conversion script
+├── README.md                           # Project documentation
+├── package.json                        # NPM configuration
+├── CLAUDE.md                           # Claude memory file
+│
+└── [backup files]
+    └── index-single-page-backup.html   # Original single-page (193 KB)
+
+NAVIGATION STRUCTURE
+====================
+
+Home (index.html)
+    ├── Hero Section
+    └── Call-to-Action
+
+Solutions (solutions.html)
+    ├── AI Transformation (#transformation)
+    ├── AI DTG Hardware (#ai-dtg)
+    ├── AI Dashboard (#ai-dashboard)
+    ├── Core Technology (#technology)
+    └── Solutions Status (#solutions)
+
+About (about.html)
+    ├── Company Overview (#company-overview)
+    ├── Our Team (#team)
+    ├── Development Timeline (#timeline)
+    ├── Certifications (#certifications)
+    └── Technical Differentiation (#tech-differentiation)
+
+CES 2026 (ces2026.html)
+    ├── CES Exhibition Details
+    ├── Invitation Form
+    └── Success Popup Modal
+
+Contact (contact.html)
+    ├── Contact Form
+    └── Company Information
+
+SHARED RESOURCES
+================
+
+CSS (css/shared-styles.css)
+- CSS variables (colors, fonts, spacing)
+- Navigation styles
+- Section layouts
+- Component styles
+- Responsive breakpoints
+- Animations and transitions
+
+JavaScript (js/main.js)
+- Multi-language support (EN/KO/ZH)
+- Language switcher with localStorage
+- Form validation and submission
+- Smooth scroll navigation
+- CES popup modal handler
+- Navigation dropdown interactions
+
+FEATURES
+========
+
+✓ Multi-language support (English, Korean, Chinese)
+✓ Language persistence across pages
+✓ Responsive design (mobile-first)
+✓ SEO-optimized meta tags per page
+✓ Cyberpunk theme with neon effects
+✓ Video backgrounds and demos
+✓ Interactive forms with validation
+✓ Smooth scrolling and animations
+✓ Dropdown navigation menus
+✓ Modular and maintainable structure
+

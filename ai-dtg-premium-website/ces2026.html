@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Meet Us at CES 2026 - GLEC AI DTG Exhibition</title>
+    <meta name="description" content="Join GLEC at CES 2026 in Las Vegas. Experience the future of AI transportation technology">
+
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Premium Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Shared Styles -->
+    <link rel="stylesheet" href="css/shared-styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav-container" id="navbar">
+        <div class="nav-content">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-text">GLEC</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link" data-translate="nav_home">Home</a></li>
+
+                <!-- Our Solutions Dropdown -->
+                <li class="nav-dropdown">
+                    <a href="solutions.html" class="nav-link dropdown-toggle" data-translate="nav_solutions">
+                        Our Solutions
+                        <span class="dropdown-arrow">▼</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="solutions.html#transformation" class="dropdown-link" data-translate="nav_transformation">AI Transformation</a></li>
+                        <li><a href="solutions.html#ai-dtg" class="dropdown-link" data-translate="nav_dtg">AI DTG Hardware</a></li>
+                        <li><a href="solutions.html#ai-dashboard" class="dropdown-link" data-translate="nav_dashboard">AI Dashboard</a></li>
+                        <li><a href="solutions.html#technology" class="dropdown-link" data-translate="nav_technology">Core Technology</a></li>
+                        <li><a href="solutions.html#solutions" class="dropdown-link" data-translate="nav_solutions_status">Solutions Status</a></li>
+                    </ul>
+                </li>
+
+                <!-- Who We Are Dropdown -->
+                <li class="nav-dropdown">
+                    <a href="about.html" class="nav-link dropdown-toggle" data-translate="nav_who_we_are">
+                        Who We Are
+                        <span class="dropdown-arrow">▼</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="about.html#company-overview" class="dropdown-link" data-translate="nav_company">Company Overview</a></li>
+                        <li><a href="about.html#team" class="dropdown-link" data-translate="nav_team">Our Team</a></li>
+                        <li><a href="about.html#timeline" class="dropdown-link" data-translate="nav_timeline">Development Timeline</a></li>
+                        <li><a href="about.html#certifications" class="dropdown-link" data-translate="nav_certifications">Certifications & Awards</a></li>
+                        <li><a href="about.html#tech-differentiation" class="dropdown-link" data-translate="nav_tech_diff">Technical Differentiation</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="ces2026.html" class="nav-link" data-translate="nav_ces2026">CES 2026</a></li>
+                <li><a href="contact.html" class="nav-link" data-translate="nav_contact">Contact</a></li>
+            </ul>
+
+            <!-- Language Selector -->
+            <div class="language-selector" id="languageSelector">
+                <button class="language-button" id="languageButton" type="button">
+                    <span id="currentLanguage">English</span>
+                    <span>▼</span>
+                </button>
+                <div class="language-dropdown" id="languageDropdown">
+                    <div class="language-option active" data-lang="en">English</div>
+                    <div class="language-option" data-lang="ko">한국어</div>
+                    <div class="language-option" data-lang="zh">中文</div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+<section class="ces-section" id="ces2026">
+        <div class="ces-content">
+            <!-- Enhanced CES 2026 Logo -->
+            <div class="ces-logo">
+                <svg viewBox="0 0 300 80" style="width: 100%; height: auto;">
+                    <defs>
+                        <linearGradient id="cesGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#FF0099;stop-opacity:1" />
+                            <stop offset="50%" style="stop-color:#00FFFF;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#FFFF00;stop-opacity:1" />
+                        </linearGradient>
+                        <filter id="glow">
+                            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                            <feMerge>
+                                <feMergeNode in="coloredBlur"/>
+                                <feMergeNode in="SourceGraphic"/>
+                            </feMerge>
+                        </filter>
+                    </defs>
+                    <!-- Background -->
+                    <rect x="10" y="10" width="280" height="60" fill="rgba(0,0,0,0.8)" rx="12" stroke="url(#cesGradient)" stroke-width="2"/>
+                    <!-- Main CES Text -->
+                    <text x="150" y="45" font-family="Orbitron, Arial, sans-serif" font-size="36" font-weight="bold"
+                          fill="url(#cesGradient)" text-anchor="middle" filter="url(#glow)">CES 2026</text>
+                    <!-- Subtitle -->
+                    <text x="150" y="60" font-family="Arial, sans-serif" font-size="10" font-weight="600"
+                          fill="#FFFFFF" text-anchor="middle" opacity="0.9">CONSUMER ELECTRONICS SHOW</text>
+                    <!-- Decorative elements -->
+                    <circle cx="30" cy="40" r="3" fill="#00FFFF" opacity="0.8"/>
+                    <circle cx="270" cy="40" r="3" fill="#FF0099" opacity="0.8"/>
+                    <rect x="25" y="20" width="250" height="1" fill="url(#cesGradient)" opacity="0.6"/>
+                    <rect x="25" y="59" width="250" height="1" fill="url(#cesGradient)" opacity="0.6"/>
+                </svg>
+            </div>
+
+            <h2 class="ces-title" data-translate="ces_title">Meet Us at CES 2026</h2>
+            <p class="ces-subtitle" data-translate="ces_subtitle">Experience the Future of AI Transportation</p>
+            <p class="ces-description" data-translate="ces_description">
+                Join GLEC at the world's most influential tech event. Discover our innovative AI DTG solutions
+                and see how we're transforming the transportation industry with cutting-edge artificial intelligence.
+            </p>
+
+            <div class="ces-info">
+                <div class="ces-info-item">
+                    <div class="ces-info-label" data-translate="ces_dates_label">Dates</div>
+                    <div class="ces-info-value" data-translate="ces_dates_value">January 6-9, 2026</div>
+                </div>
+                <div class="ces-info-item">
+                    <div class="ces-info-label" data-translate="ces_location_label">Location</div>
+                    <div class="ces-info-value" data-translate="ces_location_value">Las Vegas, Nevada</div>
+                </div>
+                <div class="ces-info-item">
+                    <div class="ces-info-label" data-translate="ces_venue_label">Venue</div>
+                    <div class="ces-info-value" data-translate="ces_venue_value">Eureka Hall</div>
+                </div>
+                <div class="ces-info-item">
+                    <div class="ces-info-label" data-translate="ces_booth_label">Booth</div>
+                    <div class="ces-info-value" data-translate="ces_booth_value">Visit Us Soon</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CES 2026 Invitation Section -->
+    <section class="ces-invitation-section">
+        <div class="ces-invitation-content">
+            <h2 class="ces-invitation-title" data-translate="ces_invitation_title">Get Your CES 2026 Invitation</h2>
+
+            <form class="ces-invitation-form" id="cesInvitationForm">
+                <div class="ces-form-group">
+                    <label for="cesEmail" class="ces-form-label" data-translate="ces_email_label">Your Email Address</label>
+                    <input
+                        type="email"
+                        id="cesEmail"
+                        name="email"
+                        class="ces-form-input"
+                        data-translate-placeholder="ces_email_placeholder"
+                        placeholder="Enter your email to receive CES 2026 invitation"
+                        required
+                    >
+                </div>
+
+                <button type="submit" class="ces-submit-btn" data-translate="ces_submit_btn">
+                    Request Invitation
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- CES Popup Modal -->
+    <div class="ces-popup" id="cesPopup">
+        <div class="ces-popup-content">
+            <h3 class="ces-popup-title">Invitation Requested!</h3>
+            <p class="ces-popup-message">
+                Thank you for your interest in meeting GLEC at CES 2026.
+                We'll send you the invitation details soon.
+            </p>
+            <button class="ces-popup-close" onclick="closeCesPopup()">Close</button>
+        </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">GLEC AI DTG SOLUTIONS</div>
+            <p class="footer-text">
+                © 2024 GLEC. All rights reserved. | Transforming Transportation with AI
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

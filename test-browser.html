@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Language Selector Debug</title>
+    <style>
+        body { font-family: monospace; padding: 20px; background: #000; color: #0f0; }
+        button { padding: 10px; margin: 10px; font-size: 16px; }
+        .result { margin: 10px 0; padding: 10px; background: #111; border: 1px solid #0f0; }
+    </style>
+</head>
+<body>
+    <h1>Language Selector Debug Test</h1>
+    
+    <button onclick="testButton()">Test 1: Check Button Exists</button>
+    <button onclick="testDropdown()">Test 2: Check Dropdown</button>
+    <button onclick="testClick()">Test 3: Simulate Click</button>
+    <button onclick="testManual()">Test 4: Manual Toggle</button>
+    <button onclick="openPage()">Open Main Page</button>
+    
+    <div id="results"></div>
+    
+    <script>
+        function log(msg) {
+            const div = document.createElement('div');
+            div.className = 'result';
+            div.textContent = msg;
+            document.getElementById('results').prepend(div);
+        }
+        
+        function openPage() {
+            window.open('http://127.0.0.1:8093/index.html', '_blank');
+        }
+        
+        async function testButton() {
+            try {
+                const response = await fetch('http://127.0.0.1:8093/index.html');
+                const html = await response.text();
+                
+                const hasButton = html.includes('id="languageButton"');
+                const hasDropdown = html.includes('id="languageDropdown"');
+                const hasEventListener = html.includes('addEventListener');
+                const hasOnclick = html.includes('onclick="toggle');
+                
+                log('✅ Button ID exists: ' + hasButton);
+                log('✅ Dropdown ID exists: ' + hasDropdown);
+                log('✅ Has addEventListener: ' + hasEventListener);
+                log('❌ Has onclick (should be false): ' + hasOnclick);
+            } catch (err) {
+                log('❌ Error: ' + err.message);
+            }
+        }
+        
+        async function testDropdown() {
+            const response = await fetch('http://127.0.0.1:8093/index.html');
+            const html = await response.text();
+            
+            const match = html.match(/\.language-dropdown\.active[^}]+/);
+            if (match) {
+                log('✅ CSS for .active found: ' + match[0].substring(0, 100));
+            } else {
+                log('❌ CSS for .active NOT found');
+            }
+        }
+        
+        function testClick() {
+            log('Opening page in new tab for manual test...');
+            log('In that tab, open Console (F12) and run:');
+            log('  document.getElementById("languageButton").click()');
+            openPage();
+        }
+        
+        function testManual() {
+            log('Opening page in new tab...');
+            log('Try clicking the language button manually');
+            log('Then check Console (F12) for logs');
+            openPage();
+        }
+    </script>
+</body>
+</html>

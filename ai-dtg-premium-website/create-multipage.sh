@@ -1,3 +1,10 @@
+#!/bin/bash
+
+# Backup original file
+cp index.html index.html.backup
+
+# Create HOME PAGE (index.html) - Simplified version
+cat > index-new.html << 'EOF'
 <!DOCTYPE html>
 <html lang="ko">
 <head>
@@ -5,18 +12,19 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GLEC AI DTG - AI Transformation for Freight Trucks</title>
     <meta name="description" content="World's leading AI transformation platform for freight trucks with safety enhancement and carbon reduction">
-
+    
     <!-- Preconnect for Performance -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
+    
     <!-- Premium Fonts -->
     <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
-
+    
     <!-- Shared Styles -->
     <link rel="stylesheet" href="css/shared-styles.css">
 </head>
 <body>
+    
     <!-- Navigation -->
     <nav class="nav-container" id="navbar">
         <div class="nav-content">
@@ -59,7 +67,7 @@
                 <li><a href="ces2026.html" class="nav-link" data-translate="nav_ces2026">CES 2026</a></li>
                 <li><a href="contact.html" class="nav-link" data-translate="nav_contact">Contact</a></li>
             </ul>
-
+            
             <!-- Language Selector -->
             <div class="language-selector" id="languageSelector">
                 <button class="language-button" id="languageButton" type="button">
@@ -74,8 +82,9 @@
             </div>
         </div>
     </nav>
-
-<section class="hero-section" id="home">
+    
+    <!-- Hero Section with Cyberpunk Video -->
+    <section class="hero-section" id="home">
         <div class="hero-video-container">
             <video class="hero-video" autoplay muted loop playsinline>
                 <source src="assets/videos/KakaoTalk_20250814_145521290.mp4" type="video/mp4">
@@ -97,7 +106,9 @@
             </div>
         </div>
     </section>
-<section class="cta-section" id="cta">
+    
+    <!-- Call to Action Section -->
+    <section class="cta-section" id="cta">
         <div class="cta-content">
             <h2 class="cta-title">Ready to Transform Your Fleet?</h2>
             <p class="cta-description">
@@ -109,6 +120,7 @@
             </div>
         </div>
     </section>
+
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
@@ -118,8 +130,11 @@
             </p>
         </div>
     </footer>
-
+    
     <!-- JavaScript -->
     <script src="js/main.js"></script>
 </body>
 </html>
+EOF
+
+echo "Created index-new.html"

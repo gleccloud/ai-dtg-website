@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Who We Are - GLEC Inc. Company Information</title>
+    <meta name="description" content="Learn about GLEC's mission, team, achievements, and technical expertise in green logistics innovation">
+
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <!-- Premium Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+    <!-- Shared Styles -->
+    <link rel="stylesheet" href="css/shared-styles.css">
+</head>
+<body>
+    <!-- Navigation -->
+    <nav class="nav-container" id="navbar">
+        <div class="nav-content">
+            <a href="index.html" class="nav-logo">
+                <span class="logo-text">GLEC</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="index.html" class="nav-link" data-translate="nav_home">Home</a></li>
+
+                <!-- Our Solutions Dropdown -->
+                <li class="nav-dropdown">
+                    <a href="solutions.html" class="nav-link dropdown-toggle" data-translate="nav_solutions">
+                        Our Solutions
+                        <span class="dropdown-arrow">▼</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="solutions.html#transformation" class="dropdown-link" data-translate="nav_transformation">AI Transformation</a></li>
+                        <li><a href="solutions.html#ai-dtg" class="dropdown-link" data-translate="nav_dtg">AI DTG Hardware</a></li>
+                        <li><a href="solutions.html#ai-dashboard" class="dropdown-link" data-translate="nav_dashboard">AI Dashboard</a></li>
+                        <li><a href="solutions.html#technology" class="dropdown-link" data-translate="nav_technology">Core Technology</a></li>
+                        <li><a href="solutions.html#solutions" class="dropdown-link" data-translate="nav_solutions_status">Solutions Status</a></li>
+                    </ul>
+                </li>
+
+                <!-- Who We Are Dropdown -->
+                <li class="nav-dropdown">
+                    <a href="about.html" class="nav-link dropdown-toggle" data-translate="nav_who_we_are">
+                        Who We Are
+                        <span class="dropdown-arrow">▼</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="about.html#company-overview" class="dropdown-link" data-translate="nav_company">Company Overview</a></li>
+                        <li><a href="about.html#team" class="dropdown-link" data-translate="nav_team">Our Team</a></li>
+                        <li><a href="about.html#timeline" class="dropdown-link" data-translate="nav_timeline">Development Timeline</a></li>
+                        <li><a href="about.html#certifications" class="dropdown-link" data-translate="nav_certifications">Certifications & Awards</a></li>
+                        <li><a href="about.html#tech-differentiation" class="dropdown-link" data-translate="nav_tech_diff">Technical Differentiation</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="ces2026.html" class="nav-link" data-translate="nav_ces2026">CES 2026</a></li>
+                <li><a href="contact.html" class="nav-link" data-translate="nav_contact">Contact</a></li>
+            </ul>
+
+            <!-- Language Selector -->
+            <div class="language-selector" id="languageSelector">
+                <button class="language-button" id="languageButton" type="button">
+                    <span id="currentLanguage">English</span>
+                    <span>▼</span>
+                </button>
+                <div class="language-dropdown" id="languageDropdown">
+                    <div class="language-option active" data-lang="en">English</div>
+                    <div class="language-option" data-lang="ko">한국어</div>
+                    <div class="language-option" data-lang="zh">中文</div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+
+    <section class="company-overview-section" id="company-overview">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label" data-translate="company_label">ABOUT US</span>
+                <h2 class="section-title" data-translate="company_title">Company Overview</h2>
+            </div>
+
+            <div class="company-content">
+                <div class="company-info-grid">
+                    <div class="company-info-item">
+                        <div class="info-label" data-translate="founded_label">Founded</div>
+                        <div class="info-value">2023</div>
+                        <div class="info-detail" data-translate="founded_detail">Startup</div>
+                    </div>
+
+                    <div class="company-info-item">
+                        <div class="info-label" data-translate="location_label">Location</div>
+                        <div class="info-value" data-translate="location_value">South Korea</div>
+                        <div class="info-detail" data-translate="location_detail">Seoul HQ</div>
+                    </div>
+
+                    <div class="company-info-item">
+                        <div class="info-label" data-translate="specialization_label">Specialization</div>
+                        <div class="info-value" data-translate="specialization_value">Green Logistics</div>
+                        <div class="info-detail" data-translate="specialization_detail">ISO-14083</div>
+                    </div>
+                </div>
+
+                <div class="company-vision">
+                    <h3 class="vision-title" data-translate="vision_title">Our Vision</h3>
+                    <p class="vision-text" data-translate="vision_text">
+                        "Korea's only logistics international standard tech company supporting green logistics services"
+                    </p>
+                </div>
+
+                <div class="company-mission">
+                    <h3 class="mission-title" data-translate="mission_title">Our Mission</h3>
+                    <p class="mission-text" data-translate="mission_text">
+                        Building a sustainable logistics ecosystem and establishing a carbon circulation structure through international standard-based technology and consulting
+                    </p>
+                </div>
+
+                <div class="company-values">
+                    <h3 class="values-title" data-translate="values_title">Core Values</h3>
+                    <div class="values-grid">
+                        <div class="value-card">
+                            <div class="value-icon">🌐</div>
+                            <h4 class="value-name" data-translate="value_standards">International Standards</h4>
+                            <p class="value-desc" data-translate="value_standards_desc">ISO-14083 compliant solutions</p>
+                        </div>
+
+                        <div class="value-card">
+                            <div class="value-icon">⚡</div>
+                            <h4 class="value-name" data-translate="value_innovation">Innovation</h4>
+                            <p class="value-desc" data-translate="value_innovation_desc">Next-gen DTG with AI capabilities</p>
+                        </div>
+
+                        <div class="value-card">
+                            <div class="value-icon">🌱</div>
+                            <h4 class="value-name" data-translate="value_sustainability">Sustainability</h4>
+                            <p class="value-desc" data-translate="value_sustainability_desc">Green logistics transformation</p>
+                        </div>
+
+                        <div class="value-card">
+                            <div class="value-icon">🤝</div>
+                            <h4 class="value-name" data-translate="value_partnership">Partnership</h4>
+                            <p class="value-desc" data-translate="value_partnership_desc">Global collaboration network</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="team-section" id="team">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label" data-translate="team_label">OUR TEAM</span>
+                <h2 class="section-title" data-translate="team_title">Team Composition</h2>
+                <p class="section-description" data-translate="team_description">
+                    Expert team driving green logistics innovation
+                </p>
+            </div>
+
+            <div class="team-stats">
+                <div class="team-stat-card">
+                    <div class="stat-number">7</div>
+                    <div class="stat-label" data-translate="team_stat_members">Team Members</div>
+                </div>
+                <div class="team-stat-card">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label" data-translate="team_stat_experience">Years Avg. Experience</div>
+                </div>
+                <div class="team-stat-card">
+                    <div class="stat-number">3</div>
+                    <div class="stat-label" data-translate="team_stat_phds">PhDs</div>
+                </div>
+                <div class="team-stat-card">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label" data-translate="team_stat_dedicated">Dedicated to Green Logistics</div>
+                </div>
+            </div>
+
+            <div class="team-roles">
+                <!-- Leadership -->
+                <div class="role-category">
+                    <h3 class="role-category-title" data-translate="team_leadership">Leadership</h3>
+                    <div class="role-grid">
+                        <div class="role-card">
+                            <div class="role-icon">👨‍💼</div>
+                            <h4 class="role-title" data-translate="role_ceo">CEO</h4>
+                            <ul class="role-responsibilities">
+                                <li data-translate="role_ceo_1">Strategic direction & vision</li>
+                                <li data-translate="role_ceo_2">Government relations & partnerships</li>
+                                <li data-translate="role_ceo_3">Business development</li>
+                            </ul>
+                        </div>
+
+                        <div class="role-card">
+                            <div class="role-icon">👨‍🔬</div>
+                            <h4 class="role-title" data-translate="role_cto">CTO</h4>
+                            <ul class="role-responsibilities">
+                                <li data-translate="role_cto_1">Technology strategy & R&D</li>
+                                <li data-translate="role_cto_2">ISO-14083 compliance oversight</li>
+                                <li data-translate="role_cto_3">Technical architecture</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- R&D Team -->
+                <div class="role-category">
+                    <h3 class="role-category-title" data-translate="team_rd">Research & Development</h3>
+                    <div class="role-grid">
+                        <div class="role-card">
+                            <div class="role-icon">🔬</div>
+                            <h4 class="role-title" data-translate="role_carbon">Carbon Emission Specialist</h4>
+                            <ul class="role-responsibilities">
+                                <li data-translate="role_carbon_1">WTW emission factor research</li>
+                                <li data-translate="role_carbon_2">ISO-14083 algorithm development</li>
+                                <li data-translate="role_carbon_3">Carbon calculation engine</li>
+                            </ul>
+                        </div>
+
+                        <div class="role-card">
+                            <div class="role-icon">🤖</div>
+                            <h4 class="role-title" data-translate="role_ai">AI Engineer</h4>
+                            <ul class="role-responsibilities">
+                                <li data-translate="role_ai_1">AI inference model development</li>
+                                <li data-translate="role_ai_2">Edge computing optimization</li>
+                                <li data-translate="role_ai_3">Driver safety AI systems</li>
+                            </ul>
+                        </div>
+
+                        <div class="role-card">
+                            <div class="role-icon">⚙️</div>
+                            <h4 class="role-title" data-translate="role_hw">Hardware Engineer</h4>
+                            <ul class="role-responsibilities">
+                                <li data-translate="role_hw_1">DTG hardware design</li>
+                                <li data-translate="role_hw_2">Sensor integration</li>
+                                <li data-translate="role_hw_3">Manufacturing & quality control</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Software Team -->
+                <div class="role-category">
+                    <h3 class="role-category-title" data-translate="team_software">Software Development</h3>
+                    <div class="role-grid">
+                        <div class="role-card">
+                            <div class="role-icon">💻</div>
+                            <h4 class="role-title" data-translate="role_backend">Backend Developer</h4>
+                            <ul class="role-responsibilities">
+                                <li data-translate="role_backend_1">Carbon API development</li>
+                                <li data-translate="role_backend_2">Cloud infrastructure</li>
+                                <li data-translate="role_backend_3">Database architecture</li>
+                            </ul>
+                        </div>
+
+                        <div class="role-card">
+                            <div class="role-icon">🎨</div>
+                            <h4 class="role-title" data-translate="role_frontend">Frontend Developer</h4>
+                            <ul class="role-responsibilities">
+                                <li data-translate="role_frontend_1">eFuel dashboard development</li>
+                                <li data-translate="role_frontend_2">Real-time data visualization</li>
+                                <li data-translate="role_frontend_3">UX/UI design implementation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="team-expertise">
+                <h3 class="expertise-title" data-translate="team_expertise_title">Collective Expertise</h3>
+                <div class="expertise-tags">
+                    <span class="expertise-tag" data-translate="expertise_iso">ISO-14083 International Standards</span>
+                    <span class="expertise-tag" data-translate="expertise_ai">AI & Machine Learning</span>
+                    <span class="expertise-tag" data-translate="expertise_carbon">Carbon Emission Calculation</span>
+                    <span class="expertise-tag" data-translate="expertise_logistics">Logistics & Transportation</span>
+                    <span class="expertise-tag" data-translate="expertise_iot">IoT & Embedded Systems</span>
+                    <span class="expertise-tag" data-translate="expertise_cloud">Cloud Architecture</span>
+                    <span class="expertise-tag" data-translate="expertise_hardware">Hardware Design & Manufacturing</span>
+                    <span class="expertise-tag" data-translate="expertise_govt">Government R&D Programs</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="timeline-section" id="timeline">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label" data-translate="timeline_label">ROADMAP</span>
+                <h2 class="section-title" data-translate="timeline_title">Development Timeline</h2>
+                <p class="section-description" data-translate="timeline_description">
+                    Our journey from foundation to innovation in green logistics
+                </p>
+            </div>
+
+            <div class="timeline-container">
+                <div class="timeline-line"></div>
+
+                <!-- 2023 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-year">2023</div>
+                    </div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-event-title" data-translate="timeline_2023_title">GLEC Inc. Founded</h3>
+                        <p class="timeline-event-desc" data-translate="timeline_2023_desc">
+                            Established as Korea's specialized logistics carbon tech startup
+                        </p>
+                        <div class="timeline-highlights">
+                            <span class="highlight-badge" data-translate="timeline_2023_highlight1">🏢 Company Establishment</span>
+                            <span class="highlight-badge" data-translate="timeline_2023_highlight2">🎯 Vision Setting</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2024 -->
+                <div class="timeline-item featured">
+                    <div class="timeline-marker">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-year">2024</div>
+                    </div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-event-title" data-translate="timeline_2024_title">TIPS R&D Program Selection</h3>
+                        <p class="timeline-event-desc" data-translate="timeline_2024_desc">
+                            Selected by Ministry of SMEs and Startups for TIPS R&D Program
+                        </p>
+                        <div class="timeline-highlights">
+                            <span class="highlight-badge govt" data-translate="timeline_2024_highlight1">🏆 TIPS R&D Program</span>
+                            <span class="highlight-badge" data-translate="timeline_2024_highlight2">🌱 eFuel Development Started</span>
+                            <span class="highlight-badge" data-translate="timeline_2024_highlight3">🚀 Multiple Certifications</span>
+                        </div>
+                        <div class="timeline-project">
+                            <div class="project-name" data-translate="efuel_title">eFuel</div>
+                            <div class="project-status" data-translate="timeline_status_development">Development Phase</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2025 -->
+                <div class="timeline-item featured">
+                    <div class="timeline-marker">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-year">2025</div>
+                    </div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-event-title" data-translate="timeline_2025_title">Environmental Tech Program Selection</h3>
+                        <p class="timeline-event-desc" data-translate="timeline_2025_desc">
+                            Selected by Korea Environmental Industry & Technology Institute
+                        </p>
+                        <div class="timeline-highlights">
+                            <span class="highlight-badge govt" data-translate="timeline_2025_highlight1">🏆 Environmental Tech Program</span>
+                            <span class="highlight-badge" data-translate="timeline_2025_highlight2">🚛 GLEC DTG Development Started</span>
+                        </div>
+                        <div class="timeline-project">
+                            <div class="project-name">GLEC DTG</div>
+                            <div class="project-status" data-translate="timeline_status_development">Development Phase</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2026 -->
+                <div class="timeline-item future">
+                    <div class="timeline-marker">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-year">2026</div>
+                    </div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-event-title" data-translate="timeline_2026_title">Product Launch</h3>
+                        <p class="timeline-event-desc" data-translate="timeline_2026_desc">
+                            Official launch of eFuel and GLEC DTG solutions
+                        </p>
+                        <div class="timeline-highlights">
+                            <span class="highlight-badge launch" data-translate="timeline_2026_highlight1">🎉 eFuel Launch (March 2026)</span>
+                            <span class="highlight-badge launch" data-translate="timeline_2026_highlight2">🎉 GLEC DTG Launch (March 2026)</span>
+                            <span class="highlight-badge" data-translate="timeline_2026_highlight3">🌍 Market Entry</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="certifications-section" id="certifications">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label" data-translate="cert_label">ACHIEVEMENTS</span>
+                <h2 class="section-title" data-translate="cert_title">Government Support & Certifications</h2>
+            </div>
+
+            <div class="certifications-content">
+                <!-- Government Funding -->
+                <div class="cert-category">
+                    <h3 class="category-title" data-translate="govt_funding_title">Government Funding & Awards</h3>
+                    <div class="cert-grid">
+                        <div class="cert-item">
+                            <div class="cert-year">2024</div>
+                            <div class="cert-badge govt">✓</div>
+                            <h4 class="cert-name" data-translate="cert_tips">TIPS R&D Program</h4>
+                            <p class="cert-desc" data-translate="cert_tips_desc">Ministry of SMEs and Startups</p>
+                        </div>
+
+                        <div class="cert-item">
+                            <div class="cert-year">2024</div>
+                            <div class="cert-badge govt">✓</div>
+                            <h4 class="cert-name" data-translate="cert_logistics">Logistics Startup</h4>
+                            <p class="cert-desc" data-translate="cert_logistics_desc">Ministry of Land, Infrastructure and Transport</p>
+                        </div>
+
+                        <div class="cert-item">
+                            <div class="cert-year">2024</div>
+                            <div class="cert-badge govt">✓</div>
+                            <h4 class="cert-name" data-translate="cert_data">Data Business Operator</h4>
+                            <p class="cert-desc" data-translate="cert_data_desc">Ministry of Science and ICT</p>
+                        </div>
+
+                        <div class="cert-item">
+                            <div class="cert-year">2025</div>
+                            <div class="cert-badge govt">✓</div>
+                            <h4 class="cert-name" data-translate="cert_env">Environmental Tech Program</h4>
+                            <p class="cert-desc" data-translate="cert_env_desc">Korea Environmental Industry & Technology Institute</p>
+                        </div>
+
+                        <div class="cert-item">
+                            <div class="cert-year">2023</div>
+                            <div class="cert-badge govt">✓</div>
+                            <h4 class="cert-name" data-translate="cert_opinet">O'Pinnet Startup</h4>
+                            <p class="cert-desc" data-translate="cert_opinet_desc">Startup Designation</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technical Achievements -->
+                <div class="cert-category">
+                    <h3 class="category-title" data-translate="tech_achievements_title">Technical Achievements</h3>
+                    <div class="achievements-grid">
+                        <div class="achievement-item">
+                            <div class="achievement-number">8+</div>
+                            <div class="achievement-label" data-translate="patents_filed">Patents Filed</div>
+                        </div>
+
+                        <div class="achievement-item">
+                            <div class="achievement-number">1</div>
+                            <div class="achievement-label" data-translate="patents_registered">Patent Registered</div>
+                        </div>
+
+                        <div class="achievement-item">
+                            <div class="achievement-number">1</div>
+                            <div class="achievement-label" data-translate="copyright">Copyright Registered</div>
+                        </div>
+
+                        <div class="achievement-item special">
+                            <div class="achievement-icon">📄</div>
+                            <div class="achievement-label" data-translate="iso_translation">ISO-14083 Korean Translation</div>
+                        </div>
+
+                        <div class="achievement-item special">
+                            <div class="achievement-icon">🔬</div>
+                            <div class="achievement-label" data-translate="wtw_research">Korea WTW Emission Factor R&D</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="tech-diff-section" id="tech-differentiation">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label" data-translate="tech_diff_label">TECHNOLOGY</span>
+                <h2 class="section-title" data-translate="tech_diff_title">Technical Differentiation</h2>
+                <p class="section-description" data-translate="tech_diff_description">
+                    Our competitive advantages in green logistics technology
+                </p>
+            </div>
+
+            <div class="tech-diff-grid">
+                <!-- ISO-14083 Compliance -->
+                <div class="tech-diff-card featured">
+                    <div class="tech-icon">🌍</div>
+                    <div class="tech-badge iso" data-translate="tech_badge_iso">INTERNATIONAL STANDARD</div>
+                    <h3 class="tech-diff-card-title" data-translate="tech_iso_title">ISO-14083 International Standard</h3>
+                    <p class="tech-diff-card-desc" data-translate="tech_iso_desc">
+                        Korea's only logistics carbon emission calculation solution complying with ISO-14083 international standard
+                    </p>
+                    <ul class="tech-diff-features">
+                        <li data-translate="tech_iso_feature1">Global standard compliance for cross-border logistics</li>
+                        <li data-translate="tech_iso_feature2">Official ISO-14083 Korean translation contributor</li>
+                        <li data-translate="tech_iso_feature3">Well-to-Wheel (WTW) analysis capability</li>
+                        <li data-translate="tech_iso_feature4">CDP, SBT, CBAM reporting automation</li>
+                    </ul>
+                </div>
+
+                <!-- AI-Powered DTG -->
+                <div class="tech-diff-card featured">
+                    <div class="tech-icon">🤖</div>
+                    <div class="tech-badge ai" data-translate="tech_badge_ai">AI INNOVATION</div>
+                    <h3 class="tech-diff-card-title" data-translate="tech_ai_title">AI-Powered Digital Tachograph</h3>
+                    <p class="tech-diff-card-desc" data-translate="tech_ai_desc">
+                        Next-generation DTG with integrated AI for safety and carbon monitoring
+                    </p>
+                    <ul class="tech-diff-features">
+                        <li data-translate="tech_ai_feature1">Real-time AI inference (driver fatigue, drowsiness detection)</li>
+                        <li data-translate="tech_ai_feature2">Edge computing with Qualcomm SC200E chipset</li>
+                        <li data-translate="tech_ai_feature3">Simultaneous carbon emission measurement</li>
+                        <li data-translate="tech_ai_feature4">5G/LTE cloud synchronization</li>
+                    </ul>
+                </div>
+
+                <!-- Real-time Carbon Monitoring -->
+                <div class="tech-diff-card">
+                    <div class="tech-icon">⚡</div>
+                    <div class="tech-badge performance" data-translate="tech_badge_performance">HIGH PERFORMANCE</div>
+                    <h3 class="tech-diff-card-title" data-translate="tech_perf_title">Real-time Carbon Monitoring</h3>
+                    <p class="tech-diff-card-desc" data-translate="tech_perf_desc">
+                        Ultra-fast API response with precision carbon calculation
+                    </p>
+                    <ul class="tech-diff-features">
+                        <li data-translate="tech_perf_feature1">0.5 second average API response time</li>
+                        <li data-translate="tech_perf_feature2">48+ specialized carbon calculation APIs</li>
+                        <li data-translate="tech_perf_feature3">Real-time WMS/TMS integration</li>
+                        <li data-translate="tech_perf_feature4">All transport modes supported (road, sea, air, rail)</li>
+                    </ul>
+                </div>
+
+                <!-- Government-Backed R&D -->
+                <div class="tech-diff-card">
+                    <div class="tech-icon">🏆</div>
+                    <div class="tech-badge govt" data-translate="tech_badge_govt">GOVERNMENT BACKED</div>
+                    <h3 class="tech-diff-card-title" data-translate="tech_govt_title">Government-Backed R&D</h3>
+                    <p class="tech-diff-card-desc" data-translate="tech_govt_desc">
+                        Validated technology through multiple government programs
+                    </p>
+                    <ul class="tech-diff-features">
+                        <li data-translate="tech_govt_feature1">TIPS R&D Program (Ministry of SMEs)</li>
+                        <li data-translate="tech_govt_feature2">Environmental Tech Program (KEITI)</li>
+                        <li data-translate="tech_govt_feature3">8+ patents filed, 1 registered</li>
+                        <li data-translate="tech_govt_feature4">Data business operator certification</li>
+                    </ul>
+                </div>
+
+                <!-- Korea WTW Research -->
+                <div class="tech-diff-card">
+                    <div class="tech-icon">🔬</div>
+                    <div class="tech-badge research" data-translate="tech_badge_research">R&D LEADERSHIP</div>
+                    <h3 class="tech-diff-card-title" data-translate="tech_research_title">Korea WTW Emission Factor</h3>
+                    <p class="tech-diff-card-desc" data-translate="tech_research_desc">
+                        Pioneering research in Korea-specific emission factors
+                    </p>
+                    <ul class="tech-diff-features">
+                        <li data-translate="tech_research_feature1">Korea WTW emission factor R&D</li>
+                        <li data-translate="tech_research_feature2">Localized carbon calculation accuracy</li>
+                        <li data-translate="tech_research_feature3">Government collaboration on standards</li>
+                        <li data-translate="tech_research_feature4">Academic research partnerships</li>
+                    </ul>
+                </div>
+
+                <!-- End-to-End Solution -->
+                <div class="tech-diff-card">
+                    <div class="tech-icon">🔗</div>
+                    <div class="tech-badge integration" data-translate="tech_badge_integration">FULL INTEGRATION</div>
+                    <h3 class="tech-diff-card-title" data-translate="tech_integration_title">End-to-End Solution</h3>
+                    <p class="tech-diff-card-desc" data-translate="tech_integration_desc">
+                        Complete carbon management from measurement to reporting
+                    </p>
+                    <ul class="tech-diff-features">
+                        <li data-translate="tech_integration_feature1">Hardware (DTG) + Software (eFuel + API)</li>
+                        <li data-translate="tech_integration_feature2">Data collection to international reporting</li>
+                        <li data-translate="tech_integration_feature3">Shipper & carrier platform integration</li>
+                        <li data-translate="tech_integration_feature4">Cloud-based centralized management</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">GLEC AI DTG SOLUTIONS</div>
+            <p class="footer-text">
+                © 2024 GLEC. All rights reserved. | Transforming Transportation with AI
+            </p>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script src="js/main.js"></script>
+</body>
+</html>

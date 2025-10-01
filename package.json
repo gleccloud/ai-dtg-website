@@ -1,33 +1,43 @@
 {
   "name": "ai-dtg-website",
-  "version": "1.0.0",
-  "main": "index.js",
+  "version": "2.0.0",
+  "description": "GLEC AI DTG - Premium AI Transformation Platform for Freight Trucks",
+  "main": "ai-dtg-premium-website/index.html",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "crawl": "ts-node scripts/crawl.ts",
-    "crawl:site": "ts-node scripts/crawl.ts https://ssd.skhynix.com/beetle_x31/ --prefix /beetle_x31/ --max 1000 --concurrency 6",
-    "preview": "npx http-server output/ssd.skhynix.com -p 8080",
-    "logs": "ts-node scripts/log-analyzer.ts",
-    "logs:watch": "ts-node scripts/log-analyzer.ts && echo 'Press Ctrl+C to stop watching' && tail -f logs/crawl-$(date +%Y-%m-%d).log",
-    "dashboard": "ts-node scripts/dashboard.ts",
-    "start": "PORT=${PORT:-0} npx http-server . -p $PORT",
-    "start:3000": "npx http-server . -p 3000",
-    "dev": "npx http-server . -p 0 --cors"
+    "start": "npx http-server ai-dtg-premium-website -p 8093 --cors",
+    "dev": "npx http-server ai-dtg-premium-website -p 8093 --cors",
+    "preview": "npx http-server ai-dtg-premium-website -p 8080 --cors",
+    "test": "node verify-all-sections.js",
+    "test:language": "node final-test.js",
+    "build": "echo 'Static site - no build needed'",
+    "deploy": "echo 'Ready for deployment'"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "description": "",
+  "keywords": [
+    "AI",
+    "DTG",
+    "Digital Tachograph",
+    "Green Logistics",
+    "ISO-14083",
+    "Carbon Measurement",
+    "Freight Trucks",
+    "Transportation",
+    "GLEC"
+  ],
+  "author": "GLEC Inc.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/glec-inc/ai-dtg-website.git"
+  },
   "devDependencies": {
-    "@playwright/test": "^1.54.2",
-    "@types/node": "^24.3.0",
+    "@playwright/test": "^1.49.0",
+    "@types/node": "^22.10.2",
     "http-server": "^14.1.1",
-    "playwright-extra": "^4.3.6",
-    "puppeteer-extra-plugin-stealth": "^2.11.2",
-    "ts-node": "^10.9.2",
-    "typescript": "^5.9.2"
+    "playwright": "^1.49.0",
+    "typescript": "^5.7.2"
   },
-  "dependencies": {
-    "playwright": "^1.54.2"
+  "engines": {
+    "node": ">=18.0.0",
+    "npm": ">=9.0.0"
   }
 }

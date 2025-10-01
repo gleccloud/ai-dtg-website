@@ -1,183 +1,271 @@
-# AI-DTG Website Crawler
+# GLEC AI DTG Website
 
-웹사이트 크롤링 및 오프라인 저장을 위한 고성능 도구입니다.
+> Premium AI Transformation Platform for Freight Trucks
 
-## 🚀 주요 기능
+[![Version](https://img.shields.io/badge/version-2.0.0-blue.svg)](https://github.com/glec-inc/ai-dtg-website)
+[![License](https://img.shields.io/badge/license-MIT-green.svg)](LICENSE)
+[![Node](https://img.shields.io/badge/node-%3E%3D18.0.0-brightgreen.svg)](https://nodejs.org)
 
-- **고성능 크롤링**: Playwright 기반 멀티스레드 크롤링
-- **완전한 오프라인 저장**: HTML, CSS, JS, 이미지, 폰트 등 모든 자산 저장
-- **체계적인 로깅**: 상세한 진행 상황 추적 및 성능 모니터링
-- **재개 기능**: 중단된 크롤링 작업 재개 지원
-- **스마트 자산 처리**: CSS 내부 URL 자동 처리
+## 🚀 Overview
 
-## 📊 로깅 시스템
+GLEC AI DTG is a comprehensive website showcasing world-class AI transformation solutions for aging freight trucks. The platform demonstrates cutting-edge technology including:
 
-### 로그 레벨
-- `DEBUG`: 상세한 디버깅 정보
-- `INFO`: 일반적인 진행 상황
-- `WARN`: 경고 메시지
-- `ERROR`: 오류 발생
-- `CRITICAL`: 심각한 오류
+- **AI-Based Safety Enhancement** - Real-time driver monitoring and cargo safety
+- **ISO-14083 Carbon Measurement** - International standard carbon emission tracking
+- **20B Parameter LLM** - Advanced AI inference engine
+- **Real-time Data Integration** - Cloud-connected fleet management
 
-### 로그 카테고리
-- `CRAWL_START`: 크롤링 시작
-- `PAGE_SUCCESS`: 페이지 처리 성공
-- `PAGE_ERROR`: 페이지 처리 실패
-- `ASSET_DOWNLOAD`: 자산 다운로드
-- `CRAWL_COMPLETE`: 크롤링 완료
+## 🌟 Features
 
-## 🛠️ 사용법
+### Complete Website Sections (14 Total)
 
-### 기본 크롤링
+1. **Hero Section** - Main landing with animated background
+2. **Company Overview** - Company founding, vision, mission, core values
+3. **Solutions Portfolio** - eFuel, GLEC DTG, Carbon API Console
+4. **Government Support & Certifications** - Awards, patents, funding programs
+5. **Development Timeline** - Company roadmap (2023-2026)
+6. **Technical Differentiation** - 6 competitive advantages
+7. **Team Composition** - Team expertise and roles
+8. **AI Transformation** - AX (AI Transformation) for old freight trucks
+9. **GLEC AI DTG Hardware** - Next-gen digital tachograph
+10. **GLEC AI Dashboard** - Real-time data visualization
+11. **Core Technology** - GLEC AI & GLEC API deep dive
+12. **CES 2026 Section** - Event information
+13. **CES Invitation Form** - Email collection with mailto integration
+14. **Call to Action** - Contact and demo requests
+
+### Multilingual Support
+
+- 🇺🇸 English
+- 🇰🇷 Korean (한국어)
+- 🇨🇳 Chinese (中文)
+
+**150+ translation keys** covering all sections with seamless language switching.
+
+### Advanced Features
+
+- ✅ **Responsive Design** - Mobile, tablet, desktop optimized
+- ✅ **Video Integration** - 6 autoplay videos with lazy loading
+- ✅ **Smooth Animations** - Intersection observers for scroll effects
+- ✅ **Cyberpunk Theme** - Neon gradients, glassmorphism, glow effects
+- ✅ **SEO Optimized** - Meta tags, OG images, structured data
+- ✅ **Form Handling** - CES invitation with popup confirmation
+- ✅ **Accessibility** - ARIA labels, keyboard navigation
+
+## 📁 Project Structure
+
+```
+ai-dtg-website/
+├── ai-dtg-premium-website/      # Main production website
+│   ├── index.html                # Complete 4,300+ line website
+│   └── assets/
+│       ├── videos/               # 6 demonstration videos
+│       │   ├── GLEC_AI_video.mov
+│       │   ├── GLEC_API_video.mov
+│       │   ├── dtg1.mp4
+│       │   ├── dtg2.mp4
+│       │   └── ...
+│       └── hardware/
+│           ├── og-thumbnail.png
+│           ├── beetle_x31_1080.jpg
+│           └── beetle_x31_B_1080.jpg
+├── ai-dtg-final-stable-version/  # Previous stable version
+├── screenshots/                  # Documentation screenshots
+├── verify-all-sections.js        # Automated testing script
+├── final-test.js                 # Language switching tests
+├── package.json                  # Project configuration
+└── README.md                     # This file
+```
+
+## 🛠️ Installation
+
+### Prerequisites
+
+- Node.js >= 18.0.0
+- npm >= 9.0.0
+
+### Setup
+
 ```bash
-npm run crawl [URL] [--max PAGES] [--concurrency WORKERS] [--prefix PATH_PREFIX]
+# Clone the repository
+git clone https://github.com/glec-inc/ai-dtg-website.git
+cd ai-dtg-website
+
+# Install dependencies
+npm install
+
+# Start development server
+npm start
 ```
 
-### 사이트 크롤링 (기본 설정)
+The website will be available at `http://localhost:8093`
+
+## 📜 Available Scripts
+
 ```bash
-npm run crawl:site
+# Development
+npm start              # Start local server on port 8093
+npm run dev            # Same as start (development mode)
+npm run preview        # Preview on port 8080
+
+# Testing
+npm test               # Run comprehensive section verification
+npm run test:language  # Test language switching (EN/KO/ZH)
+
+# Deployment
+npm run build          # Static site - no build needed
+npm run deploy         # Ready for deployment
 ```
 
-### 로그 분석
+## 🧪 Testing
+
+### Automated Testing with Playwright
+
 ```bash
-npm run logs
+# Verify all 14 sections
+npm test
+
+# Test language switching
+npm run test:language
 ```
 
-### 실시간 로그 모니터링
-```bash
-npm run logs:watch
+### Manual Testing Checklist
+
+- [ ] All 14 sections render correctly
+- [ ] Language selector switches between EN/KO/ZH
+- [ ] All 6 videos autoplay (muted)
+- [ ] CES invitation form submits
+- [ ] Navigation scrolls smoothly
+- [ ] Mobile responsive layout works
+- [ ] No console errors
+- [ ] Animations trigger on scroll
+
+## 🌐 Deployment
+
+### Static Hosting (Recommended)
+
+Deploy to any static hosting platform:
+
+- **Vercel** - `vercel deploy`
+- **Netlify** - Drag & drop `ai-dtg-premium-website/` folder
+- **GitHub Pages** - Push to `gh-pages` branch
+- **AWS S3** - Upload to S3 bucket
+
+### Build Output
+
+The `ai-dtg-premium-website/` directory contains the complete production-ready website:
+
+- Single `index.html` file (self-contained CSS/JS)
+- Assets in `assets/` subdirectory
+- No build process required
+
+## 📊 Technical Stack
+
+- **HTML5** - Semantic markup
+- **CSS3** - Custom properties, gradients, animations
+- **JavaScript (Vanilla)** - No frameworks, pure ES6+
+- **SVG** - Custom logos and graphics
+- **Video** - MP4, MOV formats with autoplay
+
+### Browser Support
+
+- Chrome/Edge >= 90
+- Firefox >= 88
+- Safari >= 14
+- Mobile browsers (iOS Safari, Chrome Android)
+
+## 🎨 Design System
+
+### Color Palette
+
+```css
+--glec-cyan: #00FFFF        /* Primary accent */
+--glec-magenta: #FF00FF     /* Secondary accent */
+--glec-yellow: #FFFF00      /* Tertiary accent */
+--glec-dark: #0A0E1A        /* Background dark */
+--glec-darker: #050810      /* Background darker */
 ```
 
-### 결과 미리보기
-```bash
-npm run preview
+### Typography
+
+- **Headings**: Orbitron (Google Fonts)
+- **Body**: -apple-system, BlinkMacSystemFont, "Segoe UI"
+
+### Spacing Scale
+
+```css
+--space-xs: 0.5rem    (8px)
+--space-sm: 1rem      (16px)
+--space-md: 1.5rem    (24px)
+--space-lg: 2rem      (32px)
+--space-xl: 3rem      (48px)
+--space-2xl: 4rem     (64px)
+--space-3xl: 6rem     (96px)
 ```
 
-## 📁 프로젝트 구조
+## 📝 Version History
 
-```
-AI-DTG Website/
-├── scripts/
-│   ├── crawl.ts          # 메인 크롤링 엔진
-│   ├── logger.ts         # 로깅 시스템
-│   ├── log-analyzer.ts   # 로그 분석 도구
-│   └── util.ts           # 유틸리티 함수
-├── output/               # 크롤링 결과물
-├── logs/                 # 로그 파일들
-├── types/                # TypeScript 타입 정의
-└── package.json
-```
+### Version 2.0.0 (Current - 2025-10-01)
 
-## 📈 성능 모니터링
+**Major Updates:**
+- ✅ Integrated 6 new business sections
+- ✅ Added GLEC AI & API technology sections
+- ✅ Implemented CES 2026 invitation form
+- ✅ Fixed language selector (duplicate variable bug)
+- ✅ Added 4 new video assets
+- ✅ Complete 3-language support (150+ keys)
+- ✅ Comprehensive testing suite
+- ✅ Production-ready deployment
 
-### 추적 가능한 메트릭
-- 페이지 처리 시간 (평균/최소/최대)
-- 자산 다운로드 성공률
-- 에러 발생 빈도
-- 전체 크롤링 소요 시간
-- 워커별 성능 분석
+**Sections Added:**
+1. Company Overview
+2. Solutions & Development Status
+3. Government Support & Certifications
+4. Development Timeline
+5. Technical Differentiation
+6. Team Composition
 
-### 로그 분석 예시
-```bash
-npm run logs
-```
+**Bug Fixes:**
+- Fixed duplicate `videoObserver` variable causing script failure
+- Resolved language dropdown click issues
+- Improved video autoplay reliability
 
-출력 예시:
-```
-=== CRAWL LOG ANALYSIS ===
+### Version 1.0.0 (2025-08-19)
 
-📊 OVERVIEW:
-  Total Logs: 1,247
-  Pages Processed: 45
-  Assets Downloaded: 1,202
-  Errors: 3
-  Warnings: 12
+**Initial Features:**
+- Basic 8-section website
+- Hero, Transformation, DTG, Dashboard, CTA, Footer
+- English + Korean translations
+- Video integration
 
-⏱️  TIMING:
-  Start: 2024-01-07 10:30:15
-  End: 2024-01-07 10:45:32
-  Total Duration: 15m 17s
+## 🤝 Contributing
 
-🚀 PERFORMANCE:
-  Average Page Processing: 2.3s
-  Fastest Page: /beetle_x31/ (800ms)
-  Slowest Page: /beetle_x31/specs (8.5s)
-  Average Asset Download: 150ms
-```
+This is a private project for GLEC Inc. For internal team members:
 
-## 🔧 설정
+1. Create a feature branch
+2. Make your changes
+3. Test thoroughly (run `npm test`)
+4. Submit pull request
 
-### 로그 설정
-`scripts/logger.ts`에서 다음 설정을 조정할 수 있습니다:
+## 📄 License
 
-```typescript
-const config: LogConfig = {
-  level: LogLevel.INFO,        // 로그 레벨
-  enableConsole: true,         // 콘솔 출력 활성화
-  enableFile: true,            // 파일 출력 활성화
-  logDir: 'logs',              // 로그 디렉토리
-  maxFileSize: 10 * 1024 * 1024, // 최대 파일 크기 (10MB)
-  maxFiles: 5                  // 보관할 로그 파일 수
-};
-```
+MIT License - See [LICENSE](LICENSE) file for details
 
-### 크롤링 설정
-- `--max`: 최대 페이지 수 (기본값: 200)
-- `--concurrency`: 동시 워커 수 (기본값: 4)
-- `--prefix`: 크롤링할 경로 접두사
-- `--no-resume`: 재개 기능 비활성화
+## 📞 Contact
 
-## 📝 로그 파일 형식
+**GLEC Inc.**
+- Website: https://dtg.glec.io
+- Email: contact@glec.io
+- Location: Seoul, South Korea
 
-```
-2024-01-07T10:30:15.123Z | INFO  | CRAWL_START     | Starting crawl of https://ssd.skhynix.com/beetle_x31/ |  |  | {"maxPages":1000,"concurrency":6,"startTime":"2024-01-07T10:30:15.123Z"}
-2024-01-07T10:30:16.456Z | INFO  | PAGE_SUCCESS     | Page processed | [1] | https://ssd.skhynix.com/beetle_x31/ | 1333ms | {"depth":0,"success":true}
-2024-01-07T10:30:17.789Z | INFO  | ASSET_DOWNLOAD   | Asset downloaded | [1] | https://ssd.skhynix.com/beetle_x31/style.css | 45ms | {"type":"css","filePath":"style.css","size":"N/A"}
-```
+## 🙏 Acknowledgments
 
-## 🚨 문제 해결
+- **Claude Code** - AI-assisted development
+- **Playwright** - Automated testing
+- **Google Fonts** - Orbitron typeface
 
-### 일반적인 문제들
-1. **메모리 부족**: `--concurrency` 값을 줄여보세요
-2. **타임아웃**: 네트워크 상태를 확인하고 `TIMEOUT_MS` 값을 조정하세요
-3. **로그 파일 크기**: `maxFileSize`와 `maxFiles` 설정을 조정하세요
+---
 
-### 디버깅
-```bash
-# 상세 로그 활성화
-npm run crawl -- --debug
+**Built with ❤️ by GLEC Inc.**
 
-# 로그 실시간 모니터링
-npm run logs:watch
-```
-
-## 📊 프로젝트 진행 상황
-
-### 완료된 작업
-- ✅ 기본 크롤링 엔진 구현
-- ✅ 로깅 시스템 구축
-- ✅ 성능 모니터링 도구
-- ✅ 로그 분석 및 통계
-- ✅ 에러 추적 및 보고
-
-### 진행 중인 작업
-- 🔄 로그 시각화 대시보드
-- 🔄 실시간 성능 알림
-- 🔄 크롤링 작업 스케줄링
-
-### 계획된 작업
-- 📋 웹 기반 로그 뷰어
-- 📋 성능 메트릭 API
-- 📋 자동 크롤링 최적화
-- 📋 클라우드 로그 저장
-
-## 🤝 기여하기
-
-1. 이슈를 등록하거나 기존 이슈를 확인하세요
-2. 기능 브랜치를 생성하세요
-3. 변경사항을 커밋하고 테스트하세요
-4. Pull Request를 생성하세요
-
-## 📄 라이선스
-
-ISC License 
+*Transforming the future of green logistics through AI innovation*

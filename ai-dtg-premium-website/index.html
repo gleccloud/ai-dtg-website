@@ -212,20 +212,14 @@
         .language-selector {
             position: relative;
             margin-left: 2rem;
+            z-index: 10000;
         }
-        
-        /* Debug styles - remove after testing */
-        .language-selector:hover .language-dropdown {
-            opacity: 1 !important;
-            visibility: visible !important;
-            transform: translateY(0) !important;
-        }
-        
+
         /* Ensure dropdown items are clickable */
         .language-option {
             pointer-events: all !important;
             position: relative;
-            z-index: 10000;
+            z-index: 10001;
         }
         
         .language-button {
@@ -252,7 +246,7 @@
         
         .language-dropdown {
             position: absolute;
-            top: 100%;
+            top: calc(100% + 5px);
             right: 0;
             background: rgba(0, 0, 0, 0.95);
             border: 1px solid var(--glec-cyan);
@@ -261,17 +255,18 @@
             opacity: 0;
             visibility: hidden;
             transform: translateY(-10px);
-            transition: all var(--duration-normal) var(--ease-out-expo);
+            transition: all 0.3s ease;
             backdrop-filter: blur(20px);
-            z-index: 9999;
+            z-index: 10002;
             box-shadow: 0 10px 30px rgba(0, 255, 255, 0.3);
+            pointer-events: none;
         }
-        
+
         .language-dropdown.active {
             opacity: 1 !important;
             visibility: visible !important;
             transform: translateY(0) !important;
-            display: block !important;
+            pointer-events: all !important;
         }
         
         .language-option {
@@ -473,6 +468,1092 @@
             box-shadow: 0 0 30px rgba(255, 0, 153, 0.5);
         }
         
+        /* Company Overview Section */
+        .company-overview-section {
+            padding: var(--space-5xl) var(--space-xl);
+            background: linear-gradient(180deg, var(--glec-black) 0%, var(--glec-darker) 50%, var(--glec-black) 100%);
+            position: relative;
+        }
+
+        .company-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            margin-top: var(--space-4xl);
+        }
+
+        .company-info-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-2xl);
+            margin-bottom: var(--space-4xl);
+        }
+
+        .company-info-item {
+            background: linear-gradient(135deg, rgba(0, 255, 255, 0.05) 0%, rgba(255, 0, 255, 0.05) 100%);
+            border: 1px solid rgba(0, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: var(--space-2xl);
+            text-align: center;
+            transition: all var(--duration-normal) var(--ease-out-expo);
+        }
+
+        .company-info-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(0, 255, 255, 0.2);
+            border-color: var(--glec-cyan);
+        }
+
+        .info-label {
+            font-family: var(--font-mono);
+            font-size: 0.9rem;
+            color: var(--glec-gray-400);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            margin-bottom: var(--space-sm);
+        }
+
+        .info-value {
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: var(--glec-gradient-cyber);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: var(--space-xs);
+        }
+
+        .info-detail {
+            font-size: 0.95rem;
+            color: var(--glec-gray-300);
+            letter-spacing: 1px;
+        }
+
+        .company-vision, .company-mission {
+            text-align: center;
+            margin-bottom: var(--space-4xl);
+            padding: var(--space-3xl);
+            background: linear-gradient(135deg, rgba(0, 255, 255, 0.08) 0%, rgba(255, 0, 255, 0.08) 100%);
+            border: 1px solid rgba(0, 255, 255, 0.2);
+            border-radius: 20px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .company-vision::before, .company-mission::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0, 255, 255, 0.1) 0%, transparent 60%);
+            animation: pulseGlow 4s ease-in-out infinite;
+        }
+
+        @keyframes pulseGlow {
+            0%, 100% { opacity: 0.3; transform: scale(1); }
+            50% { opacity: 0.6; transform: scale(1.1); }
+        }
+
+        .vision-title, .mission-title {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--glec-cyan);
+            margin-bottom: var(--space-lg);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .vision-text, .mission-text {
+            font-size: 1.3rem;
+            line-height: 1.8;
+            color: var(--glec-gray-200);
+            max-width: 900px;
+            margin: 0 auto;
+            font-style: italic;
+            position: relative;
+            z-index: 1;
+        }
+
+        .company-values {
+            margin-top: var(--space-4xl);
+        }
+
+        .values-title {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 700;
+            text-align: center;
+            background: var(--glec-gradient-neon);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: var(--space-3xl);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .values-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-2xl);
+        }
+
+        .value-card {
+            background: linear-gradient(135deg, rgba(0, 255, 255, 0.1) 0%, rgba(255, 0, 255, 0.1) 100%);
+            border: 1px solid rgba(0, 255, 255, 0.3);
+            border-radius: 15px;
+            padding: var(--space-2xl);
+            text-align: center;
+            transition: all var(--duration-normal) var(--ease-out-expo);
+        }
+
+        .value-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 50px rgba(0, 255, 255, 0.3);
+            border-color: var(--glec-cyan);
+        }
+
+        .value-icon {
+            font-size: 3rem;
+            margin-bottom: var(--space-lg);
+            filter: drop-shadow(0 0 10px rgba(0, 255, 255, 0.5));
+        }
+
+        .value-name {
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--glec-cyan);
+            margin-bottom: var(--space-md);
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .value-desc {
+            color: var(--glec-gray-300);
+            font-size: 0.95rem;
+            line-height: 1.6;
+        }
+
+        /* Solutions Section */
+        .solutions-section {
+            padding: var(--space-5xl) var(--space-xl);
+            background: var(--glec-darker);
+            position: relative;
+        }
+
+        .solutions-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: var(--space-3xl);
+            margin-top: var(--space-4xl);
+        }
+
+        .solution-card {
+            background: linear-gradient(135deg, rgba(0, 255, 255, 0.08) 0%, rgba(255, 0, 255, 0.08) 100%);
+            border: 2px solid rgba(0, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: var(--space-3xl);
+            position: relative;
+            transition: all var(--duration-normal) var(--ease-out-expo);
+            overflow: hidden;
+        }
+
+        .solution-card.featured {
+            border-color: var(--glec-magenta);
+            box-shadow: 0 0 30px rgba(255, 0, 255, 0.3);
+        }
+
+        .solution-card::before {
+            content: '';
+            position: absolute;
+            top: -100%;
+            left: -100%;
+            width: 300%;
+            height: 300%;
+            background: radial-gradient(circle, rgba(0, 255, 255, 0.15) 0%, transparent 60%);
+            opacity: 0;
+            transition: opacity var(--duration-slow) var(--ease-out-expo);
+        }
+
+        .solution-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0, 255, 255, 0.4);
+            border-color: var(--glec-cyan);
+        }
+
+        .solution-card:hover::before {
+            opacity: 1;
+            animation: rotateGlow 8s linear infinite;
+        }
+
+        @keyframes rotateGlow {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        .solution-status {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: var(--space-lg);
+            flex-wrap: wrap;
+            gap: var(--space-sm);
+        }
+
+        .status-badge {
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .status-badge.development {
+            background: linear-gradient(135deg, var(--glec-magenta), var(--glec-neon-pink));
+            color: var(--glec-white);
+            box-shadow: 0 0 20px rgba(255, 0, 153, 0.5);
+        }
+
+        .status-badge.active {
+            background: linear-gradient(135deg, var(--glec-neon-green), var(--glec-cyan));
+            color: var(--glec-black);
+            box-shadow: 0 0 20px rgba(0, 255, 136, 0.5);
+        }
+
+        .launch-date {
+            font-family: var(--font-mono);
+            font-size: 0.9rem;
+            color: var(--glec-cyan);
+            font-weight: 600;
+            position: relative;
+            z-index: 1;
+        }
+
+        .solution-icon {
+            font-size: 4rem;
+            margin-bottom: var(--space-lg);
+            filter: drop-shadow(0 0 20px rgba(0, 255, 255, 0.6));
+            position: relative;
+            z-index: 1;
+        }
+
+        .solution-title {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 800;
+            background: var(--glec-gradient-cyber);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: var(--space-sm);
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: relative;
+            z-index: 1;
+        }
+
+        .solution-subtitle {
+            font-size: 1.1rem;
+            color: var(--glec-gray-300);
+            margin-bottom: var(--space-xl);
+            font-weight: 500;
+            position: relative;
+            z-index: 1;
+        }
+
+        .solution-funding {
+            margin-bottom: var(--space-xl);
+            position: relative;
+            z-index: 1;
+        }
+
+        .funding-badge {
+            display: inline-block;
+            padding: 0.75rem 1.5rem;
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.2) 0%, rgba(255, 165, 0, 0.2) 100%);
+            border: 1px solid rgba(255, 215, 0, 0.5);
+            border-radius: 25px;
+            color: var(--glec-yellow);
+            font-size: 0.9rem;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .solution-features {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+            position: relative;
+            z-index: 1;
+        }
+
+        .solution-features li {
+            padding: var(--space-md) 0;
+            padding-left: var(--space-xl);
+            color: var(--glec-gray-200);
+            font-size: 1rem;
+            line-height: 1.6;
+            position: relative;
+            border-bottom: 1px solid rgba(0, 255, 255, 0.1);
+        }
+
+        .solution-features li:last-child {
+            border-bottom: none;
+        }
+
+        .solution-features li::before {
+            content: '✓';
+            position: absolute;
+            left: 0;
+            color: var(--glec-neon-green);
+            font-weight: 700;
+            font-size: 1.2rem;
+        }
+
+        /* Certifications Section */
+        .certifications-section {
+            padding: var(--space-5xl) var(--space-xl);
+            background: linear-gradient(180deg, var(--glec-black) 0%, var(--glec-darker) 100%);
+            position: relative;
+        }
+
+        .certifications-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            margin-top: var(--space-4xl);
+        }
+
+        .cert-category {
+            margin-bottom: var(--space-5xl);
+        }
+
+        .category-title {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--glec-cyan);
+            margin-bottom: var(--space-3xl);
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .cert-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: var(--space-2xl);
+        }
+
+        .cert-item {
+            background: linear-gradient(135deg, rgba(0, 255, 255, 0.05) 0%, rgba(255, 0, 255, 0.05) 100%);
+            border: 1px solid rgba(0, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: var(--space-2xl);
+            text-align: center;
+            position: relative;
+            transition: all var(--duration-normal) var(--ease-out-expo);
+        }
+
+        .cert-item:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(0, 255, 255, 0.3);
+            border-color: var(--glec-cyan);
+        }
+
+        .cert-year {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            font-family: var(--font-mono);
+            font-size: 0.9rem;
+            font-weight: 700;
+            color: var(--glec-magenta);
+            background: rgba(255, 0, 255, 0.1);
+            padding: 0.25rem 0.75rem;
+            border-radius: 10px;
+        }
+
+        .cert-badge {
+            width: 60px;
+            height: 60px;
+            margin: 0 auto var(--space-lg);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            border-radius: 50%;
+            background: linear-gradient(135deg, var(--glec-cyan), var(--glec-neon-green));
+            color: var(--glec-black);
+            font-weight: 700;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+        }
+
+        .cert-name {
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--glec-white);
+            margin-bottom: var(--space-sm);
+            letter-spacing: 1px;
+        }
+
+        .cert-desc {
+            font-size: 0.9rem;
+            color: var(--glec-gray-400);
+            line-height: 1.6;
+        }
+
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-2xl);
+        }
+
+        .achievement-item {
+            background: linear-gradient(135deg, rgba(0, 255, 255, 0.08) 0%, rgba(255, 0, 255, 0.08) 100%);
+            border: 2px solid rgba(0, 255, 255, 0.3);
+            border-radius: 15px;
+            padding: var(--space-3xl);
+            text-align: center;
+            transition: all var(--duration-normal) var(--ease-out-expo);
+        }
+
+        .achievement-item:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 50px rgba(0, 255, 255, 0.4);
+        }
+
+        .achievement-item.special {
+            border-color: var(--glec-magenta);
+        }
+
+        .achievement-number {
+            font-family: var(--font-display);
+            font-size: 3.5rem;
+            font-weight: 900;
+            background: var(--glec-gradient-cyber);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: var(--space-md);
+        }
+
+        .achievement-icon {
+            font-size: 3.5rem;
+            margin-bottom: var(--space-md);
+            filter: drop-shadow(0 0 10px rgba(255, 0, 255, 0.5));
+        }
+
+        .achievement-label {
+            font-size: 1rem;
+            color: var(--glec-gray-300);
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        /* Timeline Section */
+        .timeline-section {
+            padding: var(--space-5xl) var(--space-xl);
+            background: linear-gradient(180deg, var(--glec-darker) 0%, var(--glec-black) 50%, var(--glec-darker) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .timeline-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 50% 50%, rgba(0, 255, 255, 0.1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .timeline-container {
+            max-width: 1000px;
+            margin: var(--space-5xl) auto 0;
+            position: relative;
+        }
+
+        .timeline-line {
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 3px;
+            background: linear-gradient(180deg,
+                transparent 0%,
+                var(--glec-cyan) 20%,
+                var(--glec-magenta) 80%,
+                transparent 100%
+            );
+            transform: translateX(-50%);
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+        }
+
+        .timeline-item {
+            position: relative;
+            margin-bottom: var(--space-5xl);
+            display: flex;
+            align-items: center;
+            opacity: 0.7;
+            transition: all var(--duration-normal) var(--ease-out-expo);
+        }
+
+        .timeline-item:hover {
+            opacity: 1;
+        }
+
+        .timeline-item.featured {
+            opacity: 1;
+        }
+
+        .timeline-item.future {
+            opacity: 0.9;
+        }
+
+        .timeline-marker {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            z-index: 10;
+        }
+
+        .timeline-dot {
+            width: 20px;
+            height: 20px;
+            background: linear-gradient(135deg, var(--glec-cyan), var(--glec-magenta));
+            border: 4px solid var(--glec-black);
+            border-radius: 50%;
+            box-shadow: 0 0 30px rgba(0, 255, 255, 0.8), 0 0 60px rgba(255, 0, 255, 0.6);
+            transition: all var(--duration-normal) var(--ease-out-expo);
+        }
+
+        .timeline-item:hover .timeline-dot {
+            transform: scale(1.5);
+            box-shadow: 0 0 40px rgba(0, 255, 255, 1), 0 0 80px rgba(255, 0, 255, 0.8);
+        }
+
+        .timeline-year {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            font-weight: 900;
+            color: var(--glec-white);
+            background: var(--glec-black);
+            padding: 0.5rem 1.5rem;
+            border-radius: 20px;
+            border: 2px solid var(--glec-cyan);
+            white-space: nowrap;
+            margin-top: -60px;
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+        }
+
+        .timeline-content {
+            width: 45%;
+            background: linear-gradient(135deg, rgba(0, 255, 255, 0.05) 0%, rgba(255, 0, 255, 0.05) 100%);
+            border: 1px solid rgba(0, 255, 255, 0.3);
+            border-radius: 20px;
+            padding: var(--space-3xl);
+            position: relative;
+            transition: all var(--duration-normal) var(--ease-out-expo);
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-left: auto;
+            margin-right: var(--space-4xl);
+        }
+
+        .timeline-item:nth-child(even) .timeline-content {
+            margin-right: auto;
+            margin-left: var(--space-4xl);
+        }
+
+        .timeline-content:hover {
+            transform: translateY(-5px);
+            border-color: var(--glec-cyan);
+            box-shadow: 0 10px 50px rgba(0, 255, 255, 0.3);
+        }
+
+        .timeline-item.featured .timeline-content {
+            background: linear-gradient(135deg, rgba(0, 255, 255, 0.1) 0%, rgba(255, 0, 255, 0.1) 100%);
+            border: 2px solid var(--glec-cyan);
+            box-shadow: 0 5px 30px rgba(0, 255, 255, 0.2);
+        }
+
+        .timeline-item.future .timeline-content {
+            background: linear-gradient(135deg, rgba(255, 0, 255, 0.08) 0%, rgba(0, 255, 255, 0.08) 100%);
+            border: 2px dashed var(--glec-magenta);
+        }
+
+        .timeline-event-title {
+            font-family: var(--font-display);
+            font-size: 1.5rem;
+            font-weight: 700;
+            color: var(--glec-white);
+            margin-bottom: var(--space-md);
+            letter-spacing: 1px;
+        }
+
+        .timeline-event-desc {
+            font-size: 1rem;
+            color: var(--glec-gray-400);
+            line-height: 1.8;
+            margin-bottom: var(--space-xl);
+        }
+
+        .timeline-highlights {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-md);
+            margin-bottom: var(--space-lg);
+        }
+
+        .highlight-badge {
+            font-size: 0.85rem;
+            color: var(--glec-white);
+            background: rgba(0, 255, 255, 0.15);
+            border: 1px solid rgba(0, 255, 255, 0.3);
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: all var(--duration-fast) ease;
+        }
+
+        .highlight-badge:hover {
+            background: rgba(0, 255, 255, 0.25);
+            border-color: var(--glec-cyan);
+            transform: translateY(-2px);
+        }
+
+        .highlight-badge.govt {
+            background: rgba(255, 0, 255, 0.15);
+            border-color: rgba(255, 0, 255, 0.3);
+        }
+
+        .highlight-badge.govt:hover {
+            background: rgba(255, 0, 255, 0.25);
+            border-color: var(--glec-magenta);
+        }
+
+        .highlight-badge.launch {
+            background: linear-gradient(135deg, rgba(0, 255, 255, 0.2), rgba(255, 0, 255, 0.2));
+            border-color: var(--glec-cyan);
+            font-weight: 700;
+        }
+
+        .timeline-project {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            background: rgba(0, 0, 0, 0.3);
+            border: 1px solid rgba(0, 255, 255, 0.2);
+            border-radius: 10px;
+            padding: var(--space-lg);
+            margin-top: var(--space-lg);
+        }
+
+        .project-name {
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            font-weight: 700;
+            color: var(--glec-cyan);
+            letter-spacing: 1px;
+        }
+
+        .project-status {
+            font-size: 0.9rem;
+            color: var(--glec-gray-400);
+            font-weight: 600;
+        }
+
+        /* Responsive Timeline */
+        @media (max-width: 768px) {
+            .timeline-line {
+                left: 30px;
+            }
+
+            .timeline-marker {
+                left: 30px;
+            }
+
+            .timeline-year {
+                left: 30px;
+                transform: translateX(-50%);
+            }
+
+            .timeline-content {
+                width: calc(100% - 100px);
+                margin-left: 100px !important;
+                margin-right: 0 !important;
+            }
+
+            .timeline-item:nth-child(odd) .timeline-content,
+            .timeline-item:nth-child(even) .timeline-content {
+                margin-left: 100px;
+                margin-right: 0;
+            }
+        }
+
+        /* Technical Differentiation Section */
+        .tech-diff-section {
+            padding: var(--space-5xl) var(--space-xl);
+            background: linear-gradient(180deg, var(--glec-black) 0%, var(--glec-darker) 50%, var(--glec-black) 100%);
+            position: relative;
+        }
+
+        .tech-diff-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: radial-gradient(circle at 80% 20%, rgba(255, 0, 255, 0.1) 0%, transparent 50%),
+                        radial-gradient(circle at 20% 80%, rgba(0, 255, 255, 0.1) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .tech-diff-grid {
+            max-width: 1400px;
+            margin: var(--space-5xl) auto 0;
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: var(--space-3xl);
+        }
+
+        .tech-diff-card {
+            background: linear-gradient(135deg, rgba(0, 255, 255, 0.03) 0%, rgba(255, 0, 255, 0.03) 100%);
+            border: 1px solid rgba(0, 255, 255, 0.2);
+            border-radius: 20px;
+            padding: var(--space-3xl);
+            position: relative;
+            transition: all var(--duration-normal) var(--ease-out-expo);
+        }
+
+        .tech-diff-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: linear-gradient(135deg, rgba(0, 255, 255, 0.1) 0%, transparent 100%);
+            opacity: 0;
+            border-radius: 20px;
+            transition: opacity var(--duration-normal) ease;
+            pointer-events: none;
+        }
+
+        .tech-diff-card:hover::before {
+            opacity: 1;
+        }
+
+        .tech-diff-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--glec-cyan);
+            box-shadow: 0 20px 60px rgba(0, 255, 255, 0.3);
+        }
+
+        .tech-diff-card.featured {
+            background: linear-gradient(135deg, rgba(0, 255, 255, 0.08) 0%, rgba(255, 0, 255, 0.08) 100%);
+            border: 2px solid var(--glec-cyan);
+            box-shadow: 0 10px 40px rgba(0, 255, 255, 0.2);
+        }
+
+        .tech-icon {
+            font-size: 4rem;
+            margin-bottom: var(--space-lg);
+            filter: drop-shadow(0 0 20px rgba(0, 255, 255, 0.5));
+        }
+
+        .tech-badge {
+            display: inline-block;
+            font-size: 0.75rem;
+            font-weight: 700;
+            letter-spacing: 1.5px;
+            padding: 0.5rem 1.25rem;
+            border-radius: 20px;
+            margin-bottom: var(--space-lg);
+            text-transform: uppercase;
+        }
+
+        .tech-badge.iso {
+            background: linear-gradient(135deg, rgba(0, 255, 255, 0.2), rgba(0, 200, 200, 0.2));
+            border: 1px solid var(--glec-cyan);
+            color: var(--glec-cyan);
+        }
+
+        .tech-badge.ai {
+            background: linear-gradient(135deg, rgba(255, 0, 255, 0.2), rgba(200, 0, 200, 0.2));
+            border: 1px solid var(--glec-magenta);
+            color: var(--glec-magenta);
+        }
+
+        .tech-badge.performance {
+            background: linear-gradient(135deg, rgba(0, 255, 150, 0.2), rgba(0, 200, 100, 0.2));
+            border: 1px solid var(--glec-neon-green);
+            color: var(--glec-neon-green);
+        }
+
+        .tech-badge.govt {
+            background: linear-gradient(135deg, rgba(255, 215, 0, 0.2), rgba(200, 170, 0, 0.2));
+            border: 1px solid #FFD700;
+            color: #FFD700;
+        }
+
+        .tech-badge.research {
+            background: linear-gradient(135deg, rgba(100, 150, 255, 0.2), rgba(80, 120, 200, 0.2));
+            border: 1px solid #6495ED;
+            color: #6495ED;
+        }
+
+        .tech-badge.integration {
+            background: linear-gradient(135deg, rgba(255, 100, 150, 0.2), rgba(200, 80, 120, 0.2));
+            border: 1px solid #FF69B4;
+            color: #FF69B4;
+        }
+
+        .tech-diff-card-title {
+            font-family: var(--font-display);
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: var(--glec-white);
+            margin-bottom: var(--space-md);
+            letter-spacing: 0.5px;
+            line-height: 1.3;
+        }
+
+        .tech-diff-card-desc {
+            font-size: 1rem;
+            color: var(--glec-gray-400);
+            line-height: 1.8;
+            margin-bottom: var(--space-2xl);
+        }
+
+        .tech-diff-features {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .tech-diff-features li {
+            font-size: 0.95rem;
+            color: var(--glec-gray-300);
+            line-height: 2;
+            padding-left: 2rem;
+            position: relative;
+            margin-bottom: var(--space-sm);
+        }
+
+        .tech-diff-features li::before {
+            content: '▹';
+            position: absolute;
+            left: 0;
+            color: var(--glec-cyan);
+            font-size: 1.2rem;
+            font-weight: 700;
+        }
+
+        @media (max-width: 768px) {
+            .tech-diff-grid {
+                grid-template-columns: 1fr;
+                gap: var(--space-2xl);
+            }
+        }
+
+        /* Team Section */
+        .team-section {
+            padding: var(--space-5xl) var(--space-xl);
+            background: linear-gradient(180deg, var(--glec-black) 0%, var(--glec-darker) 100%);
+            position: relative;
+        }
+
+        .team-stats {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+            gap: var(--space-2xl);
+            max-width: 1200px;
+            margin: var(--space-5xl) auto;
+        }
+
+        .team-stat-card {
+            background: linear-gradient(135deg, rgba(0, 255, 255, 0.05) 0%, rgba(255, 0, 255, 0.05) 100%);
+            border: 2px solid rgba(0, 255, 255, 0.3);
+            border-radius: 15px;
+            padding: var(--space-3xl);
+            text-align: center;
+            transition: all var(--duration-normal) var(--ease-out-expo);
+        }
+
+        .team-stat-card:hover {
+            transform: translateY(-10px);
+            border-color: var(--glec-cyan);
+            box-shadow: 0 20px 60px rgba(0, 255, 255, 0.3);
+        }
+
+        .stat-number {
+            font-family: var(--font-display);
+            font-size: 4rem;
+            font-weight: 900;
+            background: var(--glec-gradient-cyber);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: var(--space-md);
+        }
+
+        .stat-label {
+            font-size: 1rem;
+            color: var(--glec-gray-300);
+            font-weight: 600;
+            letter-spacing: 0.5px;
+        }
+
+        .team-roles {
+            max-width: 1400px;
+            margin: var(--space-5xl) auto;
+        }
+
+        .role-category {
+            margin-bottom: var(--space-5xl);
+        }
+
+        .role-category-title {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            font-weight: 700;
+            color: var(--glec-cyan);
+            margin-bottom: var(--space-3xl);
+            text-align: center;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .role-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: var(--space-2xl);
+        }
+
+        .role-card {
+            background: linear-gradient(135deg, rgba(0, 255, 255, 0.03) 0%, rgba(255, 0, 255, 0.03) 100%);
+            border: 1px solid rgba(0, 255, 255, 0.2);
+            border-radius: 15px;
+            padding: var(--space-3xl);
+            transition: all var(--duration-normal) var(--ease-out-expo);
+        }
+
+        .role-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--glec-cyan);
+            box-shadow: 0 15px 50px rgba(0, 255, 255, 0.2);
+        }
+
+        .role-icon {
+            font-size: 3rem;
+            margin-bottom: var(--space-lg);
+            filter: drop-shadow(0 0 15px rgba(0, 255, 255, 0.4));
+        }
+
+        .role-title {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            font-weight: 700;
+            color: var(--glec-white);
+            margin-bottom: var(--space-lg);
+            letter-spacing: 0.5px;
+        }
+
+        .role-responsibilities {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .role-responsibilities li {
+            font-size: 0.95rem;
+            color: var(--glec-gray-300);
+            line-height: 2;
+            padding-left: 1.5rem;
+            position: relative;
+            margin-bottom: var(--space-sm);
+        }
+
+        .role-responsibilities li::before {
+            content: '•';
+            position: absolute;
+            left: 0;
+            color: var(--glec-cyan);
+            font-size: 1.5rem;
+            line-height: 1.2;
+        }
+
+        .team-expertise {
+            max-width: 1200px;
+            margin: var(--space-5xl) auto 0;
+            text-align: center;
+        }
+
+        .expertise-title {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 700;
+            color: var(--glec-white);
+            margin-bottom: var(--space-3xl);
+            letter-spacing: 1px;
+        }
+
+        .expertise-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-md);
+            justify-content: center;
+        }
+
+        .expertise-tag {
+            font-size: 0.9rem;
+            color: var(--glec-white);
+            background: linear-gradient(135deg, rgba(0, 255, 255, 0.15), rgba(255, 0, 255, 0.15));
+            border: 1px solid rgba(0, 255, 255, 0.3);
+            padding: 0.75rem 1.5rem;
+            border-radius: 25px;
+            font-weight: 600;
+            letter-spacing: 0.5px;
+            transition: all var(--duration-fast) ease;
+        }
+
+        .expertise-tag:hover {
+            background: linear-gradient(135deg, rgba(0, 255, 255, 0.3), rgba(255, 0, 255, 0.3));
+            border-color: var(--glec-cyan);
+            transform: translateY(-3px);
+            box-shadow: 0 5px 20px rgba(0, 255, 255, 0.4);
+        }
+
+        @media (max-width: 768px) {
+            .team-stats {
+                grid-template-columns: repeat(2, 1fr);
+            }
+
+            .role-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
         /* AI Transformation Section */
         .transformation-section {
             padding: var(--space-5xl) var(--space-xl);
@@ -769,6 +1850,509 @@
                 grid-template-columns: 1fr;
             }
         }
+
+        /* CES 2026 Section */
+        .ces-section {
+            padding: var(--space-5xl) var(--space-xl);
+            background: linear-gradient(135deg, var(--glec-darker) 0%, var(--glec-black) 50%, var(--glec-darker) 100%);
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .ces-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 50% 50%, rgba(255, 0, 153, 0.1) 0%, transparent 70%);
+            pointer-events: none;
+        }
+
+        .ces-content {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+            z-index: 2;
+        }
+
+        .ces-logo {
+            width: 300px;
+            height: auto;
+            margin: 0 auto var(--space-xl);
+            display: block;
+            filter: drop-shadow(0 0 30px rgba(255, 0, 153, 0.8));
+            background: linear-gradient(135deg, rgba(255, 0, 153, 0.1), rgba(0, 255, 255, 0.1));
+            padding: var(--space-lg);
+            border-radius: var(--border-radius-xl);
+            border: 2px solid rgba(0, 255, 255, 0.3);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+            animation: ces-glow 3s ease-in-out infinite alternate;
+        }
+
+        @keyframes ces-glow {
+            from {
+                filter: drop-shadow(0 0 30px rgba(255, 0, 153, 0.8));
+                border-color: rgba(0, 255, 255, 0.3);
+            }
+            to {
+                filter: drop-shadow(0 0 50px rgba(0, 255, 255, 0.8));
+                border-color: rgba(255, 0, 153, 0.5);
+            }
+        }
+
+        .ces-title {
+            font-size: 3rem;
+            font-weight: 700;
+            margin-bottom: var(--space-lg);
+            background: linear-gradient(135deg, var(--glec-neon-pink), var(--glec-cyan), var(--glec-yellow));
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradient-shift 3s ease-in-out infinite;
+        }
+
+        .ces-subtitle {
+            font-size: 1.5rem;
+            font-weight: 600;
+            color: var(--glec-cyan);
+            margin-bottom: var(--space-md);
+        }
+
+        .ces-description {
+            font-size: 1.1rem;
+            line-height: 1.6;
+            color: var(--glec-light-gray);
+            margin-bottom: var(--space-xl);
+        }
+
+        .ces-info {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: var(--space-lg);
+            margin-top: var(--space-xl);
+        }
+
+        .ces-info-item {
+            background: rgba(0, 255, 255, 0.1);
+            border: 1px solid rgba(0, 255, 255, 0.3);
+            border-radius: var(--border-radius-lg);
+            padding: var(--space-lg);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+        }
+
+        .ces-info-label {
+            font-size: 0.9rem;
+            color: var(--glec-cyan);
+            font-weight: 600;
+            margin-bottom: var(--space-xs);
+        }
+
+        .ces-info-value {
+            font-size: 1.1rem;
+            color: var(--glec-white);
+            font-weight: 500;
+        }
+
+        /* CES 2026 Invitation Section */
+        .ces-invitation-section {
+            padding: var(--space-4xl) var(--space-xl);
+            background: linear-gradient(135deg, var(--glec-black) 0%, var(--glec-darker) 30%, var(--glec-black) 100%);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .ces-invitation-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at 30% 70%, rgba(0, 255, 255, 0.15) 0%, transparent 50%),
+                        radial-gradient(circle at 70% 30%, rgba(255, 0, 153, 0.15) 0%, transparent 50%);
+            pointer-events: none;
+        }
+
+        .ces-invitation-content {
+            max-width: 600px;
+            margin: 0 auto;
+            text-align: center;
+            position: relative;
+            z-index: 2;
+        }
+
+        .ces-invitation-title {
+            font-size: 2.5rem;
+            font-weight: 700;
+            margin-bottom: var(--space-lg);
+            background: linear-gradient(135deg, var(--glec-cyan), var(--glec-neon-pink), var(--glec-yellow));
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: gradient-shift 4s ease-in-out infinite;
+        }
+
+        .ces-invitation-form {
+            background: rgba(0, 255, 255, 0.05);
+            border: 2px solid rgba(0, 255, 255, 0.3);
+            border-radius: var(--border-radius-xl);
+            padding: var(--space-2xl);
+            backdrop-filter: blur(15px);
+            box-shadow: 0 20px 60px rgba(0, 255, 255, 0.1);
+        }
+
+        .ces-form-group {
+            margin-bottom: var(--space-lg);
+        }
+
+        .ces-form-label {
+            display: block;
+            font-size: 1rem;
+            color: var(--glec-cyan);
+            font-weight: 600;
+            margin-bottom: var(--space-sm);
+        }
+
+        .ces-form-input {
+            width: 100%;
+            padding: var(--space-md) var(--space-lg);
+            background: rgba(0, 0, 0, 0.6);
+            border: 2px solid rgba(0, 255, 255, 0.3);
+            border-radius: var(--border-radius-lg);
+            color: var(--glec-white);
+            font-size: 1rem;
+            transition: all 0.3s ease;
+        }
+
+        .ces-form-input:focus {
+            outline: none;
+            border-color: var(--glec-cyan);
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.4);
+            background: rgba(0, 0, 0, 0.8);
+        }
+
+        .ces-form-input::placeholder {
+            color: var(--glec-light-gray);
+        }
+
+        .ces-submit-btn {
+            width: 100%;
+            padding: var(--space-md) var(--space-xl);
+            background: linear-gradient(135deg, var(--glec-neon-pink), var(--glec-magenta));
+            border: none;
+            border-radius: var(--border-radius-lg);
+            color: var(--glec-white);
+            font-size: 1.1rem;
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .ces-submit-btn:hover {
+            background: linear-gradient(135deg, var(--glec-magenta), var(--glec-neon-pink));
+            transform: translateY(-3px);
+            box-shadow: 0 0 30px rgba(255, 0, 153, 0.6);
+        }
+
+        /* Popup Modal */
+        .ces-popup {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.8);
+            z-index: 1000;
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+        }
+
+        .ces-popup-content {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            background: linear-gradient(135deg, var(--glec-darker), var(--glec-black));
+            border: 2px solid var(--glec-cyan);
+            border-radius: var(--border-radius-xl);
+            padding: var(--space-2xl);
+            max-width: 400px;
+            width: 90%;
+            text-align: center;
+            box-shadow: 0 20px 60px rgba(0, 255, 255, 0.3);
+        }
+
+        .ces-popup-title {
+            font-size: 1.5rem;
+            color: var(--glec-cyan);
+            font-weight: 700;
+            margin-bottom: var(--space-md);
+        }
+
+        .ces-popup-message {
+            color: var(--glec-light-gray);
+            margin-bottom: var(--space-lg);
+            line-height: 1.6;
+        }
+
+        .ces-popup-close {
+            background: linear-gradient(135deg, var(--glec-cyan), var(--glec-neon-cyan));
+            border: none;
+            border-radius: var(--border-radius-md);
+            color: var(--glec-black);
+            padding: var(--space-sm) var(--space-xl);
+            font-weight: 600;
+            cursor: pointer;
+            transition: all 0.3s ease;
+        }
+
+        .ces-popup-close:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+        }
+
+        /* Technology Section */
+        .technology-section {
+            padding: var(--space-3xl) var(--space-xl);
+            background: linear-gradient(135deg, rgba(0, 255, 255, 0.05) 0%, rgba(255, 0, 255, 0.05) 100%);
+            position: relative;
+        }
+
+        .technology-section::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 1px;
+            background: linear-gradient(90deg, transparent, var(--glec-cyan), transparent);
+        }
+
+        .tech-block {
+            margin-top: var(--space-3xl);
+            padding: var(--space-2xl);
+            background: rgba(0, 0, 0, 0.6);
+            border: 1px solid rgba(0, 255, 255, 0.2);
+            border-radius: var(--border-radius-xl);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+        }
+
+        .tech-video-container {
+            position: relative;
+            margin: var(--space-2xl) auto;
+            width: 800px;
+            max-width: 100%;
+            border-radius: var(--border-radius-lg);
+            overflow: hidden;
+            background: rgba(0, 0, 0, 0.8);
+            border: 1px solid rgba(0, 255, 255, 0.3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+
+        .tech-video {
+            width: 600px;
+            max-width: 100%;
+            height: auto;
+            background: #000;
+            border-radius: var(--border-radius-lg);
+            display: block;
+        }
+
+        .video-overlay {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+            background: linear-gradient(transparent, rgba(0, 0, 0, 0.9));
+            padding: var(--space-xl);
+            color: var(--glec-white);
+            pointer-events: none;
+        }
+
+        .video-overlay h4 {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            color: var(--glec-cyan);
+            margin-bottom: var(--space-sm);
+        }
+
+        .video-overlay p {
+            color: var(--glec-light-gray);
+            margin: 0;
+            font-size: 0.95rem;
+        }
+
+        .tech-video-container:hover {
+            border-color: var(--glec-cyan);
+            box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+        }
+
+        .tech-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            margin-bottom: var(--space-2xl);
+            flex-wrap: wrap;
+            gap: var(--space-lg);
+        }
+
+        .tech-title {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, var(--glec-cyan), var(--glec-magenta));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .tech-badge {
+            padding: var(--space-sm) var(--space-lg);
+            background: linear-gradient(135deg, var(--glec-neon-blue), var(--glec-neon-pink));
+            border-radius: 20px;
+            font-size: 0.85rem;
+            font-weight: 600;
+            letter-spacing: 1px;
+        }
+
+        .tech-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: var(--space-xl);
+            margin-bottom: var(--space-2xl);
+        }
+
+        .tech-card {
+            padding: var(--space-xl);
+            background: rgba(0, 0, 0, 0.4);
+            border: 1px solid rgba(0, 255, 255, 0.1);
+            border-radius: var(--border-radius-lg);
+            transition: all 0.3s ease;
+        }
+
+        .tech-card:hover {
+            transform: translateY(-5px);
+            border-color: var(--glec-cyan);
+            box-shadow: 0 10px 30px rgba(0, 255, 255, 0.3);
+        }
+
+        .tech-icon {
+            font-size: 2.5rem;
+            margin-bottom: var(--space-md);
+        }
+
+        .tech-card h4 {
+            font-family: var(--font-display);
+            font-size: 1.2rem;
+            color: var(--glec-cyan);
+            margin-bottom: var(--space-md);
+        }
+
+        .tech-card p {
+            color: var(--glec-light-gray);
+            line-height: 1.6;
+            font-size: 0.95rem;
+        }
+
+        .tech-stats {
+            display: flex;
+            justify-content: space-around;
+            padding: var(--space-xl);
+            background: rgba(0, 255, 255, 0.05);
+            border-radius: var(--border-radius-lg);
+            flex-wrap: wrap;
+            gap: var(--space-xl);
+        }
+
+        .stat-item {
+            text-align: center;
+        }
+
+        .stat-number {
+            display: block;
+            font-family: var(--font-display);
+            font-size: 2.5rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, var(--glec-cyan), var(--glec-yellow));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .stat-label {
+            display: block;
+            margin-top: var(--space-sm);
+            color: var(--glec-light-gray);
+            font-size: 0.9rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .tech-integration {
+            padding: var(--space-xl);
+            background: linear-gradient(135deg, rgba(0, 255, 255, 0.1), rgba(255, 0, 255, 0.1));
+            border-radius: var(--border-radius-lg);
+            border-left: 4px solid var(--glec-cyan);
+        }
+
+        .tech-integration h4 {
+            font-family: var(--font-display);
+            font-size: 1.3rem;
+            color: var(--glec-yellow);
+            margin-bottom: var(--space-md);
+        }
+
+        .tech-integration p {
+            color: var(--glec-light-gray);
+            line-height: 1.8;
+        }
+
+        @media (max-width: 768px) {
+            .tech-header {
+                flex-direction: column;
+                align-items: flex-start;
+            }
+
+            .tech-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .tech-stats {
+                flex-direction: column;
+            }
+
+            .tech-video {
+                width: 100%;
+                height: auto;
+            }
+
+            .tech-video-container {
+                margin: var(--space-lg) auto;
+                max-width: 100%;
+            }
+
+            .video-overlay {
+                padding: var(--space-lg);
+            }
+
+            .video-overlay h4 {
+                font-size: 1.1rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -784,19 +2368,21 @@
                 <li><a href="#transformation" class="nav-link" data-translate="nav_transformation">AI Transformation</a></li>
                 <li><a href="#ai-dtg" class="nav-link" data-translate="nav_dtg">AI DTG</a></li>
                 <li><a href="#ai-dashboard" class="nav-link" data-translate="nav_dashboard">AI Dashboard</a></li>
+                <li><a href="#technology" class="nav-link" data-translate="nav_technology">CORE TECHNOLOGY</a></li>
                 <li><a href="#cta" class="nav-link" data-translate="nav_contact">Contact</a></li>
+                <li><a href="#ces2026" class="nav-link" data-translate="nav_ces2026">CES 2026</a></li>
             </ul>
             
             <!-- Language Selector -->
-            <div class="language-selector">
-                <button class="language-button" id="languageButton" onclick="toggleLanguageDropdown()">
+            <div class="language-selector" id="languageSelector">
+                <button class="language-button" id="languageButton" type="button">
                     <span id="currentLanguage">English</span>
                     <span>▼</span>
                 </button>
                 <div class="language-dropdown" id="languageDropdown">
-                    <div class="language-option active">English</div>
-                    <div class="language-option" onclick="window.location.href='index-zh.html'">中文</div>
-                    <div class="language-option" onclick="window.location.href='index-ko.html'">한국어</div>
+                    <div class="language-option active" data-lang="en">English</div>
+                    <div class="language-option" data-lang="ko">한국어</div>
+                    <div class="language-option" data-lang="zh">中文</div>
                 </div>
             </div>
         </div>
@@ -826,6 +2412,585 @@
         </div>
     </section>
     
+    <!-- Company Overview Section -->
+    <section class="company-overview-section" id="company-overview">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label" data-translate="company_label">ABOUT US</span>
+                <h2 class="section-title" data-translate="company_title">Company Overview</h2>
+            </div>
+
+            <div class="company-content">
+                <div class="company-info-grid">
+                    <div class="company-info-item">
+                        <div class="info-label" data-translate="founded_label">Founded</div>
+                        <div class="info-value">2023</div>
+                        <div class="info-detail" data-translate="founded_detail">Startup</div>
+                    </div>
+
+                    <div class="company-info-item">
+                        <div class="info-label" data-translate="location_label">Location</div>
+                        <div class="info-value" data-translate="location_value">South Korea</div>
+                        <div class="info-detail" data-translate="location_detail">Seoul HQ</div>
+                    </div>
+
+                    <div class="company-info-item">
+                        <div class="info-label" data-translate="specialization_label">Specialization</div>
+                        <div class="info-value" data-translate="specialization_value">Green Logistics</div>
+                        <div class="info-detail" data-translate="specialization_detail">ISO-14083</div>
+                    </div>
+                </div>
+
+                <div class="company-vision">
+                    <h3 class="vision-title" data-translate="vision_title">Our Vision</h3>
+                    <p class="vision-text" data-translate="vision_text">
+                        "Korea's only logistics international standard tech company supporting green logistics services"
+                    </p>
+                </div>
+
+                <div class="company-mission">
+                    <h3 class="mission-title" data-translate="mission_title">Our Mission</h3>
+                    <p class="mission-text" data-translate="mission_text">
+                        Building a sustainable logistics ecosystem and establishing a carbon circulation structure through international standard-based technology and consulting
+                    </p>
+                </div>
+
+                <div class="company-values">
+                    <h3 class="values-title" data-translate="values_title">Core Values</h3>
+                    <div class="values-grid">
+                        <div class="value-card">
+                            <div class="value-icon">🌐</div>
+                            <h4 class="value-name" data-translate="value_standards">International Standards</h4>
+                            <p class="value-desc" data-translate="value_standards_desc">ISO-14083 compliant solutions</p>
+                        </div>
+
+                        <div class="value-card">
+                            <div class="value-icon">⚡</div>
+                            <h4 class="value-name" data-translate="value_innovation">Innovation</h4>
+                            <p class="value-desc" data-translate="value_innovation_desc">Next-gen DTG with AI capabilities</p>
+                        </div>
+
+                        <div class="value-card">
+                            <div class="value-icon">🌱</div>
+                            <h4 class="value-name" data-translate="value_sustainability">Sustainability</h4>
+                            <p class="value-desc" data-translate="value_sustainability_desc">Green logistics transformation</p>
+                        </div>
+
+                        <div class="value-card">
+                            <div class="value-icon">🤝</div>
+                            <h4 class="value-name" data-translate="value_partnership">Partnership</h4>
+                            <p class="value-desc" data-translate="value_partnership_desc">Global collaboration network</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions & Development Status Section -->
+    <section class="solutions-section" id="solutions">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label" data-translate="solutions_label">OUR SOLUTIONS</span>
+                <h2 class="section-title" data-translate="solutions_title">Solutions & Development Status</h2>
+                <p class="section-description" data-translate="solutions_description">
+                    Cutting-edge green logistics solutions under development
+                </p>
+            </div>
+
+            <div class="solutions-grid">
+                <!-- eFuel Solution -->
+                <div class="solution-card featured">
+                    <div class="solution-status">
+                        <span class="status-badge development" data-translate="status_development">Under Development</span>
+                        <span class="launch-date" data-translate="launch_march_2026">Launch: March 2026</span>
+                    </div>
+                    <div class="solution-icon">🌱</div>
+                    <h3 class="solution-title" data-translate="efuel_title">eFuel</h3>
+                    <p class="solution-subtitle" data-translate="efuel_subtitle">Freight Carbon Monitoring Solution</p>
+                    <div class="solution-funding">
+                        <span class="funding-badge" data-translate="tips_program">🏆 TIPS R&D Program 2024</span>
+                    </div>
+                    <ul class="solution-features">
+                        <li data-translate="efuel_feature_1">Real-time carbon emission monitoring</li>
+                        <li data-translate="efuel_feature_2">Scope 3 emissions management</li>
+                        <li data-translate="efuel_feature_3">ISO-14083 standard compliance</li>
+                        <li data-translate="efuel_feature_4">WMS/TMS system integration</li>
+                        <li data-translate="efuel_feature_5">Automated CDP, SBT, CBAM reporting</li>
+                    </ul>
+                </div>
+
+                <!-- GLEC DTG Solution -->
+                <div class="solution-card featured">
+                    <div class="solution-status">
+                        <span class="status-badge development" data-translate="status_development">Under Development</span>
+                        <span class="launch-date" data-translate="launch_march_2026">Launch: March 2026</span>
+                    </div>
+                    <div class="solution-icon">🚛</div>
+                    <h3 class="solution-title">GLEC DTG</h3>
+                    <p class="solution-subtitle" data-translate="dtg_subtitle_full">Digital Tachograph</p>
+                    <div class="solution-funding">
+                        <span class="funding-badge" data-translate="env_program">🏆 Environmental Tech Program 2025</span>
+                    </div>
+                    <ul class="solution-features">
+                        <li data-translate="dtg_feature_1">Next-gen vehicle operation recorder</li>
+                        <li data-translate="dtg_feature_2">LTE-based automatic data collection</li>
+                        <li data-translate="dtg_feature_3">Real-time carbon emission measurement</li>
+                        <li data-translate="dtg_feature_4">Touch smart display interface</li>
+                        <li data-translate="dtg_feature_5">Qualcomm SC200E AP (8GB RAM + 32GB HDD)</li>
+                    </ul>
+                </div>
+
+                <!-- Carbon API Console Solution -->
+                <div class="solution-card">
+                    <div class="solution-status">
+                        <span class="status-badge active" data-translate="status_active">In Service</span>
+                    </div>
+                    <div class="solution-icon">⚡</div>
+                    <h3 class="solution-title">Carbon API Console</h3>
+                    <p class="solution-subtitle" data-translate="api_subtitle">Logistics Carbon Calculation API</p>
+                    <ul class="solution-features">
+                        <li data-translate="api_feature_1">48 APIs for carbon calculation</li>
+                        <li data-translate="api_feature_2">0.5 second response time</li>
+                        <li data-translate="api_feature_3">ISO-14083 standard engine</li>
+                        <li data-translate="api_feature_4">Shipper/carrier system integration</li>
+                        <li data-translate="api_feature_5">Supports all transport modes</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Government Support & Certifications Section -->
+    <section class="certifications-section" id="certifications">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label" data-translate="cert_label">ACHIEVEMENTS</span>
+                <h2 class="section-title" data-translate="cert_title">Government Support & Certifications</h2>
+            </div>
+
+            <div class="certifications-content">
+                <!-- Government Funding -->
+                <div class="cert-category">
+                    <h3 class="category-title" data-translate="govt_funding_title">Government Funding & Awards</h3>
+                    <div class="cert-grid">
+                        <div class="cert-item">
+                            <div class="cert-year">2024</div>
+                            <div class="cert-badge govt">✓</div>
+                            <h4 class="cert-name" data-translate="cert_tips">TIPS R&D Program</h4>
+                            <p class="cert-desc" data-translate="cert_tips_desc">Ministry of SMEs and Startups</p>
+                        </div>
+
+                        <div class="cert-item">
+                            <div class="cert-year">2024</div>
+                            <div class="cert-badge govt">✓</div>
+                            <h4 class="cert-name" data-translate="cert_logistics">Logistics Startup</h4>
+                            <p class="cert-desc" data-translate="cert_logistics_desc">Ministry of Land, Infrastructure and Transport</p>
+                        </div>
+
+                        <div class="cert-item">
+                            <div class="cert-year">2024</div>
+                            <div class="cert-badge govt">✓</div>
+                            <h4 class="cert-name" data-translate="cert_data">Data Business Operator</h4>
+                            <p class="cert-desc" data-translate="cert_data_desc">Ministry of Science and ICT</p>
+                        </div>
+
+                        <div class="cert-item">
+                            <div class="cert-year">2025</div>
+                            <div class="cert-badge govt">✓</div>
+                            <h4 class="cert-name" data-translate="cert_env">Environmental Tech Program</h4>
+                            <p class="cert-desc" data-translate="cert_env_desc">Korea Environmental Industry & Technology Institute</p>
+                        </div>
+
+                        <div class="cert-item">
+                            <div class="cert-year">2023</div>
+                            <div class="cert-badge govt">✓</div>
+                            <h4 class="cert-name" data-translate="cert_opinet">O'Pinnet Startup</h4>
+                            <p class="cert-desc" data-translate="cert_opinet_desc">Startup Designation</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Technical Achievements -->
+                <div class="cert-category">
+                    <h3 class="category-title" data-translate="tech_achievements_title">Technical Achievements</h3>
+                    <div class="achievements-grid">
+                        <div class="achievement-item">
+                            <div class="achievement-number">8+</div>
+                            <div class="achievement-label" data-translate="patents_filed">Patents Filed</div>
+                        </div>
+
+                        <div class="achievement-item">
+                            <div class="achievement-number">1</div>
+                            <div class="achievement-label" data-translate="patents_registered">Patent Registered</div>
+                        </div>
+
+                        <div class="achievement-item">
+                            <div class="achievement-number">1</div>
+                            <div class="achievement-label" data-translate="copyright">Copyright Registered</div>
+                        </div>
+
+                        <div class="achievement-item special">
+                            <div class="achievement-icon">📄</div>
+                            <div class="achievement-label" data-translate="iso_translation">ISO-14083 Korean Translation</div>
+                        </div>
+
+                        <div class="achievement-item special">
+                            <div class="achievement-icon">🔬</div>
+                            <div class="achievement-label" data-translate="wtw_research">Korea WTW Emission Factor R&D</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Development Timeline Section -->
+    <section class="timeline-section" id="timeline">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label" data-translate="timeline_label">ROADMAP</span>
+                <h2 class="section-title" data-translate="timeline_title">Development Timeline</h2>
+                <p class="section-description" data-translate="timeline_description">
+                    Our journey from foundation to innovation in green logistics
+                </p>
+            </div>
+
+            <div class="timeline-container">
+                <div class="timeline-line"></div>
+
+                <!-- 2023 -->
+                <div class="timeline-item">
+                    <div class="timeline-marker">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-year">2023</div>
+                    </div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-event-title" data-translate="timeline_2023_title">GLEC Inc. Founded</h3>
+                        <p class="timeline-event-desc" data-translate="timeline_2023_desc">
+                            Established as Korea's specialized logistics carbon tech startup
+                        </p>
+                        <div class="timeline-highlights">
+                            <span class="highlight-badge" data-translate="timeline_2023_highlight1">🏢 Company Establishment</span>
+                            <span class="highlight-badge" data-translate="timeline_2023_highlight2">🎯 Vision Setting</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2024 -->
+                <div class="timeline-item featured">
+                    <div class="timeline-marker">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-year">2024</div>
+                    </div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-event-title" data-translate="timeline_2024_title">TIPS R&D Program Selection</h3>
+                        <p class="timeline-event-desc" data-translate="timeline_2024_desc">
+                            Selected by Ministry of SMEs and Startups for TIPS R&D Program
+                        </p>
+                        <div class="timeline-highlights">
+                            <span class="highlight-badge govt" data-translate="timeline_2024_highlight1">🏆 TIPS R&D Program</span>
+                            <span class="highlight-badge" data-translate="timeline_2024_highlight2">🌱 eFuel Development Started</span>
+                            <span class="highlight-badge" data-translate="timeline_2024_highlight3">🚀 Multiple Certifications</span>
+                        </div>
+                        <div class="timeline-project">
+                            <div class="project-name" data-translate="efuel_title">eFuel</div>
+                            <div class="project-status" data-translate="timeline_status_development">Development Phase</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2025 -->
+                <div class="timeline-item featured">
+                    <div class="timeline-marker">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-year">2025</div>
+                    </div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-event-title" data-translate="timeline_2025_title">Environmental Tech Program Selection</h3>
+                        <p class="timeline-event-desc" data-translate="timeline_2025_desc">
+                            Selected by Korea Environmental Industry & Technology Institute
+                        </p>
+                        <div class="timeline-highlights">
+                            <span class="highlight-badge govt" data-translate="timeline_2025_highlight1">🏆 Environmental Tech Program</span>
+                            <span class="highlight-badge" data-translate="timeline_2025_highlight2">🚛 GLEC DTG Development Started</span>
+                        </div>
+                        <div class="timeline-project">
+                            <div class="project-name">GLEC DTG</div>
+                            <div class="project-status" data-translate="timeline_status_development">Development Phase</div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 2026 -->
+                <div class="timeline-item future">
+                    <div class="timeline-marker">
+                        <div class="timeline-dot"></div>
+                        <div class="timeline-year">2026</div>
+                    </div>
+                    <div class="timeline-content">
+                        <h3 class="timeline-event-title" data-translate="timeline_2026_title">Product Launch</h3>
+                        <p class="timeline-event-desc" data-translate="timeline_2026_desc">
+                            Official launch of eFuel and GLEC DTG solutions
+                        </p>
+                        <div class="timeline-highlights">
+                            <span class="highlight-badge launch" data-translate="timeline_2026_highlight1">🎉 eFuel Launch (March 2026)</span>
+                            <span class="highlight-badge launch" data-translate="timeline_2026_highlight2">🎉 GLEC DTG Launch (March 2026)</span>
+                            <span class="highlight-badge" data-translate="timeline_2026_highlight3">🌍 Market Entry</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Technical Differentiation Section -->
+    <section class="tech-diff-section" id="tech-differentiation">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label" data-translate="tech_diff_label">TECHNOLOGY</span>
+                <h2 class="section-title" data-translate="tech_diff_title">Technical Differentiation</h2>
+                <p class="section-description" data-translate="tech_diff_description">
+                    Our competitive advantages in green logistics technology
+                </p>
+            </div>
+
+            <div class="tech-diff-grid">
+                <!-- ISO-14083 Compliance -->
+                <div class="tech-diff-card featured">
+                    <div class="tech-icon">🌍</div>
+                    <div class="tech-badge iso" data-translate="tech_badge_iso">INTERNATIONAL STANDARD</div>
+                    <h3 class="tech-diff-card-title" data-translate="tech_iso_title">ISO-14083 International Standard</h3>
+                    <p class="tech-diff-card-desc" data-translate="tech_iso_desc">
+                        Korea's only logistics carbon emission calculation solution complying with ISO-14083 international standard
+                    </p>
+                    <ul class="tech-diff-features">
+                        <li data-translate="tech_iso_feature1">Global standard compliance for cross-border logistics</li>
+                        <li data-translate="tech_iso_feature2">Official ISO-14083 Korean translation contributor</li>
+                        <li data-translate="tech_iso_feature3">Well-to-Wheel (WTW) analysis capability</li>
+                        <li data-translate="tech_iso_feature4">CDP, SBT, CBAM reporting automation</li>
+                    </ul>
+                </div>
+
+                <!-- AI-Powered DTG -->
+                <div class="tech-diff-card featured">
+                    <div class="tech-icon">🤖</div>
+                    <div class="tech-badge ai" data-translate="tech_badge_ai">AI INNOVATION</div>
+                    <h3 class="tech-diff-card-title" data-translate="tech_ai_title">AI-Powered Digital Tachograph</h3>
+                    <p class="tech-diff-card-desc" data-translate="tech_ai_desc">
+                        Next-generation DTG with integrated AI for safety and carbon monitoring
+                    </p>
+                    <ul class="tech-diff-features">
+                        <li data-translate="tech_ai_feature1">Real-time AI inference (driver fatigue, drowsiness detection)</li>
+                        <li data-translate="tech_ai_feature2">Edge computing with Qualcomm SC200E chipset</li>
+                        <li data-translate="tech_ai_feature3">Simultaneous carbon emission measurement</li>
+                        <li data-translate="tech_ai_feature4">5G/LTE cloud synchronization</li>
+                    </ul>
+                </div>
+
+                <!-- Real-time Carbon Monitoring -->
+                <div class="tech-diff-card">
+                    <div class="tech-icon">⚡</div>
+                    <div class="tech-badge performance" data-translate="tech_badge_performance">HIGH PERFORMANCE</div>
+                    <h3 class="tech-diff-card-title" data-translate="tech_perf_title">Real-time Carbon Monitoring</h3>
+                    <p class="tech-diff-card-desc" data-translate="tech_perf_desc">
+                        Ultra-fast API response with precision carbon calculation
+                    </p>
+                    <ul class="tech-diff-features">
+                        <li data-translate="tech_perf_feature1">0.5 second average API response time</li>
+                        <li data-translate="tech_perf_feature2">48+ specialized carbon calculation APIs</li>
+                        <li data-translate="tech_perf_feature3">Real-time WMS/TMS integration</li>
+                        <li data-translate="tech_perf_feature4">All transport modes supported (road, sea, air, rail)</li>
+                    </ul>
+                </div>
+
+                <!-- Government-Backed R&D -->
+                <div class="tech-diff-card">
+                    <div class="tech-icon">🏆</div>
+                    <div class="tech-badge govt" data-translate="tech_badge_govt">GOVERNMENT BACKED</div>
+                    <h3 class="tech-diff-card-title" data-translate="tech_govt_title">Government-Backed R&D</h3>
+                    <p class="tech-diff-card-desc" data-translate="tech_govt_desc">
+                        Validated technology through multiple government programs
+                    </p>
+                    <ul class="tech-diff-features">
+                        <li data-translate="tech_govt_feature1">TIPS R&D Program (Ministry of SMEs)</li>
+                        <li data-translate="tech_govt_feature2">Environmental Tech Program (KEITI)</li>
+                        <li data-translate="tech_govt_feature3">8+ patents filed, 1 registered</li>
+                        <li data-translate="tech_govt_feature4">Data business operator certification</li>
+                    </ul>
+                </div>
+
+                <!-- Korea WTW Research -->
+                <div class="tech-diff-card">
+                    <div class="tech-icon">🔬</div>
+                    <div class="tech-badge research" data-translate="tech_badge_research">R&D LEADERSHIP</div>
+                    <h3 class="tech-diff-card-title" data-translate="tech_research_title">Korea WTW Emission Factor</h3>
+                    <p class="tech-diff-card-desc" data-translate="tech_research_desc">
+                        Pioneering research in Korea-specific emission factors
+                    </p>
+                    <ul class="tech-diff-features">
+                        <li data-translate="tech_research_feature1">Korea WTW emission factor R&D</li>
+                        <li data-translate="tech_research_feature2">Localized carbon calculation accuracy</li>
+                        <li data-translate="tech_research_feature3">Government collaboration on standards</li>
+                        <li data-translate="tech_research_feature4">Academic research partnerships</li>
+                    </ul>
+                </div>
+
+                <!-- End-to-End Solution -->
+                <div class="tech-diff-card">
+                    <div class="tech-icon">🔗</div>
+                    <div class="tech-badge integration" data-translate="tech_badge_integration">FULL INTEGRATION</div>
+                    <h3 class="tech-diff-card-title" data-translate="tech_integration_title">End-to-End Solution</h3>
+                    <p class="tech-diff-card-desc" data-translate="tech_integration_desc">
+                        Complete carbon management from measurement to reporting
+                    </p>
+                    <ul class="tech-diff-features">
+                        <li data-translate="tech_integration_feature1">Hardware (DTG) + Software (eFuel + API)</li>
+                        <li data-translate="tech_integration_feature2">Data collection to international reporting</li>
+                        <li data-translate="tech_integration_feature3">Shipper & carrier platform integration</li>
+                        <li data-translate="tech_integration_feature4">Cloud-based centralized management</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section class="team-section" id="team">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label" data-translate="team_label">OUR TEAM</span>
+                <h2 class="section-title" data-translate="team_title">Team Composition</h2>
+                <p class="section-description" data-translate="team_description">
+                    Expert team driving green logistics innovation
+                </p>
+            </div>
+
+            <div class="team-stats">
+                <div class="team-stat-card">
+                    <div class="stat-number">7</div>
+                    <div class="stat-label" data-translate="team_stat_members">Team Members</div>
+                </div>
+                <div class="team-stat-card">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label" data-translate="team_stat_experience">Years Avg. Experience</div>
+                </div>
+                <div class="team-stat-card">
+                    <div class="stat-number">3</div>
+                    <div class="stat-label" data-translate="team_stat_phds">PhDs</div>
+                </div>
+                <div class="team-stat-card">
+                    <div class="stat-number">100%</div>
+                    <div class="stat-label" data-translate="team_stat_dedicated">Dedicated to Green Logistics</div>
+                </div>
+            </div>
+
+            <div class="team-roles">
+                <!-- Leadership -->
+                <div class="role-category">
+                    <h3 class="role-category-title" data-translate="team_leadership">Leadership</h3>
+                    <div class="role-grid">
+                        <div class="role-card">
+                            <div class="role-icon">👨‍💼</div>
+                            <h4 class="role-title" data-translate="role_ceo">CEO</h4>
+                            <ul class="role-responsibilities">
+                                <li data-translate="role_ceo_1">Strategic direction & vision</li>
+                                <li data-translate="role_ceo_2">Government relations & partnerships</li>
+                                <li data-translate="role_ceo_3">Business development</li>
+                            </ul>
+                        </div>
+
+                        <div class="role-card">
+                            <div class="role-icon">👨‍🔬</div>
+                            <h4 class="role-title" data-translate="role_cto">CTO</h4>
+                            <ul class="role-responsibilities">
+                                <li data-translate="role_cto_1">Technology strategy & R&D</li>
+                                <li data-translate="role_cto_2">ISO-14083 compliance oversight</li>
+                                <li data-translate="role_cto_3">Technical architecture</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- R&D Team -->
+                <div class="role-category">
+                    <h3 class="role-category-title" data-translate="team_rd">Research & Development</h3>
+                    <div class="role-grid">
+                        <div class="role-card">
+                            <div class="role-icon">🔬</div>
+                            <h4 class="role-title" data-translate="role_carbon">Carbon Emission Specialist</h4>
+                            <ul class="role-responsibilities">
+                                <li data-translate="role_carbon_1">WTW emission factor research</li>
+                                <li data-translate="role_carbon_2">ISO-14083 algorithm development</li>
+                                <li data-translate="role_carbon_3">Carbon calculation engine</li>
+                            </ul>
+                        </div>
+
+                        <div class="role-card">
+                            <div class="role-icon">🤖</div>
+                            <h4 class="role-title" data-translate="role_ai">AI Engineer</h4>
+                            <ul class="role-responsibilities">
+                                <li data-translate="role_ai_1">AI inference model development</li>
+                                <li data-translate="role_ai_2">Edge computing optimization</li>
+                                <li data-translate="role_ai_3">Driver safety AI systems</li>
+                            </ul>
+                        </div>
+
+                        <div class="role-card">
+                            <div class="role-icon">⚙️</div>
+                            <h4 class="role-title" data-translate="role_hw">Hardware Engineer</h4>
+                            <ul class="role-responsibilities">
+                                <li data-translate="role_hw_1">DTG hardware design</li>
+                                <li data-translate="role_hw_2">Sensor integration</li>
+                                <li data-translate="role_hw_3">Manufacturing & quality control</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Software Team -->
+                <div class="role-category">
+                    <h3 class="role-category-title" data-translate="team_software">Software Development</h3>
+                    <div class="role-grid">
+                        <div class="role-card">
+                            <div class="role-icon">💻</div>
+                            <h4 class="role-title" data-translate="role_backend">Backend Developer</h4>
+                            <ul class="role-responsibilities">
+                                <li data-translate="role_backend_1">Carbon API development</li>
+                                <li data-translate="role_backend_2">Cloud infrastructure</li>
+                                <li data-translate="role_backend_3">Database architecture</li>
+                            </ul>
+                        </div>
+
+                        <div class="role-card">
+                            <div class="role-icon">🎨</div>
+                            <h4 class="role-title" data-translate="role_frontend">Frontend Developer</h4>
+                            <ul class="role-responsibilities">
+                                <li data-translate="role_frontend_1">eFuel dashboard development</li>
+                                <li data-translate="role_frontend_2">Real-time data visualization</li>
+                                <li data-translate="role_frontend_3">UX/UI design implementation</li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="team-expertise">
+                <h3 class="expertise-title" data-translate="team_expertise_title">Collective Expertise</h3>
+                <div class="expertise-tags">
+                    <span class="expertise-tag" data-translate="expertise_iso">ISO-14083 International Standards</span>
+                    <span class="expertise-tag" data-translate="expertise_ai">AI & Machine Learning</span>
+                    <span class="expertise-tag" data-translate="expertise_carbon">Carbon Emission Calculation</span>
+                    <span class="expertise-tag" data-translate="expertise_logistics">Logistics & Transportation</span>
+                    <span class="expertise-tag" data-translate="expertise_iot">IoT & Embedded Systems</span>
+                    <span class="expertise-tag" data-translate="expertise_cloud">Cloud Architecture</span>
+                    <span class="expertise-tag" data-translate="expertise_hardware">Hardware Design & Manufacturing</span>
+                    <span class="expertise-tag" data-translate="expertise_govt">Government R&D Programs</span>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- AI Transformation Section -->
     <section class="transformation-section" id="transformation">
         <div class="section-container">
@@ -952,7 +3117,119 @@
             </div>
         </div>
     </section>
-    
+
+    <!-- Technology Section -->
+    <section class="technology-section" id="technology">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label" data-translate="technology_label">CORE TECHNOLOGY</span>
+                <h2 class="section-title" data-translate="technology_title">Cutting-Edge AI & API Technology</h2>
+                <p class="section-description" data-translate="technology_description">
+                    World-leading AI technology and international standard carbon measurement API<br>
+                    Creating sustainable logistics through innovation
+                </p>
+            </div>
+
+            <!-- GLEC AI Technology -->
+            <div class="tech-block">
+                <div class="tech-header">
+                    <h3 class="tech-title" data-translate="glec_ai_title">GLEC AI - 20B LLM Real-time Inference Engine</h3>
+                    <span class="tech-badge" data-translate="ai_safety_badge">AI SAFETY</span>
+                </div>
+
+                <!-- GLEC AI Demo Video -->
+                <div class="tech-video-container" style="width: 700px; height: 700px; max-width: 100%; margin: 20px auto; padding: 20px; box-sizing: border-box; display: flex; align-items: center; justify-content: center;">
+                    <video class="tech-video" style="width: 700px; height: 700px; max-width: 100%; max-height: 100%; object-fit: contain; display: block;" autoplay muted loop playsinline preload="auto" id="glecAiVideo">
+                        <source src="assets/videos/GLEC_AI_video.mov" type="video/quicktime">
+                        <source src="assets/videos/GLEC_AI_video.mov" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
+                <div class="tech-grid">
+                    <div class="tech-card">
+                        <h4>20B Parameter LLM</h4>
+                        <p>4-bit quantization for real-time inference with embedded weights from accident-prone area datasets (weather, time, location patterns)</p>
+                    </div>
+
+                    <div class="tech-card">
+                        <h4>Real-time Data Integration</h4>
+                        <p>CAN Protocol data, GPS tracking, live traffic incidents, and congestion information processed as real-time embedding weights</p>
+                    </div>
+
+                    <div class="tech-card">
+                        <h4>Vehicle Context Protocol (VCP)</h4>
+                        <p>Proprietary data integration standard for analog truck sensors, enabling extended embedding weights from legacy vehicle systems</p>
+                    </div>
+
+                    <div class="tech-card">
+                        <h4>Urgency-based Inference</h4>
+                        <p>Context-aware AI that prioritizes safety and carbon reduction with differential sensitivity, delivered through real-time voice agent</p>
+                    </div>
+                </div>
+
+                <div class="tech-stats">
+                    <div class="stat-item">
+                        <span class="stat-number">40%</span>
+                        <span class="stat-label">Accident Reduction</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">20B</span>
+                        <span class="stat-label">Parameters</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number"><100ms</span>
+                        <span class="stat-label">Response Time</span>
+                    </div>
+                </div>
+            </div>
+
+            <!-- GLEC API Technology -->
+            <div class="tech-block">
+                <div class="tech-header">
+                    <h3 class="tech-title">GLEC API - ISO-14083 Carbon Measurement Platform</h3>
+                    <span class="tech-badge">CARBON NEUTRAL</span>
+                </div>
+
+                <!-- GLEC API Demo Video -->
+                <div class="tech-video-container" style="width: 700px; height: 700px; max-width: 100%; margin: 20px auto; padding: 20px; box-sizing: border-box; display: flex; align-items: center; justify-content: center;">
+                    <video class="tech-video" style="width: 700px; height: 700px; max-width: 100%; max-height: 100%; object-fit: contain; display: block;" autoplay muted loop playsinline preload="auto" id="glecApiVideo">
+                        <source src="assets/videos/GLEC_API_video.mov" type="video/quicktime">
+                        <source src="assets/videos/GLEC_API_video.mov" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+
+                <div class="tech-grid">
+                    <div class="tech-card">
+                        <h4>ISO-14083 Standard</h4>
+                        <p>Complete API implementation of international freight carbon emission measurement standard for global compliance</p>
+                    </div>
+
+                    <div class="tech-card">
+                        <h4>Real-time Quantification</h4>
+                        <p>Instant carbon footprint calculation enabling eco-driving awareness and behavior modification for drivers</p>
+                    </div>
+
+                    <div class="tech-card">
+                        <h4>Supply Chain Reporting</h4>
+                        <p>Enterprise-grade carbon emission reporting for regulatory compliance and sustainability initiatives</p>
+                    </div>
+
+                    <div class="tech-card">
+                        <h4>Carbon Credit Infrastructure</h4>
+                        <p>Core platform for transport carbon credit issuance, enabling monetization of emission reductions</p>
+                    </div>
+                </div>
+
+                <div class="tech-integration">
+                    <h4>Seamless DTG Integration</h4>
+                    <p>GLEC API works in perfect harmony with GLEC DTG hardware, creating a comprehensive ecosystem for sustainable logistics transformation. Real-time data from vehicles flows through our API, providing actionable insights for both drivers and fleet managers.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <!-- Call to Action Section -->
     <section class="cta-section" id="cta">
         <div class="cta-content">
@@ -966,8 +3243,110 @@
             </div>
         </div>
     </section>
-    
-    
+
+    <!-- CES 2026 Section -->
+    <section class="ces-section" id="ces2026">
+        <div class="ces-content">
+            <!-- Enhanced CES 2026 Logo -->
+            <div class="ces-logo">
+                <svg viewBox="0 0 300 80" style="width: 100%; height: auto;">
+                    <defs>
+                        <linearGradient id="cesGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                            <stop offset="0%" style="stop-color:#FF0099;stop-opacity:1" />
+                            <stop offset="50%" style="stop-color:#00FFFF;stop-opacity:1" />
+                            <stop offset="100%" style="stop-color:#FFFF00;stop-opacity:1" />
+                        </linearGradient>
+                        <filter id="glow">
+                            <feGaussianBlur stdDeviation="3" result="coloredBlur"/>
+                            <feMerge>
+                                <feMergeNode in="coloredBlur"/>
+                                <feMergeNode in="SourceGraphic"/>
+                            </feMerge>
+                        </filter>
+                    </defs>
+                    <!-- Background -->
+                    <rect x="10" y="10" width="280" height="60" fill="rgba(0,0,0,0.8)" rx="12" stroke="url(#cesGradient)" stroke-width="2"/>
+                    <!-- Main CES Text -->
+                    <text x="150" y="45" font-family="Orbitron, Arial, sans-serif" font-size="36" font-weight="bold"
+                          fill="url(#cesGradient)" text-anchor="middle" filter="url(#glow)">CES 2026</text>
+                    <!-- Subtitle -->
+                    <text x="150" y="60" font-family="Arial, sans-serif" font-size="10" font-weight="600"
+                          fill="#FFFFFF" text-anchor="middle" opacity="0.9">CONSUMER ELECTRONICS SHOW</text>
+                    <!-- Decorative elements -->
+                    <circle cx="30" cy="40" r="3" fill="#00FFFF" opacity="0.8"/>
+                    <circle cx="270" cy="40" r="3" fill="#FF0099" opacity="0.8"/>
+                    <rect x="25" y="20" width="250" height="1" fill="url(#cesGradient)" opacity="0.6"/>
+                    <rect x="25" y="59" width="250" height="1" fill="url(#cesGradient)" opacity="0.6"/>
+                </svg>
+            </div>
+
+            <h2 class="ces-title" data-translate="ces_title">Meet Us at CES 2026</h2>
+            <p class="ces-subtitle" data-translate="ces_subtitle">Experience the Future of AI Transportation</p>
+            <p class="ces-description" data-translate="ces_description">
+                Join GLEC at the world's most influential tech event. Discover our innovative AI DTG solutions
+                and see how we're transforming the transportation industry with cutting-edge artificial intelligence.
+            </p>
+
+            <div class="ces-info">
+                <div class="ces-info-item">
+                    <div class="ces-info-label" data-translate="ces_dates_label">Dates</div>
+                    <div class="ces-info-value" data-translate="ces_dates_value">January 6-9, 2026</div>
+                </div>
+                <div class="ces-info-item">
+                    <div class="ces-info-label" data-translate="ces_location_label">Location</div>
+                    <div class="ces-info-value" data-translate="ces_location_value">Las Vegas, Nevada</div>
+                </div>
+                <div class="ces-info-item">
+                    <div class="ces-info-label" data-translate="ces_venue_label">Venue</div>
+                    <div class="ces-info-value" data-translate="ces_venue_value">Eureka Hall</div>
+                </div>
+                <div class="ces-info-item">
+                    <div class="ces-info-label" data-translate="ces_booth_label">Booth</div>
+                    <div class="ces-info-value" data-translate="ces_booth_value">Visit Us Soon</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CES 2026 Invitation Section -->
+    <section class="ces-invitation-section">
+        <div class="ces-invitation-content">
+            <h2 class="ces-invitation-title" data-translate="ces_invitation_title">Get Your CES 2026 Invitation</h2>
+
+            <form class="ces-invitation-form" id="cesInvitationForm">
+                <div class="ces-form-group">
+                    <label for="cesEmail" class="ces-form-label" data-translate="ces_email_label">Your Email Address</label>
+                    <input
+                        type="email"
+                        id="cesEmail"
+                        name="email"
+                        class="ces-form-input"
+                        data-translate-placeholder="ces_email_placeholder"
+                        placeholder="Enter your email to receive CES 2026 invitation"
+                        required
+                    >
+                </div>
+
+                <button type="submit" class="ces-submit-btn" data-translate="ces_submit_btn">
+                    Request Invitation
+                </button>
+            </form>
+        </div>
+    </section>
+
+    <!-- CES Popup Modal -->
+    <div class="ces-popup" id="cesPopup">
+        <div class="ces-popup-content">
+            <h3 class="ces-popup-title">Invitation Requested!</h3>
+            <p class="ces-popup-message">
+                Thank you for your interest in meeting GLEC at CES 2026.
+                We'll send you the invitation details soon.
+            </p>
+            <button class="ces-popup-close" onclick="closeCesPopup()">Close</button>
+        </div>
+    </div>
+
+
     <!-- Footer -->
     <footer class="footer">
         <div class="footer-content">
@@ -983,6 +3362,7 @@
         // Multi-language Support
         const translations = {
             ko: {
+                // Navigation
                 nav_home: "Home",
                 nav_transformation: "AI Transformation",
                 nav_dtg: "AI DTG", 
@@ -1011,7 +3391,221 @@
                 data_visualization_title: "실시간 데이터 시각화",
                 data_visualization_description: "직관적인 인터페이스로 운전자와 관리자가 모든 정보를 한눈에 파악할 수 있습니다.<br>차량 위치, 운행 경로, 연료 소비, 탄소 배출량 등 모든 데이터를<br>실시간으로 모니터링하고 분석합니다.",
                 voice_agent_title: "AI 음성 대화 에이전트",
-                voice_agent_description: "실시간 AI 음성 인식 및 대화 시스템으로 운전자에게 즉각적인 긴급 안전 경보를<br>제공합니다. 위험 상황 감지 시 음성으로 경고하여 사고율을 20% 이상 감소시키고,<br>운전자와의 자연스러운 대화를 통해 안전 운행을 지원합니다."
+                voice_agent_description: "실시간 AI 음성 인식 및 대화 시스템으로 운전자에게 즉각적인 긴급 안전 경보를<br>제공합니다. 위험 상황 감지 시 음성으로 경고하여 사고율을 20% 이상 감소시키고,<br>운전자와의 자연스러운 대화를 통해 안전 운행을 지원합니다.",
+                // Technology Section
+                technology_label: "핵심 기술",
+                technology_title: "최첨단 AI & API 기술",
+                technology_description: "세계 최고 수준의 AI 기술과 국제표준 탄소 측정 API<br>혁신을 통한 지속가능한 물류 구현",
+                glec_ai_title: "GLEC AI - 20B LLM 실시간 추론 엔진",
+                ai_safety_badge: "AI 안전",
+                // CES 2026 Section
+                nav_technology: "CORE TECHNOLOGY",
+                nav_contact: "연락처",
+                nav_ces2026: "CES 2026",
+                ces_title: "CES 2026에서 만나요",
+                ces_subtitle: "AI 운송의 미래를 경험하세요",
+                ces_description: "세계에서 가장 영향력 있는 기술 이벤트에서 GLEC을 만나보세요. 혁신적인 AI DTG 솔루션을 발견하고 첨단 인공지능으로 운송업계를 어떻게 변화시키고 있는지 확인해보세요.",
+                ces_dates_label: "일정",
+                ces_dates_value: "2026년 1월 6-9일",
+                ces_location_label: "장소",
+                ces_location_value: "네바다주 라스베가스",
+                ces_venue_label: "회장",
+                ces_venue_value: "유레카 홀",
+                ces_booth_label: "부스",
+                ces_booth_value: "곧 방문 예정",
+                ces_invitation_title: "CES 2026 초대장 받기",
+                ces_email_label: "이메일 주소",
+                ces_email_placeholder: "CES 2026 초대장을 받을 이메일을 입력하세요",
+                ces_submit_btn: "초대장 요청",
+                // Company Overview
+                company_label: "회사 소개",
+                company_title: "회사 개요",
+                founded_label: "설립",
+                founded_detail: "스타트업",
+                location_label: "위치",
+                location_value: "대한민국",
+                location_detail: "서울 본사",
+                specialization_label: "전문 분야",
+                specialization_value: "녹색 물류",
+                specialization_detail: "ISO-14083",
+                vision_title: "비전",
+                vision_text: "녹색 물류 서비스 구축을 지원할 국내 유일 '물류 국제표준 테크 기업'",
+                mission_title: "미션",
+                mission_text: "국제표준 기반 기술과 컨설팅을 통해 지속가능물류 생태계를 구축하고 탄소 선순환 구조를 완성합니다",
+                values_title: "핵심 가치",
+                value_standards: "국제 표준",
+                value_standards_desc: "ISO-14083 준수 솔루션",
+                value_innovation: "혁신",
+                value_innovation_desc: "AI 탑재 차세대 DTG",
+                value_sustainability: "지속가능성",
+                value_sustainability_desc: "녹색 물류 전환",
+                value_partnership: "파트너십",
+                value_partnership_desc: "글로벌 협력 네트워크",
+                // Solutions Section
+                solutions_label: "솔루션",
+                solutions_title: "솔루션 및 개발 현황",
+                solutions_description: "개발 중인 최첨단 녹색 물류 솔루션",
+                status_development: "개발 중",
+                status_active: "서비스 중",
+                launch_march_2026: "출시: 2026년 3월",
+                efuel_title: "이퓨얼",
+                efuel_subtitle: "화물차 탄소배출량 모니터링 솔루션",
+                tips_program: "🏆 TIPS R&D 지원사업 2024",
+                efuel_feature_1: "실시간 탄소 배출량 모니터링",
+                efuel_feature_2: "Scope 3 배출량 관리",
+                efuel_feature_3: "ISO-14083 국제표준 준수",
+                efuel_feature_4: "WMS/TMS 시스템 연동",
+                efuel_feature_5: "CDP, SBT, CBAM 자동 보고",
+                dtg_subtitle_full: "디지털 운행기록장치",
+                env_program: "🏆 환경기술사업화 지원사업 2025",
+                dtg_feature_1: "차세대 차량 운행기록장치",
+                dtg_feature_2: "LTE 기반 자동 데이터 수집",
+                dtg_feature_3: "실시간 탄소배출량 측정",
+                dtg_feature_4: "터치 스마트 디스플레이",
+                dtg_feature_5: "Qualcomm SC200E AP (8GB RAM + 32GB HDD)",
+                api_subtitle: "물류 탄소 계산 API",
+                api_feature_1: "탄소 계산용 48개 API",
+                api_feature_2: "0.5초 응답 속도",
+                api_feature_3: "ISO-14083 표준 엔진",
+                api_feature_4: "화주/운송사 시스템 연동",
+                api_feature_5: "모든 운송 수단 지원",
+                // Certifications Section
+                cert_label: "성과",
+                cert_title: "정부 지원 및 인증",
+                govt_funding_title: "정부 지원 및 수상",
+                cert_tips: "TIPS R&D 지원사업",
+                cert_tips_desc: "중소벤처기업부",
+                cert_logistics: "물류 스타트업",
+                cert_logistics_desc: "국토교통부",
+                cert_data: "데이터사업자",
+                cert_data_desc: "과학기술정보통신부",
+                cert_env: "환경기술사업화 지원사업",
+                cert_env_desc: "한국환경산업기술원",
+                cert_opinet: "오피넷 스타트업",
+                cert_opinet_desc: "스타트업 지정",
+                tech_achievements_title: "기술 성과",
+                patents_filed: "특허 출원",
+                patents_registered: "특허 등록",
+                copyright: "저작권 등록",
+                iso_translation: "ISO-14083 한글 번역본",
+                wtw_research: "한국형 WTW 배출계수 R&D",
+                // Timeline Section
+                timeline_label: "로드맵",
+                timeline_title: "개발 타임라인",
+                timeline_description: "설립부터 녹색 물류 혁신까지의 여정",
+                timeline_2023_title: "GLEC Inc. 설립",
+                timeline_2023_desc: "대한민국 물류 탄소 전문 기술 스타트업으로 설립",
+                timeline_2023_highlight1: "🏢 회사 설립",
+                timeline_2023_highlight2: "🎯 비전 수립",
+                timeline_2024_title: "TIPS R&D 지원사업 선정",
+                timeline_2024_desc: "중소벤처기업부 TIPS R&D 지원사업 선정",
+                timeline_2024_highlight1: "🏆 TIPS R&D 지원사업",
+                timeline_2024_highlight2: "🌱 이퓨얼 개발 착수",
+                timeline_2024_highlight3: "🚀 다수 인증 획득",
+                timeline_2025_title: "환경기술사업화 지원사업 선정",
+                timeline_2025_desc: "한국환경산업기술원 환경기술사업화 지원사업 선정",
+                timeline_2025_highlight1: "🏆 환경기술사업화 지원사업",
+                timeline_2025_highlight2: "🚛 GLEC DTG 개발 착수",
+                timeline_2026_title: "제품 출시",
+                timeline_2026_desc: "이퓨얼 및 GLEC DTG 솔루션 공식 출시",
+                timeline_2026_highlight1: "🎉 이퓨얼 출시 (2026년 3월)",
+                timeline_2026_highlight2: "🎉 GLEC DTG 출시 (2026년 3월)",
+                timeline_2026_highlight3: "🌍 시장 진입",
+                timeline_status_development: "개발 단계",
+                // Technical Differentiation Section
+                tech_diff_label: "기술",
+                tech_diff_title: "기술적 차별성",
+                tech_diff_description: "녹색 물류 기술에서의 경쟁 우위",
+                tech_badge_iso: "국제 표준",
+                tech_iso_title: "ISO-14083 국제 표준",
+                tech_iso_desc: "ISO-14083 국제표준을 준수하는 국내 유일의 물류 탄소배출량 계산 솔루션",
+                tech_iso_feature1: "국경 간 물류를 위한 글로벌 표준 준수",
+                tech_iso_feature2: "공식 ISO-14083 한글 번역 기여",
+                tech_iso_feature3: "WTW (Well-to-Wheel) 분석 역량",
+                tech_iso_feature4: "CDP, SBT, CBAM 보고 자동화",
+                tech_badge_ai: "AI 혁신",
+                tech_ai_title: "AI 탑재 디지털 운행기록장치",
+                tech_ai_desc: "안전 및 탄소 모니터링을 위한 AI 통합 차세대 DTG",
+                tech_ai_feature1: "실시간 AI 추론 (운전자 피로도, 졸음 감지)",
+                tech_ai_feature2: "Qualcomm SC200E 칩셋 엣지 컴퓨팅",
+                tech_ai_feature3: "동시 탄소배출량 측정",
+                tech_ai_feature4: "5G/LTE 클라우드 동기화",
+                tech_badge_performance: "고성능",
+                tech_perf_title: "실시간 탄소 모니터링",
+                tech_perf_desc: "정밀한 탄소 계산과 초고속 API 응답",
+                tech_perf_feature1: "평균 0.5초 API 응답 시간",
+                tech_perf_feature2: "48개 이상의 전문 탄소 계산 API",
+                tech_perf_feature3: "실시간 WMS/TMS 연동",
+                tech_perf_feature4: "모든 운송 수단 지원 (도로, 해상, 항공, 철도)",
+                tech_badge_govt: "정부 지원",
+                tech_govt_title: "정부 R&D 지원",
+                tech_govt_desc: "다수의 정부 프로그램을 통해 검증된 기술",
+                tech_govt_feature1: "TIPS R&D 지원사업 (중소벤처기업부)",
+                tech_govt_feature2: "환경기술사업화 지원사업 (KEITI)",
+                tech_govt_feature3: "특허 출원 8건 이상, 등록 1건",
+                tech_govt_feature4: "데이터사업자 인증",
+                tech_badge_research: "R&D 리더십",
+                tech_research_title: "한국형 WTW 배출계수",
+                tech_research_desc: "한국형 배출계수 분야의 선도적 연구",
+                tech_research_feature1: "한국형 WTW 배출계수 R&D",
+                tech_research_feature2: "현지화된 탄소 계산 정확도",
+                tech_research_feature3: "표준 관련 정부 협력",
+                tech_research_feature4: "학술 연구 파트너십",
+                tech_badge_integration: "완전 통합",
+                tech_integration_title: "End-to-End 솔루션",
+                tech_integration_desc: "측정부터 보고까지 완전한 탄소 관리",
+                tech_integration_feature1: "하드웨어 (DTG) + 소프트웨어 (eFuel + API)",
+                tech_integration_feature2: "데이터 수집부터 국제 보고까지",
+                tech_integration_feature3: "화주 및 운송사 플랫폼 통합",
+                tech_integration_feature4: "클라우드 기반 중앙 관리",
+                // Team Section
+                team_label: "우리 팀",
+                team_title: "팀 구성",
+                team_description: "녹색 물류 혁신을 주도하는 전문가 팀",
+                team_stat_members: "팀원",
+                team_stat_experience: "평균 경력 (년)",
+                team_stat_phds: "박사",
+                team_stat_dedicated: "녹색 물류 전담",
+                team_leadership: "리더십",
+                role_ceo: "대표이사",
+                role_ceo_1: "전략 방향 및 비전",
+                role_ceo_2: "정부 관계 및 파트너십",
+                role_ceo_3: "사업 개발",
+                role_cto: "기술이사",
+                role_cto_1: "기술 전략 및 R&D",
+                role_cto_2: "ISO-14083 준수 감독",
+                role_cto_3: "기술 아키텍처",
+                team_rd: "연구 개발",
+                role_carbon: "탄소배출 전문가",
+                role_carbon_1: "WTW 배출계수 연구",
+                role_carbon_2: "ISO-14083 알고리즘 개발",
+                role_carbon_3: "탄소 계산 엔진",
+                role_ai: "AI 엔지니어",
+                role_ai_1: "AI 추론 모델 개발",
+                role_ai_2: "엣지 컴퓨팅 최적화",
+                role_ai_3: "운전자 안전 AI 시스템",
+                role_hw: "하드웨어 엔지니어",
+                role_hw_1: "DTG 하드웨어 설계",
+                role_hw_2: "센서 통합",
+                role_hw_3: "제조 및 품질 관리",
+                team_software: "소프트웨어 개발",
+                role_backend: "백엔드 개발자",
+                role_backend_1: "탄소 API 개발",
+                role_backend_2: "클라우드 인프라",
+                role_backend_3: "데이터베이스 아키텍처",
+                role_frontend: "프론트엔드 개발자",
+                role_frontend_1: "이퓨얼 대시보드 개발",
+                role_frontend_2: "실시간 데이터 시각화",
+                role_frontend_3: "UX/UI 디자인 구현",
+                team_expertise_title: "집단 전문성",
+                expertise_iso: "ISO-14083 국제 표준",
+                expertise_ai: "AI 및 머신러닝",
+                expertise_carbon: "탄소배출량 계산",
+                expertise_logistics: "물류 및 운송",
+                expertise_iot: "IoT 및 임베디드 시스템",
+                expertise_cloud: "클라우드 아키텍처",
+                expertise_hardware: "하드웨어 설계 및 제조",
+                expertise_govt: "정부 R&D 프로그램"
             },
             en: {
                 nav_home: "Home",
@@ -1042,7 +3636,221 @@
                 data_visualization_title: "Real-time Data Visualization",
                 data_visualization_description: "Intuitive interface allows drivers and managers to grasp all information at a glance.<br>Monitor and analyze all data including vehicle location, route, fuel consumption,<br>carbon emissions in real-time.",
                 voice_agent_title: "AI Voice Conversational Agent",
-                voice_agent_description: "Real-time AI voice recognition and conversation system provides immediate emergency safety alerts<br>to drivers. Voice warnings during hazardous situations reduce accident rates by over 20%,<br>supporting safe driving through natural conversations with drivers."
+                voice_agent_description: "Real-time AI voice recognition and conversation system provides immediate emergency safety alerts<br>to drivers. Voice warnings during hazardous situations reduce accident rates by over 20%,<br>supporting safe driving through natural conversations with drivers.",
+                // Technology Section
+                technology_label: "Core Technology",
+                technology_title: "Cutting-Edge AI & API Technology",
+                technology_description: "World-leading AI technology and international standard carbon measurement API<br>Creating sustainable logistics through innovation",
+                glec_ai_title: "GLEC AI - 20B LLM Real-time Inference Engine",
+                ai_safety_badge: "AI Safety",
+                // CES 2026 Section
+                nav_technology: "CORE TECHNOLOGY",
+                nav_contact: "Contact",
+                nav_ces2026: "CES 2026",
+                ces_title: "Meet Us at CES 2026",
+                ces_subtitle: "Experience the Future of AI Transportation",
+                ces_description: "Join GLEC at the world's most influential tech event. Discover our innovative AI DTG solutions and see how we're transforming the transportation industry with cutting-edge artificial intelligence.",
+                ces_dates_label: "Dates",
+                ces_dates_value: "January 6-9, 2026",
+                ces_location_label: "Location",
+                ces_location_value: "Las Vegas, Nevada",
+                ces_venue_label: "Venue",
+                ces_venue_value: "Eureka Hall",
+                ces_booth_label: "Booth",
+                ces_booth_value: "Visit Us Soon",
+                ces_invitation_title: "Get Your CES 2026 Invitation",
+                ces_email_label: "Your Email Address",
+                ces_email_placeholder: "Enter your email to receive CES 2026 invitation",
+                ces_submit_btn: "Request Invitation",
+                // Company Overview
+                company_label: "ABOUT US",
+                company_title: "Company Overview",
+                founded_label: "Founded",
+                founded_detail: "Startup",
+                location_label: "Location",
+                location_value: "South Korea",
+                location_detail: "Seoul HQ",
+                specialization_label: "Specialization",
+                specialization_value: "Green Logistics",
+                specialization_detail: "ISO-14083",
+                vision_title: "Our Vision",
+                vision_text: "Korea's only logistics international standard tech company supporting green logistics services",
+                mission_title: "Our Mission",
+                mission_text: "Building a sustainable logistics ecosystem and establishing a carbon circulation structure through international standard-based technology and consulting",
+                values_title: "Core Values",
+                value_standards: "International Standards",
+                value_standards_desc: "ISO-14083 compliant solutions",
+                value_innovation: "Innovation",
+                value_innovation_desc: "Next-gen DTG with AI capabilities",
+                value_sustainability: "Sustainability",
+                value_sustainability_desc: "Green logistics transformation",
+                value_partnership: "Partnership",
+                value_partnership_desc: "Global collaboration network",
+                // Solutions Section
+                solutions_label: "OUR SOLUTIONS",
+                solutions_title: "Solutions & Development Status",
+                solutions_description: "Cutting-edge green logistics solutions under development",
+                status_development: "Under Development",
+                status_active: "In Service",
+                launch_march_2026: "Launch: March 2026",
+                efuel_title: "eFuel",
+                efuel_subtitle: "Freight Carbon Monitoring Solution",
+                tips_program: "🏆 TIPS R&D Program 2024",
+                efuel_feature_1: "Real-time carbon emission monitoring",
+                efuel_feature_2: "Scope 3 emissions management",
+                efuel_feature_3: "ISO-14083 standard compliance",
+                efuel_feature_4: "WMS/TMS system integration",
+                efuel_feature_5: "Automated CDP, SBT, CBAM reporting",
+                dtg_subtitle_full: "Digital Tachograph",
+                env_program: "🏆 Environmental Tech Program 2025",
+                dtg_feature_1: "Next-gen vehicle operation recorder",
+                dtg_feature_2: "LTE-based automatic data collection",
+                dtg_feature_3: "Real-time carbon emission measurement",
+                dtg_feature_4: "Touch smart display interface",
+                dtg_feature_5: "Qualcomm SC200E AP (8GB RAM + 32GB HDD)",
+                api_subtitle: "Logistics Carbon Calculation API",
+                api_feature_1: "48 APIs for carbon calculation",
+                api_feature_2: "0.5 second response time",
+                api_feature_3: "ISO-14083 standard engine",
+                api_feature_4: "Shipper/carrier system integration",
+                api_feature_5: "Supports all transport modes",
+                // Certifications Section
+                cert_label: "ACHIEVEMENTS",
+                cert_title: "Government Support & Certifications",
+                govt_funding_title: "Government Funding & Awards",
+                cert_tips: "TIPS R&D Program",
+                cert_tips_desc: "Ministry of SMEs and Startups",
+                cert_logistics: "Logistics Startup",
+                cert_logistics_desc: "Ministry of Land, Infrastructure and Transport",
+                cert_data: "Data Business Operator",
+                cert_data_desc: "Ministry of Science and ICT",
+                cert_env: "Environmental Tech Program",
+                cert_env_desc: "Korea Environmental Industry & Technology Institute",
+                cert_opinet: "O'Pinnet Startup",
+                cert_opinet_desc: "Startup Designation",
+                tech_achievements_title: "Technical Achievements",
+                patents_filed: "Patents Filed",
+                patents_registered: "Patent Registered",
+                copyright: "Copyright Registered",
+                iso_translation: "ISO-14083 Korean Translation",
+                wtw_research: "Korea WTW Emission Factor R&D",
+                // Timeline Section
+                timeline_label: "ROADMAP",
+                timeline_title: "Development Timeline",
+                timeline_description: "Our journey from foundation to innovation in green logistics",
+                timeline_2023_title: "GLEC Inc. Founded",
+                timeline_2023_desc: "Established as Korea's specialized logistics carbon tech startup",
+                timeline_2023_highlight1: "🏢 Company Establishment",
+                timeline_2023_highlight2: "🎯 Vision Setting",
+                timeline_2024_title: "TIPS R&D Program Selection",
+                timeline_2024_desc: "Selected by Ministry of SMEs and Startups for TIPS R&D Program",
+                timeline_2024_highlight1: "🏆 TIPS R&D Program",
+                timeline_2024_highlight2: "🌱 eFuel Development Started",
+                timeline_2024_highlight3: "🚀 Multiple Certifications",
+                timeline_2025_title: "Environmental Tech Program Selection",
+                timeline_2025_desc: "Selected by Korea Environmental Industry & Technology Institute",
+                timeline_2025_highlight1: "🏆 Environmental Tech Program",
+                timeline_2025_highlight2: "🚛 GLEC DTG Development Started",
+                timeline_2026_title: "Product Launch",
+                timeline_2026_desc: "Official launch of eFuel and GLEC DTG solutions",
+                timeline_2026_highlight1: "🎉 eFuel Launch (March 2026)",
+                timeline_2026_highlight2: "🎉 GLEC DTG Launch (March 2026)",
+                timeline_2026_highlight3: "🌍 Market Entry",
+                timeline_status_development: "Development Phase",
+                // Technical Differentiation Section
+                tech_diff_label: "TECHNOLOGY",
+                tech_diff_title: "Technical Differentiation",
+                tech_diff_description: "Our competitive advantages in green logistics technology",
+                tech_badge_iso: "INTERNATIONAL STANDARD",
+                tech_iso_title: "ISO-14083 International Standard",
+                tech_iso_desc: "Korea's only logistics carbon emission calculation solution complying with ISO-14083 international standard",
+                tech_iso_feature1: "Global standard compliance for cross-border logistics",
+                tech_iso_feature2: "Official ISO-14083 Korean translation contributor",
+                tech_iso_feature3: "Well-to-Wheel (WTW) analysis capability",
+                tech_iso_feature4: "CDP, SBT, CBAM reporting automation",
+                tech_badge_ai: "AI INNOVATION",
+                tech_ai_title: "AI-Powered Digital Tachograph",
+                tech_ai_desc: "Next-generation DTG with integrated AI for safety and carbon monitoring",
+                tech_ai_feature1: "Real-time AI inference (driver fatigue, drowsiness detection)",
+                tech_ai_feature2: "Edge computing with Qualcomm SC200E chipset",
+                tech_ai_feature3: "Simultaneous carbon emission measurement",
+                tech_ai_feature4: "5G/LTE cloud synchronization",
+                tech_badge_performance: "HIGH PERFORMANCE",
+                tech_perf_title: "Real-time Carbon Monitoring",
+                tech_perf_desc: "Ultra-fast API response with precision carbon calculation",
+                tech_perf_feature1: "0.5 second average API response time",
+                tech_perf_feature2: "48+ specialized carbon calculation APIs",
+                tech_perf_feature3: "Real-time WMS/TMS integration",
+                tech_perf_feature4: "All transport modes supported (road, sea, air, rail)",
+                tech_badge_govt: "GOVERNMENT BACKED",
+                tech_govt_title: "Government-Backed R&D",
+                tech_govt_desc: "Validated technology through multiple government programs",
+                tech_govt_feature1: "TIPS R&D Program (Ministry of SMEs)",
+                tech_govt_feature2: "Environmental Tech Program (KEITI)",
+                tech_govt_feature3: "8+ patents filed, 1 registered",
+                tech_govt_feature4: "Data business operator certification",
+                tech_badge_research: "R&D LEADERSHIP",
+                tech_research_title: "Korea WTW Emission Factor",
+                tech_research_desc: "Pioneering research in Korea-specific emission factors",
+                tech_research_feature1: "Korea WTW emission factor R&D",
+                tech_research_feature2: "Localized carbon calculation accuracy",
+                tech_research_feature3: "Government collaboration on standards",
+                tech_research_feature4: "Academic research partnerships",
+                tech_badge_integration: "FULL INTEGRATION",
+                tech_integration_title: "End-to-End Solution",
+                tech_integration_desc: "Complete carbon management from measurement to reporting",
+                tech_integration_feature1: "Hardware (DTG) + Software (eFuel + API)",
+                tech_integration_feature2: "Data collection to international reporting",
+                tech_integration_feature3: "Shipper & carrier platform integration",
+                tech_integration_feature4: "Cloud-based centralized management",
+                // Team Section
+                team_label: "OUR TEAM",
+                team_title: "Team Composition",
+                team_description: "Expert team driving green logistics innovation",
+                team_stat_members: "Team Members",
+                team_stat_experience: "Years Avg. Experience",
+                team_stat_phds: "PhDs",
+                team_stat_dedicated: "Dedicated to Green Logistics",
+                team_leadership: "Leadership",
+                role_ceo: "CEO",
+                role_ceo_1: "Strategic direction & vision",
+                role_ceo_2: "Government relations & partnerships",
+                role_ceo_3: "Business development",
+                role_cto: "CTO",
+                role_cto_1: "Technology strategy & R&D",
+                role_cto_2: "ISO-14083 compliance oversight",
+                role_cto_3: "Technical architecture",
+                team_rd: "Research & Development",
+                role_carbon: "Carbon Emission Specialist",
+                role_carbon_1: "WTW emission factor research",
+                role_carbon_2: "ISO-14083 algorithm development",
+                role_carbon_3: "Carbon calculation engine",
+                role_ai: "AI Engineer",
+                role_ai_1: "AI inference model development",
+                role_ai_2: "Edge computing optimization",
+                role_ai_3: "Driver safety AI systems",
+                role_hw: "Hardware Engineer",
+                role_hw_1: "DTG hardware design",
+                role_hw_2: "Sensor integration",
+                role_hw_3: "Manufacturing & quality control",
+                team_software: "Software Development",
+                role_backend: "Backend Developer",
+                role_backend_1: "Carbon API development",
+                role_backend_2: "Cloud infrastructure",
+                role_backend_3: "Database architecture",
+                role_frontend: "Frontend Developer",
+                role_frontend_1: "eFuel dashboard development",
+                role_frontend_2: "Real-time data visualization",
+                role_frontend_3: "UX/UI design implementation",
+                team_expertise_title: "Collective Expertise",
+                expertise_iso: "ISO-14083 International Standards",
+                expertise_ai: "AI & Machine Learning",
+                expertise_carbon: "Carbon Emission Calculation",
+                expertise_logistics: "Logistics & Transportation",
+                expertise_iot: "IoT & Embedded Systems",
+                expertise_cloud: "Cloud Architecture",
+                expertise_hardware: "Hardware Design & Manufacturing",
+                expertise_govt: "Government R&D Programs"
             },
             zh: {
                 nav_home: "主页",
@@ -1073,46 +3881,305 @@
                 data_visualization_title: "实时数据可视化",
                 data_visualization_description: "直观界面让驾驶员和管理员一目了然地掌握所有信息。<br>实时监控和分析包括车辆位置、路线、燃油消耗、<br>碳排放在内的所有数据。",
                 voice_agent_title: "AI语音对话代理",
-                voice_agent_description: "实时AI语音识别和对话系统为驾驶员提供即时紧急安全警报。<br>危险情况下的语音警告可将事故率降低20%以上，<br>通过与驾驶员的自然对话支持安全驾驶。"
+                voice_agent_description: "实时AI语音识别和对话系统为驾驶员提供即时紧急安全警报。<br>危险情况下的语音警告可将事故率降低20%以上，<br>通过与驾驶员的自然对话支持安全驾驶。",
+                // Technology Section
+                technology_label: "核心技术",
+                technology_title: "尖端AI与API技术",
+                technology_description: "世界领先的AI技术与国际标准碳测量API<br>通过创新实现可持续物流",
+                glec_ai_title: "GLEC AI - 200亿参数LLM实时推理引擎",
+                ai_safety_badge: "AI安全",
+                // CES 2026 Section
+                nav_technology: "CORE TECHNOLOGY",
+                nav_contact: "联系我们",
+                nav_ces2026: "CES 2026",
+                ces_title: "CES 2026见面会",
+                ces_subtitle: "体验AI运输的未来",
+                ces_description: "在世界最具影响力的科技盛会中与GLEC相遇。发现我们创新的AI DTG解决方案，了解我们如何通过尖端人工智能技术变革运输行业。",
+                ces_dates_label: "日期",
+                ces_dates_value: "2026年1月6-9日",
+                ces_location_label: "地点",
+                ces_location_value: "内华达州拉斯维加斯",
+                ces_venue_label: "场馆",
+                ces_venue_value: "尤里卡大厅",
+                ces_booth_label: "展位",
+                ces_booth_value: "敬请期待",
+                ces_invitation_title: "获取CES 2026邀请函",
+                ces_email_label: "您的邮箱地址",
+                ces_email_placeholder: "输入邮箱地址以接收CES 2026邀请函",
+                ces_submit_btn: "申请邀请函",
+                // Company Overview
+                company_label: "关于我们",
+                company_title: "公司概况",
+                founded_label: "成立时间",
+                founded_detail: "初创企业",
+                location_label: "地点",
+                location_value: "韩国",
+                location_detail: "首尔总部",
+                specialization_label: "专业领域",
+                specialization_value: "绿色物流",
+                specialization_detail: "ISO-14083",
+                vision_title: "愿景",
+                vision_text: "韩国唯一支持绿色物流服务的物流国际标准技术公司",
+                mission_title: "使命",
+                mission_text: "通过基于国际标准的技术和咨询，构建可持续物流生态系统，完善碳循环结构",
+                values_title: "核心价值观",
+                value_standards: "国际标准",
+                value_standards_desc: "符合ISO-14083的解决方案",
+                value_innovation: "创新",
+                value_innovation_desc: "配备AI的下一代DTG",
+                value_sustainability: "可持续性",
+                value_sustainability_desc: "绿色物流转型",
+                value_partnership: "合作伙伴",
+                value_partnership_desc: "全球合作网络",
+                // Solutions Section
+                solutions_label: "解决方案",
+                solutions_title: "解决方案及开发现状",
+                solutions_description: "开发中的尖端绿色物流解决方案",
+                status_development: "开发中",
+                status_active: "服务中",
+                launch_march_2026: "发布: 2026年3月",
+                efuel_title: "eFuel",
+                efuel_subtitle: "货运碳监测解决方案",
+                tips_program: "🏆 TIPS研发计划 2024",
+                efuel_feature_1: "实时碳排放监测",
+                efuel_feature_2: "Scope 3排放管理",
+                efuel_feature_3: "符合ISO-14083标准",
+                efuel_feature_4: "WMS/TMS系统集成",
+                efuel_feature_5: "CDP、SBT、CBAM自动报告",
+                dtg_subtitle_full: "数字式行车记录仪",
+                env_program: "🏆 环境技术计划 2025",
+                dtg_feature_1: "下一代车辆运行记录仪",
+                dtg_feature_2: "基于LTE的自动数据采集",
+                dtg_feature_3: "实时碳排放测量",
+                dtg_feature_4: "触摸智能显示屏",
+                dtg_feature_5: "Qualcomm SC200E AP (8GB RAM + 32GB HDD)",
+                api_subtitle: "物流碳计算API",
+                api_feature_1: "用于碳计算的48个API",
+                api_feature_2: "0.5秒响应时间",
+                api_feature_3: "ISO-14083标准引擎",
+                api_feature_4: "托运人/承运人系统集成",
+                api_feature_5: "支持所有运输方式",
+                // Certifications Section
+                cert_label: "成就",
+                cert_title: "政府支持与认证",
+                govt_funding_title: "政府资助与奖项",
+                cert_tips: "TIPS研发计划",
+                cert_tips_desc: "中小企业和创业部",
+                cert_logistics: "物流初创企业",
+                cert_logistics_desc: "国土交通部",
+                cert_data: "数据业务运营商",
+                cert_data_desc: "科学技术信息通信部",
+                cert_env: "环境技术计划",
+                cert_env_desc: "韩国环境产业技术院",
+                cert_opinet: "O'Pinnet初创企业",
+                cert_opinet_desc: "初创企业指定",
+                tech_achievements_title: "技术成就",
+                patents_filed: "专利申请",
+                patents_registered: "专利注册",
+                copyright: "版权注册",
+                iso_translation: "ISO-14083韩文翻译",
+                wtw_research: "韩国WTW排放因子研发",
+                // Timeline Section
+                timeline_label: "路线图",
+                timeline_title: "发展时间表",
+                timeline_description: "从创立到绿色物流创新的历程",
+                timeline_2023_title: "GLEC Inc. 成立",
+                timeline_2023_desc: "作为韩国专业物流碳技术初创企业成立",
+                timeline_2023_highlight1: "🏢 公司成立",
+                timeline_2023_highlight2: "🎯 愿景设定",
+                timeline_2024_title: "入选TIPS研发项目",
+                timeline_2024_desc: "入选中小企业部TIPS研发支持项目",
+                timeline_2024_highlight1: "🏆 TIPS研发项目",
+                timeline_2024_highlight2: "🌱 eFuel开发启动",
+                timeline_2024_highlight3: "🚀 多项认证",
+                timeline_2025_title: "入选环境技术商业化项目",
+                timeline_2025_desc: "入选韩国环境产业技术院环境技术商业化支持项目",
+                timeline_2025_highlight1: "🏆 环境技术项目",
+                timeline_2025_highlight2: "🚛 GLEC DTG开发启动",
+                timeline_2026_title: "产品发布",
+                timeline_2026_desc: "eFuel和GLEC DTG解决方案正式发布",
+                timeline_2026_highlight1: "🎉 eFuel发布（2026年3月）",
+                timeline_2026_highlight2: "🎉 GLEC DTG发布（2026年3月）",
+                timeline_2026_highlight3: "🌍 市场进入",
+                timeline_status_development: "开发阶段",
+                // Technical Differentiation Section
+                tech_diff_label: "技术",
+                tech_diff_title: "技术差异化",
+                tech_diff_description: "我们在绿色物流技术方面的竞争优势",
+                tech_badge_iso: "国际标准",
+                tech_iso_title: "ISO-14083国际标准",
+                tech_iso_desc: "韩国唯一符合ISO-14083国际标准的物流碳排放计算解决方案",
+                tech_iso_feature1: "跨境物流全球标准合规",
+                tech_iso_feature2: "官方ISO-14083韩文翻译贡献者",
+                tech_iso_feature3: "WTW（油井到车轮）分析能力",
+                tech_iso_feature4: "CDP、SBT、CBAM报告自动化",
+                tech_badge_ai: "AI创新",
+                tech_ai_title: "AI驱动的数字行车记录仪",
+                tech_ai_desc: "集成AI的下一代DTG，用于安全和碳监控",
+                tech_ai_feature1: "实时AI推理（驾驶员疲劳、困倦检测）",
+                tech_ai_feature2: "Qualcomm SC200E芯片组边缘计算",
+                tech_ai_feature3: "同步碳排放测量",
+                tech_ai_feature4: "5G/LTE云同步",
+                tech_badge_performance: "高性能",
+                tech_perf_title: "实时碳监控",
+                tech_perf_desc: "精确碳计算的超快API响应",
+                tech_perf_feature1: "平均0.5秒API响应时间",
+                tech_perf_feature2: "48个以上专业碳计算API",
+                tech_perf_feature3: "实时WMS/TMS集成",
+                tech_perf_feature4: "支持所有运输模式（公路、海运、航空、铁路）",
+                tech_badge_govt: "政府支持",
+                tech_govt_title: "政府支持的研发",
+                tech_govt_desc: "通过多个政府项目验证的技术",
+                tech_govt_feature1: "TIPS研发项目（中小企业部）",
+                tech_govt_feature2: "环境技术项目（KEITI）",
+                tech_govt_feature3: "申请专利8项以上，注册1项",
+                tech_govt_feature4: "数据业务运营商认证",
+                tech_badge_research: "研发领导力",
+                tech_research_title: "韩国WTW排放因子",
+                tech_research_desc: "韩国特定排放因子的开创性研究",
+                tech_research_feature1: "韩国WTW排放因子研发",
+                tech_research_feature2: "本地化碳计算精度",
+                tech_research_feature3: "标准方面的政府合作",
+                tech_research_feature4: "学术研究伙伴关系",
+                tech_badge_integration: "完全集成",
+                tech_integration_title: "端到端解决方案",
+                tech_integration_desc: "从测量到报告的完整碳管理",
+                tech_integration_feature1: "硬件（DTG）+软件（eFuel + API）",
+                tech_integration_feature2: "数据收集到国际报告",
+                tech_integration_feature3: "托运人和承运人平台集成",
+                tech_integration_feature4: "基于云的集中管理",
+                // Team Section
+                team_label: "我们的团队",
+                team_title: "团队组成",
+                team_description: "推动绿色物流创新的专家团队",
+                team_stat_members: "团队成员",
+                team_stat_experience: "平均经验年限",
+                team_stat_phds: "博士",
+                team_stat_dedicated: "专注于绿色物流",
+                team_leadership: "领导团队",
+                role_ceo: "首席执行官",
+                role_ceo_1: "战略方向和愿景",
+                role_ceo_2: "政府关系和合作伙伴关系",
+                role_ceo_3: "业务发展",
+                role_cto: "首席技术官",
+                role_cto_1: "技术战略和研发",
+                role_cto_2: "ISO-14083合规监督",
+                role_cto_3: "技术架构",
+                team_rd: "研究与开发",
+                role_carbon: "碳排放专家",
+                role_carbon_1: "WTW排放因子研究",
+                role_carbon_2: "ISO-14083算法开发",
+                role_carbon_3: "碳计算引擎",
+                role_ai: "AI工程师",
+                role_ai_1: "AI推理模型开发",
+                role_ai_2: "边缘计算优化",
+                role_ai_3: "驾驶员安全AI系统",
+                role_hw: "硬件工程师",
+                role_hw_1: "DTG硬件设计",
+                role_hw_2: "传感器集成",
+                role_hw_3: "制造和质量控制",
+                team_software: "软件开发",
+                role_backend: "后端开发人员",
+                role_backend_1: "碳API开发",
+                role_backend_2: "云基础设施",
+                role_backend_3: "数据库架构",
+                role_frontend: "前端开发人员",
+                role_frontend_1: "eFuel仪表板开发",
+                role_frontend_2: "实时数据可视化",
+                role_frontend_3: "UX/UI设计实现",
+                team_expertise_title: "集体专业知识",
+                expertise_iso: "ISO-14083国际标准",
+                expertise_ai: "AI和机器学习",
+                expertise_carbon: "碳排放计算",
+                expertise_logistics: "物流和运输",
+                expertise_iot: "物联网和嵌入式系统",
+                expertise_cloud: "云架构",
+                expertise_hardware: "硬件设计和制造",
+                expertise_govt: "政府研发项目"
             }
         };
         
         let currentLang = 'en';
-        
-        // Simple language selector - using window.onclick for global access
-        window.toggleLanguageDropdown = function() {
-            const dropdown = document.getElementById('languageDropdown');
-            dropdown.classList.toggle('active');
-            console.log('Dropdown toggled, active:', dropdown.classList.contains('active'));
-        };
-        
-        window.selectLanguage = function(lang, text) {
-            console.log('Language selected:', lang, text);
-            
-            // Update display
-            document.getElementById('currentLanguage').textContent = text;
-            currentLang = lang;
-            
-            // Update active states
-            document.querySelectorAll('.language-option').forEach(opt => {
-                opt.classList.remove('active');
-            });
-            document.querySelector(`[data-lang="${lang}"]`).classList.add('active');
-            
-            // Translate page
-            translatePage(lang);
-            
-            // Close dropdown
-            document.getElementById('languageDropdown').classList.remove('active');
-        };
-        
-        // Close dropdown when clicking outside
-        document.addEventListener('click', function(e) {
-            const selector = document.querySelector('.language-selector');
-            if (selector && !selector.contains(e.target)) {
-                document.getElementById('languageDropdown').classList.remove('active');
+
+        // Initialize immediately - script is at end of body
+        (function() {
+            console.log('🚀 Initializing language selector...');
+
+            const languageButton = document.getElementById('languageButton');
+            const languageDropdown = document.getElementById('languageDropdown');
+            const languageOptions = document.querySelectorAll('.language-option');
+            const currentLanguageSpan = document.getElementById('currentLanguage');
+
+            if (!languageButton || !languageDropdown || !currentLanguageSpan) {
+                console.error('❌ Language selector elements not found!');
+                return;
             }
-        });
+
+            console.log('✅ All elements found:', {
+                button: !!languageButton,
+                dropdown: !!languageDropdown,
+                options: languageOptions.length,
+                span: !!currentLanguageSpan
+            });
+
+            // Toggle dropdown
+            languageButton.addEventListener('click', function(e) {
+                e.preventDefault();
+                e.stopPropagation();
+
+                const isActive = languageDropdown.classList.contains('active');
+                console.log('🔘 Button clicked! Currently active:', isActive);
+
+                if (isActive) {
+                    languageDropdown.classList.remove('active');
+                    console.log('🔽 Dropdown closed');
+                } else {
+                    languageDropdown.classList.add('active');
+                    console.log('🔼 Dropdown opened');
+                }
+            });
+
+            // Handle language selection
+            languageOptions.forEach(option => {
+                option.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    e.stopPropagation();
+
+                    const lang = this.getAttribute('data-lang');
+                    const text = this.textContent.trim();
+
+                    console.log('🌐 Language selected:', lang, text);
+
+                    // Update display
+                    currentLanguageSpan.textContent = text;
+                    currentLang = lang;
+
+                    // Update active states
+                    languageOptions.forEach(opt => opt.classList.remove('active'));
+                    this.classList.add('active');
+
+                    // Translate page
+                    translatePage(lang);
+
+                    // Close dropdown
+                    languageDropdown.classList.remove('active');
+
+                    console.log('✅ Translation complete for:', lang);
+                });
+            });
+
+            // Close dropdown when clicking outside
+            document.addEventListener('click', function(e) {
+                if (!languageButton.contains(e.target) && !languageDropdown.contains(e.target)) {
+                    if (languageDropdown.classList.contains('active')) {
+                        languageDropdown.classList.remove('active');
+                        console.log('🔽 Dropdown closed (outside click)');
+                    }
+                }
+            });
+
+            console.log('✅ Language selector initialized successfully!');
+        })();
         
         // Translation function
         function translatePage(lang) {
@@ -1235,20 +4302,82 @@
         
         // Performance Optimization - Lazy Load Videos
         const videos = document.querySelectorAll('video[data-src]');
-        const videoObserver = new IntersectionObserver((entries) => {
+        const lazyVideoObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     const video = entry.target;
                     video.src = video.dataset.src;
                     video.load();
-                    videoObserver.unobserve(video);
+                    lazyVideoObserver.unobserve(video);
                 }
             });
         });
-        
+
         videos.forEach(video => {
-            videoObserver.observe(video);
+            lazyVideoObserver.observe(video);
         });
+
+        // CES 2026 Invitation Form Handler
+        window.addEventListener('load', function() {
+            const cesForm = document.getElementById('cesInvitationForm');
+            const cesPopup = document.getElementById('cesPopup');
+
+            if (cesForm && cesPopup) {
+                cesForm.addEventListener('submit', function(e) {
+                    e.preventDefault();
+                    console.log('Form submitted');
+
+                    const email = document.getElementById('cesEmail').value;
+                    console.log('Email:', email);
+
+                    if (email) {
+                        // Show success popup first
+                        console.log('Showing popup');
+                        cesPopup.style.display = 'block';
+
+                        // Create mailto link
+                        const subject = encodeURIComponent('CES 2026 Invitation Request from GLEC Website');
+                        const body = encodeURIComponent(`Hello GLEC Team,
+
+I would like to request an invitation to meet GLEC at CES 2026.
+
+My email address: ${email}
+Date requested: ${new Date().toLocaleDateString()}
+
+Please send me the details about your booth location and meeting schedule.
+
+Thank you!`);
+
+                        const mailtoLink = `mailto:contact@glec.io?subject=${subject}&body=${body}`;
+
+                        // Open mailto with delay
+                        setTimeout(() => {
+                            window.location.href = mailtoLink;
+                        }, 1000);
+
+                        // Reset form
+                        cesForm.reset();
+                    }
+                });
+            } else {
+                console.log('Form or popup not found');
+            }
+        });
+
+        // Close popup function
+        function closeCesPopup() {
+            document.getElementById('cesPopup').style.display = 'none';
+        }
+
+        // Close popup when clicking outside
+        const cesPopupElement = document.getElementById('cesPopup');
+        if (cesPopupElement) {
+            cesPopupElement.addEventListener('click', function(e) {
+                if (e.target === this) {
+                    closeCesPopup();
+                }
+            });
+        }
     </script>
 </body>
 </html>

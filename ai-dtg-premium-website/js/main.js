@@ -1337,7 +1337,7 @@ window.addEventListener('load', function() {
                 submitBtn.disabled = true;
 
                 // Send using EmailJS with sendForm
-                emailjs.sendForm('service_8dmz5ca', 'template_ces_invitation', cesForm)
+                emailjs.sendForm('service_8dmz5ca', 'template_3lkmhx9', cesForm)
                     .then(function(response) {
                         console.log('SUCCESS!', response.status, response.text);
                         // Show success popup
@@ -1438,7 +1438,7 @@ if (contactForm) {
         submitBtn.disabled = true;
 
         // Send using EmailJS with sendForm
-        emailjs.sendForm('service_8dmz5ca', 'template_contact_form', contactForm)
+        emailjs.sendForm('service_8dmz5ca', 'template_b05mb6m', contactForm)
             .then(function(response) {
                 console.log('SUCCESS!', response.status, response.text);
                 alert('Thank you! Your message has been sent successfully. We will get back to you soon.');

@@ -1,0 +1,381 @@
+/* Enhanced Video Player Styles */
+.glec-video-container {
+    position: relative;
+    width: 100%;
+    border-radius: var(--glec-border-radius-lg);
+    overflow: hidden;
+    background: var(--glec-glass-bg);
+    border: 1px solid var(--glec-glass-border);
+    box-shadow: var(--glec-shadow-lg);
+    transition: all var(--glec-duration-300) var(--glec-ease-smooth);
+}
+
+.glec-video-container:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--glec-shadow-xl);
+}
+
+.glec-video-player {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: all var(--glec-duration-300) var(--glec-ease-smooth);
+}
+
+.glec-video-player::-webkit-media-controls {
+    display: none !important;
+}
+
+.glec-video-player::-webkit-media-controls-panel {
+    display: none !important;
+}
+
+.glec-video-player::-webkit-media-controls-play-button {
+    display: none !important;
+}
+
+.glec-video-player::-webkit-media-controls-start-playback-button {
+    display: none !important;
+}
+
+/* Play Overlay Styles */
+.glec-play-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.3);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all var(--glec-duration-300) var(--glec-ease-smooth);
+    opacity: 1;
+}
+
+.glec-video-container:hover .glec-play-overlay {
+    background: rgba(0, 0, 0, 0.5);
+}
+
+.glec-video-container.playing .glec-play-overlay {
+    opacity: 0;
+    pointer-events: none;
+}
+
+.glec-play-button {
+    width: 80px;
+    height: 80px;
+    background: var(--glec-gradient-accent);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--glec-color-black);
+    font-size: 2rem;
+    transition: all var(--glec-duration-300) var(--glec-ease-smooth);
+    box-shadow: var(--glec-shadow-lg);
+}
+
+.glec-play-button:hover {
+    transform: scale(1.1);
+    box-shadow: var(--glec-shadow-xl);
+}
+
+.glec-play-button svg {
+    width: 40px;
+    height: 40px;
+    margin-left: 4px;
+}
+
+/* Video Loading States */
+.glec-video-container.loading::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 40px;
+    height: 40px;
+    margin: -20px 0 0 -20px;
+    border: 3px solid var(--glec-glass-border);
+    border-top: 3px solid var(--glec-gold);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    z-index: 10;
+}
+
+@keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+}
+
+/* Video Error States */
+.glec-video-container.error::after {
+    content: '영상을 불러올 수 없습니다';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: var(--glec-color-red-400);
+    font-size: 0.875rem;
+    text-align: center;
+    background: rgba(0, 0, 0, 0.8);
+    padding: 0.5rem 1rem;
+    border-radius: var(--glec-border-radius-md);
+    z-index: 10;
+}
+
+/* Scroll Progress Indicator */
+.glec-scroll-progress {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 3px;
+    background: rgba(0, 0, 0, 0.3);
+    z-index: 1001;
+}
+
+.glec-scroll-progress-bar {
+    height: 100%;
+    background: var(--glec-gradient-accent);
+    width: 0%;
+    transition: width 0.1s ease;
+}
+
+/* Video Frame Control Indicator */
+.glec-frame-indicator {
+    position: absolute;
+    bottom: 1rem;
+    right: 1rem;
+    background: rgba(0, 0, 0, 0.8);
+    color: var(--glec-gold);
+    padding: 0.25rem 0.5rem;
+    border-radius: var(--glec-border-radius-sm);
+    font-size: 0.75rem;
+    font-family: 'Courier New', monospace;
+    opacity: 0;
+    transition: opacity var(--glec-duration-300) var(--glec-ease-smooth);
+}
+
+.glec-video-container:hover .glec-frame-indicator {
+    opacity: 1;
+}
+
+/* Responsive Video Adjustments */
+@media (max-width: 768px) {
+    .glec-play-button {
+        width: 60px;
+        height: 60px;
+        font-size: 1.5rem;
+    }
+    
+    .glec-play-button svg {
+        width: 30px;
+        height: 30px;
+    }
+    
+    .glec-frame-indicator {
+        bottom: 0.5rem;
+        right: 0.5rem;
+        font-size: 0.625rem;
+    }
+}
+
+/* Video Performance Optimizations */
+.glec-video-player {
+    will-change: transform;
+    backface-visibility: hidden;
+    -webkit-backface-visibility: hidden;
+    -moz-backface-visibility: hidden;
+}
+
+/* Smooth Scrolling for Video Frame Control */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Custom Scrollbar for Better Video Control */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0, 0, 0, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+    background: var(--glec-gradient-accent);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: var(--glec-gold);
+}
+
+/* Product Image Styles */
+.glec-product-image {
+    width: 100%;
+    height: 200px;
+    overflow: hidden;
+    border-radius: var(--glec-border-radius-lg);
+    background: var(--glec-glass-bg);
+    border: 1px solid var(--glec-glass-border);
+    margin-bottom: 1rem;
+}
+
+.glec-product-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform var(--glec-duration-300) var(--glec-ease-smooth);
+}
+
+.glec-product-image:hover .glec-product-img {
+    transform: scale(1.05);
+}
+
+/* Hero Video Styles */
+.glec-hero-video-container {
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+}
+
+.glec-hero-video {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+/* Product Video Styles */
+.glec-product-video {
+    position: relative;
+    width: 100%;
+    border-radius: var(--glec-border-radius-lg);
+    overflow: hidden;
+    background: var(--glec-glass-bg);
+    border: 1px solid var(--glec-glass-border);
+    box-shadow: var(--glec-shadow-lg);
+    margin-top: 1rem;
+}
+
+.glec-product-video-player {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Transformation Video Styles */
+.glec-transformation-video {
+    position: relative;
+    max-width: 800px;
+    margin: 0 auto 3rem;
+    border-radius: var(--glec-border-radius-lg);
+    overflow: hidden;
+    background: var(--glec-glass-bg);
+    border: 1px solid var(--glec-glass-border);
+    box-shadow: var(--glec-shadow-lg);
+}
+
+.glec-transformation-video-player {
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+    display: block;
+}
+
+/* Additional Videos Styles */
+.glec-additional-videos {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    margin-top: 3rem;
+}
+
+.glec-video-item {
+    position: relative;
+    border-radius: var(--glec-border-radius-lg);
+    overflow: hidden;
+    background: var(--glec-glass-bg);
+    border: 1px solid var(--glec-glass-border);
+    box-shadow: var(--glec-shadow-lg);
+}
+
+.glec-additional-video-player {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    display: block;
+}
+
+.glec-video-caption {
+    padding: 1rem;
+    text-align: center;
+    background: var(--glec-glass-bg);
+    color: var(--glec-gold);
+    font-weight: 600;
+    border-top: 1px solid var(--glec-glass-border);
+}
+
+/* Scroll-based Animation Classes */
+.glec-scroll-animate {
+    opacity: 0;
+    transform: translateY(30px);
+    transition: all var(--glec-duration-600) var(--glec-ease-smooth);
+}
+
+.glec-scroll-animate.animate-in {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Video Frame Control Animation */
+.glec-video-frame-control {
+    position: relative;
+    overflow: hidden;
+}
+
+.glec-video-frame-control .glec-video-player {
+    transition: none; /* Remove transition for frame-by-frame control */
+}
+
+/* Scroll-based Video Frame Control */
+.glec-scroll-video {
+    position: relative;
+    overflow: hidden;
+}
+
+.glec-scroll-video .glec-video-player {
+    transition: none;
+    will-change: transform;
+}
+
+/* Frame-by-frame Animation */
+@keyframes frameAdvance {
+    0% { transform: scale(1); }
+    50% { transform: scale(1.02); }
+    100% { transform: scale(1); }
+}
+
+.glec-frame-advance {
+    animation: frameAdvance 0.1s ease-in-out;
+}
+
+/* Scroll Progress Animation */
+.glec-scroll-progress-bar {
+    background: linear-gradient(90deg, var(--glec-gold), var(--glec-gold-light), var(--glec-gold));
+    background-size: 200% 100%;
+    animation: scrollProgress 2s ease-in-out infinite;
+}
+
+@keyframes scrollProgress {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+} 

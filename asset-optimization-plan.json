@@ -1,0 +1,131 @@
+{
+  "metadata": {
+    "projectName": "GLEC AI Solutions Product Showcase",
+    "optimizationLevel": "World-Class CTO Mode",
+    "targetPerformance": "Premium Commercial Grade",
+    "createdAt": "2025-08-19T12:00:44.077Z"
+  },
+  "videoOptimization": {
+    "hero": {
+      "source": "KakaoTalk_20250814_145521290.mp4",
+      "target": "hero-cyberpunk-optimized.mp4",
+      "optimizations": [
+        "Compress to H.264 with CRF 23",
+        "Resize to 1920x1080 max",
+        "Optimize for web streaming",
+        "Add fade-in/out effects",
+        "Reduce file size by 40-60%"
+      ],
+      "usage": "Hero section background video - Wide layout, Cyberpunk branding"
+    },
+    "transformation": {
+      "source": "KakaoTalk_20250814_145511097.mp4",
+      "target": "ai-transformation-intro.mp4",
+      "optimizations": [
+        "Compress to H.264 with CRF 25",
+        "Resize to 1200x800 max",
+        "Add professional controls",
+        "Optimize loading speed"
+      ],
+      "usage": "AI Transformation section introduction video"
+    },
+    "dtgDemo": {
+      "source": "0819 (1).mp4",
+      "target": "glec-dtg-product-demo.mp4",
+      "optimizations": [
+        "Compress to H.264 with CRF 24",
+        "Resize to 800x600 for product showcase",
+        "Add play overlay interaction",
+        "Optimize for modal display"
+      ],
+      "usage": "GLEC AI DTG product demonstration"
+    },
+    "dashboardDemo": {
+      "source": "화면 기록 2025-08-14 오후 5.51.51.mov",
+      "target": "glec-dashboard-demo.mp4",
+      "optimizations": [
+        "Convert MOV to MP4",
+        "Compress to H.264 with CRF 24",
+        "Resize to 800x600 for product showcase",
+        "Add interactive controls"
+      ],
+      "usage": "GLEC AI Dashboard demonstration"
+    }
+  },
+  "imageOptimization": {
+    "dtgPrimary": {
+      "source": "그림1 (1).png",
+      "target": "glec-dtg-hero.webp",
+      "optimizations": [
+        "Convert to WebP format",
+        "Resize to 800x600 max",
+        "Quality 85%",
+        "Add progressive loading",
+        "Generate responsive variants"
+      ],
+      "responsive": [
+        "400w",
+        "600w",
+        "800w"
+      ],
+      "usage": "Main GLEC AI DTG product image"
+    },
+    "dtgSecondary": {
+      "source": "그림2 (2).png",
+      "target": "glec-dtg-detail.webp",
+      "optimizations": [
+        "Convert to WebP format",
+        "Resize to 600x400 max",
+        "Quality 80%",
+        "Compress for detail view"
+      ],
+      "usage": "GLEC AI DTG detail/secondary image"
+    },
+    "dashboardPrimary": {
+      "source": "image (1).png",
+      "target": "glec-dashboard-hero.webp",
+      "optimizations": [
+        "Convert to WebP format",
+        "Resize to 800x600 max",
+        "Quality 85%",
+        "Add progressive loading",
+        "Generate responsive variants"
+      ],
+      "responsive": [
+        "400w",
+        "600w",
+        "800w"
+      ],
+      "usage": "Main GLEC AI Dashboard product image"
+    },
+    "dashboardSecondary": {
+      "source": "image (2).png",
+      "target": "glec-dashboard-detail.webp",
+      "optimizations": [
+        "Convert to WebP format",
+        "Resize to 600x400 max",
+        "Quality 80%",
+        "Compress for detail view"
+      ],
+      "usage": "GLEC AI Dashboard detail/secondary image"
+    }
+  },
+  "performanceTargets": {
+    "pageSizeTarget": "< 3MB initial load",
+    "videoLoadTime": "< 2s for hero video",
+    "imageLoadTime": "< 1s per image",
+    "mobileOptimization": "Full responsive support",
+    "browserSupport": [
+      "Chrome 90+",
+      "Firefox 88+",
+      "Safari 14+",
+      "Edge 90+"
+    ]
+  },
+  "deliveryOptimization": {
+    "lazyLoading": "Implement for all non-critical images and videos",
+    "preloading": "Hero video and critical images only",
+    "compression": "Gzip/Brotli for all text assets",
+    "caching": "Browser cache headers for 1 year on assets"
+  }
+}

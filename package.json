@@ -1,0 +1,33 @@
+{
+  "name": "ai-dtg-website",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "crawl": "ts-node scripts/crawl.ts",
+    "crawl:site": "ts-node scripts/crawl.ts https://ssd.skhynix.com/beetle_x31/ --prefix /beetle_x31/ --max 1000 --concurrency 6",
+    "preview": "npx http-server output/ssd.skhynix.com -p 8080",
+    "logs": "ts-node scripts/log-analyzer.ts",
+    "logs:watch": "ts-node scripts/log-analyzer.ts && echo 'Press Ctrl+C to stop watching' && tail -f logs/crawl-$(date +%Y-%m-%d).log",
+    "dashboard": "ts-node scripts/dashboard.ts",
+    "start": "PORT=${PORT:-0} npx http-server . -p $PORT",
+    "start:3000": "npx http-server . -p 3000",
+    "dev": "npx http-server . -p 0 --cors"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.54.2",
+    "@types/node": "^24.3.0",
+    "http-server": "^14.1.1",
+    "playwright-extra": "^4.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2",
+    "ts-node": "^10.9.2",
+    "typescript": "^5.9.2"
+  },
+  "dependencies": {
+    "playwright": "^1.54.2"
+  }
+}

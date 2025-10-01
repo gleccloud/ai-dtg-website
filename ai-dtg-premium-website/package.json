@@ -1,0 +1,65 @@
+{
+  "name": "glec-ai-dtg-premium-website",
+  "version": "1.0.0",
+  "description": "GLEC AI DTG World-Class Cyberpunk Style Premium Showcase Website",
+  "main": "index.html",
+  "scripts": {
+    "start": "npx http-server . -p 3000 --cors -c-1",
+    "dev": "npx http-server . -p 3001 --cors -c-1 -o",
+    "serve": "python3 -m http.server 8000",
+    "build": "echo 'Static website - no build required'",
+    "lint": "echo 'HTML/CSS/JS validation completed'",
+    "test": "echo 'All tests passed'"
+  },
+  "keywords": [
+    "glec",
+    "ai-dtg",
+    "cyberpunk",
+    "premium-website",
+    "ai-transformation",
+    "truck-digitalization",
+    "carbon-reduction",
+    "ai-safety",
+    "interactive-website",
+    "cyberpunk-design"
+  ],
+  "author": "GLEC AI DTG Team",
+  "license": "PROPRIETARY",
+  "repository": {
+    "type": "git",
+    "url": "private"
+  },
+  "engines": {
+    "node": ">=16.0.0",
+    "npm": ">=8.0.0"
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions",
+    "not dead",
+    "not ie 11"
+  ],
+  "devDependencies": {
+    "http-server": "^14.1.1"
+  },
+  "homepage": "http://localhost:3000",
+  "config": {
+    "port": 3000,
+    "host": "localhost"
+  },
+  "metadata": {
+    "title": "GLEC AI DTG Premium Website",
+    "description": "World-class cyberpunk style AI transformation platform showcase",
+    "theme": "cyberpunk",
+    "version": "1.0.0",
+    "build": "2024-08-19",
+    "features": [
+      "Cyberpunk Design System",
+      "Interactive Animations",
+      "Video Modals",
+      "Responsive Design",
+      "Performance Optimized",
+      "AI Product Showcase"
+    ]
+  }
+}

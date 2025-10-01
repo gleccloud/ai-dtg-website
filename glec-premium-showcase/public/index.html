@@ -1,0 +1,371 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GLEC AI DTG - World-Class Commercial-Grade Product Showcase</title>
+    <meta name="description" content="GLEC AI DTG와 GLEC AI Dashboard를 통한 노후 화물차의 AI Transformation 솔루션">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/design-system.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/components.css">
+    <script src="js/scroll-video-control.js"></script>
+    <script src="js/scroll-progress.js"></script>
+    <script src="js/video-controls.js"></script>
+    <script src="js/advanced-scroll-video.js"></script>
+    <script src="js/advanced-scroll-video.js"></script>
+</head>
+<body>
+    <!-- Scroll Progress Indicator -->
+    <div class="glec-scroll-progress">
+        <div class="glec-scroll-progress-bar"></div>
+    </div>
+    <!-- Navigation -->
+    <nav class="glec-nav glec-glass-nav">
+        <div class="glec-nav-container">
+            <div class="glec-nav-logo">
+                <span class="glec-logo-text">GLEC</span>
+                <span class="glec-logo-subtext">AI DTG</span>
+            </div>
+            <div class="glec-nav-menu">
+                <a href="#home" class="glec-nav-link">Home</a>
+                <a href="#products" class="glec-nav-link">Products</a>
+                <a href="#transformation" class="glec-nav-link">AI Transformation</a>
+                <a href="#contact" class="glec-nav-link">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section with Cyberpunk Video -->
+    <section id="home" class="glec-hero-section">
+        <div class="glec-hero-video-container">
+            <video id="heroVideo" class="glec-hero-video" autoplay muted loop>
+                <source src="assets/videos/KakaoTalk_20250814_145521290.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+            </video>
+            <div class="glec-hero-overlay">
+                <div class="glec-hero-content">
+                    <h1 class="glec-hero-title">
+                        <span class="glec-text-gradient">GLEC AI DTG</span>
+                        <span class="glec-hero-subtitle">노후 화물차의 AI Transformation</span>
+                    </h1>
+                    <p class="glec-hero-description">
+                        사이버펑크 기술로 구현된 AI 기반 디지털운행기록장치와 대시보드로<br>
+                        운전자 안전과 탄소 감축을 동시에 달성합니다
+                    </p>
+                    <div class="glec-hero-buttons">
+                        <button class="glec-btn glec-btn-primary" onclick="scrollToSection('products')">
+                            제품 둘러보기
+                        </button>
+                        <button class="glec-btn glec-btn-secondary" onclick="scrollToSection('transformation')">
+                            AI Transformation
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section id="products" class="glec-section">
+        <div class="glec-container">
+            <div class="glec-section-header">
+                <h2 class="glec-section-title">핵심 제품</h2>
+                <p class="glec-section-subtitle">GLEC의 두 가지 핵심 솔루션으로 노후 화물차를 첨단 AI 차량으로 변환합니다</p>
+            </div>
+            
+            <div class="glec-products-grid">
+                <!-- GLEC AI DTG -->
+                <div class="glec-product-card glec-scroll-animate" data-product="ai-dtg">
+                    <div class="glec-product-image">
+                        <img src="assets/hardware/beetle_x31_1080.jpg" alt="GLEC AI DTG" class="glec-product-img">
+                    </div>
+                    <div class="glec-product-content">
+                        <h3 class="glec-product-title">GLEC AI DTG</h3>
+                        <p class="glec-product-description">
+                            AI 기반 디지털운행기록장치로 운전자 안전과 수송 효율성을 동시에 향상시킵니다.
+                            고정밀 센싱과 실시간 AI 분석으로 최적의 운전 환경을 제공합니다.
+                        </p>
+                        <div class="glec-product-features">
+                            <span class="glec-feature-tag">AI 안전 추론</span>
+                            <span class="glec-feature-tag">실시간 모니터링</span>
+                            <span class="glec-feature-tag">탄소 측정</span>
+                        </div>
+                        <div class="glec-product-video glec-video-small">
+                            <video class="glec-product-video-player" muted loop>
+                                <source src="assets/videos/0819.mp4" type="video/mp4">
+                            </video>
+                            <div class="glec-play-overlay" onclick="playProductVideo(this)">
+                                <div class="glec-play-button">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M8 5v14l11-7z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="glec-product-actions">
+                            <button class="glec-btn glec-btn-outline">상세 보기</button>
+                            <button class="glec-btn glec-btn-primary">견적 문의</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- GLEC AI Dashboard -->
+                <div class="glec-product-card glec-scroll-animate" data-product="ai-dashboard">
+                    <div class="glec-product-image">
+                        <img src="assets/hardware/beetle_x31_B_1080.jpg" alt="GLEC AI Dashboard" class="glec-product-img">
+                    </div>
+                    <div class="glec-product-content">
+                        <h3 class="glec-product-title">GLEC AI Dashboard</h3>
+                        <p class="glec-product-description">
+                            실시간 AI 분석 결과를 시각화하는 대시보드로 운전자와 관리자가 
+                            즉시 안전 상태와 탄소 배출량을 파악할 수 있습니다.
+                        </p>
+                        <div class="glec-product-features">
+                            <span class="glec-feature-tag">실시간 대시보드</span>
+                            <span class="glec-feature-tag">AI 분석 시각화</span>
+                            <span class="glec-feature-tag">모바일 지원</span>
+                        </div>
+                        <div class="glec-product-video glec-video-medium">
+                            <video class="glec-product-video-player" muted loop>
+                                <source src="assets/videos/화면 기록 2025-08-14 오후 5.51.51.mov" type="video/quicktime">
+                            </video>
+                            <div class="glec-play-overlay" onclick="playProductVideo(this)">
+                                <div class="glec-play-button">
+                                    <svg viewBox="0 0 24 24" fill="currentColor">
+                                        <path d="M8 5v14l11-7z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="glec-product-actions">
+                            <button class="glec-btn glec-btn-outline">데모 보기</button>
+                            <button class="glec-btn glec-btn-primary">체험 신청</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Transformation Section -->
+    <section id="transformation" class="glec-section glec-section-dark">
+        <div class="glec-container">
+            <div class="glec-section-header">
+                <h2 class="glec-section-title">AI Transformation (AX)</h2>
+                <p class="glec-section-subtitle">노후 화물차를 첨단 AI 차량으로 변환하는 혁신적인 솔루션</p>
+            </div>
+            
+            <div class="glec-transformation-content">
+                <!-- Main Transformation Video -->
+                <div class="glec-transformation-video glec-scroll-animate">
+                    <video id="transformationVideo" class="glec-transformation-video-player" muted loop>
+                        <source src="assets/videos/KakaoTalk_20250814_145511097.mp4" type="video/mp4">
+                    </video>
+                    <div class="glec-play-overlay" onclick="playTransformationVideo()">
+                        <div class="glec-play-button glec-play-button-large">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M8 5v14l11-7z"/>
+                            </svg>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Transformation Features -->
+                <div class="glec-transformation-features">
+                    <div class="glec-feature-item glec-scroll-animate">
+                        <div class="glec-feature-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
+                            </svg>
+                        </div>
+                        <div class="glec-feature-content">
+                            <h3 class="glec-feature-title">AI 기반 운전자 및 화물 안전 향상</h3>
+                            <p class="glec-feature-description">
+                                실시간 AI 분석을 통해 운전자의 피로도, 주의력, 운전 패턴을 모니터링하고,
+                                화물의 상태와 적재 상태를 지속적으로 감시하여 안전을 최우선으로 합니다.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="glec-feature-item glec-scroll-animate">
+                        <div class="glec-feature-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M12 2C6.48 2 2 6.48 2 12s4.48 10 10 10 10-4.48 10-10S17.52 2 12 2zm-2 15l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
+                            </svg>
+                        </div>
+                        <div class="glec-feature-content">
+                            <h3 class="glec-feature-title">AI 기반 국제표준 탄소 측정 및 탄소 감축</h3>
+                            <p class="glec-feature-description">
+                                국제표준을 준수하는 정밀한 탄소 배출량 측정과 AI 기반 최적화 알고리즘으로
+                                연료 효율성을 극대화하고 탄소 배출량을 최소화합니다.
+                            </p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Videos -->
+                <div class="glec-additional-videos">
+                    <div class="glec-video-item glec-scroll-animate">
+                        <video class="glec-additional-video-player" muted loop>
+                            <source src="assets/videos/화면 기록 2025-08-14 오후 5.36.28.mov" type="video/quicktime">
+                        </video>
+                        <div class="glec-video-caption">운전자 안전 모니터링 시스템</div>
+                    </div>
+                    <div class="glec-video-item glec-scroll-animate">
+                        <video class="glec-additional-video-player" muted loop>
+                            <source src="assets/videos/KakaoTalk_20250814_145532343.mp4" type="video/mp4">
+                        </video>
+                        <div class="glec-video-caption">AI 분석 대시보드</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="glec-section">
+        <div class="glec-container">
+            <div class="glec-section-header">
+                <h2 class="glec-section-title">문의하기</h2>
+                <p class="glec-section-subtitle">GLEC AI DTG 솔루션에 대한 상세 정보와 견적을 문의하세요</p>
+            </div>
+            
+            <div class="glec-contact-content">
+                <div class="glec-contact-info">
+                    <div class="glec-contact-item">
+                        <div class="glec-contact-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M20 4H4c-1.1 0-1.99.9-1.99 2L2 18c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V6c0-1.1-.9-2-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/>
+                            </svg>
+                        </div>
+                        <div class="glec-contact-details">
+                            <h3>이메일</h3>
+                            <p>info@glec-ai.com</p>
+                        </div>
+                    </div>
+                    
+                    <div class="glec-contact-item">
+                        <div class="glec-contact-icon">
+                            <svg viewBox="0 0 24 24" fill="currentColor">
+                                <path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z"/>
+                            </svg>
+                        </div>
+                        <div class="glec-contact-details">
+                            <h3>전화</h3>
+                            <p>+82-2-1234-5678</p>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="glec-contact-form">
+                    <div class="glec-form-group">
+                        <input type="text" class="glec-input" placeholder="이름" required>
+                    </div>
+                    <div class="glec-form-group">
+                        <input type="email" class="glec-input" placeholder="이메일" required>
+                    </div>
+                    <div class="glec-form-group">
+                        <input type="text" class="glec-input" placeholder="회사명" required>
+                    </div>
+                    <div class="glec-form-group">
+                        <textarea class="glec-textarea" placeholder="문의 내용" rows="5" required></textarea>
+                    </div>
+                    <button type="submit" class="glec-btn glec-btn-primary glec-btn-full">문의하기</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="glec-footer">
+        <div class="glec-container">
+            <div class="glec-footer-content">
+                <div class="glec-footer-logo">
+                    <span class="glec-logo-text">GLEC</span>
+                    <span class="glec-logo-subtext">AI DTG</span>
+                </div>
+                <div class="glec-footer-links">
+                    <a href="#home">Home</a>
+                    <a href="#products">Products</a>
+                    <a href="#transformation">AI Transformation</a>
+                    <a href="#contact">Contact</a>
+                </div>
+                <div class="glec-footer-copyright">
+                    <p>&copy; 2025 GLEC AI DTG. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript Files -->
+    <script src="js/animations.js"></script>
+    <script src="js/scroll-effects.js"></script>
+    <script src="js/video-player.js"></script>
+    <script src="js/utils.js"></script>
+    
+    <script>
+        // Video Player Functions
+        function playProductVideo(overlay) {
+            const video = overlay.previousElementSibling;
+            const playButton = overlay.querySelector('.glec-play-button');
+            
+            if (video.paused) {
+                video.play();
+                overlay.style.opacity = '0';
+                playButton.style.transform = 'scale(0.8)';
+            } else {
+                video.pause();
+                overlay.style.opacity = '1';
+                playButton.style.transform = 'scale(1)';
+            }
+        }
+        
+        function playTransformationVideo() {
+            const video = document.getElementById('transformationVideo');
+            const overlay = video.nextElementSibling;
+            const playButton = overlay.querySelector('.glec-play-button');
+            
+            if (video.paused) {
+                video.play();
+                overlay.style.opacity = '0';
+                playButton.style.transform = 'scale(0.8)';
+            } else {
+                video.pause();
+                overlay.style.opacity = '1';
+                playButton.style.transform = 'scale(1)';
+            }
+        }
+        
+        // Smooth Scrolling
+        function scrollToSection(sectionId) {
+            const section = document.getElementById(sectionId);
+            if (section) {
+                section.scrollIntoView({ behavior: 'smooth' });
+            }
+        }
+        
+        // Initialize animations when page loads
+        document.addEventListener('DOMContentLoaded', function() {
+            // Auto-play hero video
+            const heroVideo = document.getElementById('heroVideo');
+            if (heroVideo) {
+                heroVideo.play().catch(function(error) {
+                    console.log('Video autoplay failed:', error);
+                });
+            }
+            
+            // Initialize scroll animations
+            if (typeof GLECScrollEffects !== 'undefined') {
+                new GLECScrollEffects();
+            }
+        });
+    </script>
+</body>
+</html> 

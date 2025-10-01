@@ -1,0 +1,843 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="GLEC AI DTG Premium Showcase - World-Class Commercial-Grade Product Showcase Website">
+    <meta name="keywords" content="GLEC, AI, DTG, Product Showcase, Premium, World-Class">
+    <meta name="author" content="GLEC AI DTG Team">
+    
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="GLEC AI DTG Premium Showcase">
+    <meta property="og:description" content="World-Class Commercial-Grade Product Showcase Website">
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://glec-ai.com/dtg-showcase">
+    <meta property="og:image" content="assets/images/glec-dtg-logo.png">
+    
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="GLEC AI DTG Premium Showcase">
+    <meta name="twitter:description" content="World-Class Commercial-Grade Product Showcase Website">
+    <meta name="twitter:image" content="assets/images/glec-dtg-logo.png">
+    
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="assets/icons/favicon.ico">
+    <link rel="apple-touch-icon" sizes="180x180" href="assets/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/icons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="assets/icons/favicon-16x16.png">
+    
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/design-system.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/components.css">
+    
+    <title>GLEC AI DTG Premium Showcase</title>
+    
+    <!-- Critical CSS for Performance -->
+    <style>
+        /* Critical CSS for above-the-fold content */
+        body {
+            background: var(--glec-black) !important;
+            color: var(--glec-gold) !important;
+            font-family: var(--glec-font-body) !important;
+            margin: 0 !important;
+            padding: 0 !important;
+            overflow-x: hidden !important;
+        }
+        
+        .glec-loading {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--glec-black);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+            transition: opacity 0.5s ease-out;
+        }
+        
+        .glec-loading.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        .glec-loading-logo {
+            width: 80px;
+            height: 80px;
+            background: var(--glec-gradient-accent);
+            border-radius: 50%;
+            animation: pulse 2s ease-in-out infinite;
+        }
+    </style>
+    
+    <!-- JavaScript Libraries -->
+    <script src="js/animations.js" defer></script>
+    <script src="js/scroll-effects.js" defer></script>
+    <script src="js/video-player.js" defer></script>
+    <script src="js/utils.js" defer></script>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="glec-loading" id="loadingScreen">
+        <div class="glec-loading-logo"></div>
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="glec-scroll-progress">
+        <div class="glec-scroll-progress-bar" id="scrollProgressBar"></div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="glec-nav" id="mainNav">
+        <div class="glec-nav-container">
+            <a href="#" class="glec-nav-logo">GLEC AI DTG</a>
+            <div class="glec-nav-links">
+                <a href="#hero" class="glec-nav-link" data-section="hero">Home</a>
+                <a href="#products" class="glec-nav-link" data-section="products">Products</a>
+                <a href="#technology" class="glec-nav-link" data-section="technology">Technology</a>
+                <a href="#videos" class="glec-nav-link" data-section="videos">Videos</a>
+                <a href="#gallery" class="glec-nav-link" data-section="gallery">Gallery</a>
+                <a href="#contact" class="glec-nav-link" data-section="contact">Contact</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Frame Indicators -->
+    <div class="glec-frame-indicators" id="frameIndicators">
+        <div class="glec-frame-indicator active" data-frame="hero" data-tooltip="Home">
+            <span class="glec-frame-number">1</span>
+            <div class="glec-frame-tooltip">Home</div>
+        </div>
+        <div class="glec-frame-indicator" data-frame="products" data-tooltip="Products">
+            <span class="glec-frame-number">2</span>
+            <div class="glec-frame-tooltip">Products</div>
+        </div>
+        <div class="glec-frame-indicator" data-frame="technology" data-tooltip="Technology">
+            <span class="glec-frame-number">3</span>
+            <div class="glec-frame-tooltip">Technology</div>
+        </div>
+        <div class="glec-frame-indicator" data-frame="videos" data-tooltip="Videos">
+            <span class="glec-frame-number">4</span>
+            <div class="glec-frame-tooltip">Videos</div>
+        </div>
+        <div class="glec-frame-indicator" data-frame="gallery" data-tooltip="Gallery">
+            <span class="glec-frame-number">5</span>
+            <div class="glec-frame-tooltip">Gallery</div>
+        </div>
+        <div class="glec-frame-indicator" data-frame="contact" data-tooltip="Contact">
+            <span class="glec-frame-number">6</span>
+            <div class="glec-frame-tooltip">Contact</div>
+        </div>
+    </div>
+
+    <!-- Main Content -->
+    <main>
+        <!-- Hero Section -->
+        <section id="hero" class="glec-section">
+            <div class="glec-container">
+                <div class="glec-grid glec-grid-cols-1 glec-grid-cols-md-2">
+                    <div class="glec-hero-content">
+                        <h1 class="glec-hero-title glec-scroll-animate">
+                            GLEC AI DTG
+                            <span class="glec-hero-subtitle">Digital Tachograph AI Platform</span>
+                        </h1>
+                        <p class="glec-hero-description glec-scroll-animate">
+                            세계 최고 수준의 AI 기반 디지털운행기록장치(DTG) 플랫폼. 
+                            운전자 안전과 수송 탄소 감축을 위한 혁신적인 기술 표준을 제시합니다.
+                        </p>
+                        <div class="glec-hero-actions glec-scroll-animate">
+                            <button class="glec-btn glec-btn-primary glec-btn-lg" onclick="scrollToSection('products')">
+                                제품 탐색
+                            </button>
+                            <button class="glec-btn glec-btn-secondary glec-btn-lg" onclick="scrollToSection('videos')">
+                                데모 영상
+                            </button>
+                        </div>
+                    </div>
+                    <div class="glec-hero-visual glec-scroll-animate">
+                        <div class="glec-hero-video-container">
+                            <video id="heroVideo" class="glec-hero-video" autoplay muted loop>
+                                <source src="assets/videos/0819.mp4" type="video/mp4">
+                                Your browser does not support the video tag.
+                            </video>
+                            <div class="glec-hero-video-overlay">
+                                <div class="glec-hero-video-content">
+                                    <h3>AI-Powered Innovation</h3>
+                                    <p>Real-time Digital Twin Generation</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section id="products" class="glec-section">
+            <div class="glec-container">
+                <div class="glec-section-header glec-scroll-animate">
+                    <h2>Our Products</h2>
+                    <p>Discover our cutting-edge AI DTG solutions</p>
+                </div>
+                <div class="glec-grid glec-grid-cols-1 glec-grid-cols-md-2 glec-grid-cols-lg-3">
+                    <div class="glec-card glec-product-card glec-scroll-animate">
+                        <div class="glec-card-header">
+                            <div class="glec-card-image">
+                                <div class="glec-card-badge">AI</div>
+                                <img src="assets/images/dtg-device.jpg" alt="DTG Device" onerror="this.style.display='none'">
+                                <div class="glec-image-placeholder" style="display: flex; align-items: center; justify-content: center; color: var(--glec-gold); font-size: 3rem;">🤖</div>
+                            </div>
+                        </div>
+                        <div class="glec-card-content">
+                            <h3 class="glec-card-title">AI 기반 디지털운행기록장치</h3>
+                            <p class="glec-card-description">
+                                운전자 안전과 수송 탄소 감축을 위한 AI 기반 디지털운행기록장치. 
+                                실시간 안전 추론과 데이터 분석으로 운송 효율성을 극대화합니다.
+                            </p>
+                            <div class="glec-card-actions">
+                                <button class="glec-btn glec-btn-primary" onclick="showProductDetail('dtg-device')">
+                                    자세히 보기
+                                </button>
+                                <button class="glec-btn glec-btn-secondary" onclick="view3DModel('dtg-device')">
+                                    3D 뷰
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glec-card glec-product-card glec-scroll-animate">
+                        <div class="glec-card-header">
+                            <div class="glec-card-image">
+                                <div class="glec-card-badge">Sensor</div>
+                                <img src="assets/images/sensor-array.jpg" alt="Sensor Array" onerror="this.style.display='none'">
+                                <div class="glec-image-placeholder" style="display: flex; align-items: center; justify-content: center; color: var(--glec-gold); font-size: 3rem;">📡</div>
+                            </div>
+                        </div>
+                        <div class="glec-card-content">
+                            <h3 class="glec-card-title">안전 추론 AI 시스템</h3>
+                            <p class="glec-card-description">
+                                다중 센서 퓨전 기술을 활용한 실시간 안전 추론 AI 시스템. 
+                                운전자 상태, 차량 상태, 환경 조건을 종합적으로 분석합니다.
+                            </p>
+                            <div class="glec-card-actions">
+                                <button class="glec-btn glec-btn-primary" onclick="showProductDetail('sensor-array')">
+                                    자세히 보기
+                                </button>
+                                <button class="glec-btn glec-btn-secondary" onclick="view3DModel('sensor-array')">
+                                    3D 뷰
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="glec-card glec-product-card glec-scroll-animate">
+                        <div class="glec-card-header">
+                            <div class="glec-card-image">
+                                <div class="glec-card-badge">Platform</div>
+                                <img src="assets/images/truck-integration.jpg" alt="Truck Integration" onerror="this.style.display='none'">
+                                <div class="glec-image-placeholder" style="display: flex; align-items: center; justify-content: center; color: var(--glec-gold); font-size: 3rem;">🚛</div>
+                            </div>
+                        </div>
+                        <div class="glec-card-content">
+                            <h3 class="glec-card-title">VCP IoT 플랫폼</h3>
+                            <p class="glec-card-description">
+                                차량 중심 프로토콜(VCP) 기반 IoT 플랫폼. 
+                                트럭 IoT 생태계를 위한 표준 프로토콜과 시스템 설계를 제공합니다.
+                            </p>
+                            <div class="glec-card-actions">
+                                <button class="glec-btn glec-btn-primary" onclick="showProductDetail('truck-integration')">
+                                    자세히 보기
+                                </button>
+                                <button class="glec-btn glec-btn-secondary" onclick="view3DModel('truck-integration')">
+                                    3D 뷰
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technology Section -->
+        <section id="technology" class="glec-section">
+            <div class="glec-container">
+                <div class="glec-section-header glec-scroll-animate">
+                    <h2>Technology Features</h2>
+                    <p>Cutting-edge AI and machine learning capabilities</p>
+                </div>
+                <div class="glec-grid glec-grid-cols-1 glec-grid-cols-md-2">
+                    <div class="glec-tech-feature glec-scroll-animate">
+                        <div class="glec-tech-icon">🧠</div>
+                        <h3>AI-Powered Analysis</h3>
+                        <p>Advanced machine learning algorithms for real-time data processing and intelligent decision making.</p>
+                    </div>
+                    <div class="glec-tech-feature glec-scroll-animate">
+                        <div class="glec-tech-icon">⚡</div>
+                        <h3>Real-Time Processing</h3>
+                        <p>Ultra-fast data processing with sub-millisecond response times for critical applications.</p>
+                    </div>
+                    <div class="glec-tech-feature glec-scroll-animate">
+                        <div class="glec-tech-icon">🔒</div>
+                        <h3>Secure Communication</h3>
+                        <p>Enterprise-grade security with end-to-end encryption and secure data transmission.</p>
+                    </div>
+                    <div class="glec-tech-feature glec-scroll-animate">
+                        <div class="glec-tech-icon">📊</div>
+                        <h3>Advanced Analytics</h3>
+                        <p>Comprehensive data analytics and visualization tools for deep insights.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Videos Section -->
+        <section id="videos" class="glec-section">
+            <div class="glec-container">
+                <div class="glec-section-header glec-scroll-animate">
+                    <h2>제품 데모 영상</h2>
+                    <p>우리 기술의 실제 동작을 확인하세요</p>
+                </div>
+                <div class="glec-grid glec-grid-cols-1 glec-grid-cols-md-2 glec-grid-cols-lg-3">
+                    <div class="glec-card glec-video-card glec-scroll-animate">
+                        <div class="glec-video-player">
+                            <video id="video1" preload="metadata">
+                                <source src="assets/videos/KakaoTalk_20250814_145511097.mp4" type="video/mp4">
+                            </video>
+                            <div class="glec-play-overlay" onclick="playVideo('video1')">
+                                <div class="glec-play-button">▶</div>
+                            </div>
+                        </div>
+                        <div class="glec-video-info">
+                            <h3>DTG 디바이스 개요</h3>
+                            <p>AI 기반 DTG 디바이스의 종합적인 기능 소개</p>
+                        </div>
+                    </div>
+
+                    <div class="glec-card glec-video-card glec-scroll-animate">
+                        <div class="glec-video-player">
+                            <video id="video2" preload="metadata">
+                                <source src="assets/videos/KakaoTalk_20250814_145521290.mp4" type="video/mp4">
+                            </video>
+                            <div class="glec-play-overlay" onclick="playVideo('video2')">
+                                <div class="glec-play-button">▶</div>
+                            </div>
+                        </div>
+                        <div class="glec-video-info">
+                            <h3>센서 어레이 기술</h3>
+                            <p>정밀한 데이터 수집을 위한 고급 센서 기술</p>
+                        </div>
+                    </div>
+
+                    <div class="glec-card glec-video-card glec-scroll-animate">
+                        <div class="glec-video-player">
+                            <video id="video3" preload="metadata">
+                                <source src="assets/videos/KakaoTalk_20250814_145532343.mp4" type="video/mp4">
+                            </video>
+                            <div class="glec-play-overlay" onclick="playVideo('video3')">
+                                <div class="glec-play-button">▶</div>
+                            </div>
+                        </div>
+                        <div class="glec-video-info">
+                            <h3>트럭 통합 데모</h3>
+                            <p>트럭 통합 기능의 실제 동작 시연</p>
+                        </div>
+                    </div>
+
+                    <div class="glec-card glec-video-card glec-scroll-animate">
+                        <div class="glec-video-player">
+                            <video id="video4" preload="metadata">
+                                <source src="assets/videos/화면 기록 2025-08-14 오후 5.51.51.mov" type="video/quicktime">
+                            </video>
+                            <div class="glec-play-overlay" onclick="playVideo('video4')">
+                                <div class="glec-play-button">▶</div>
+                            </div>
+                        </div>
+                        <div class="glec-video-info">
+                            <h3>대시보드 데모 1</h3>
+                            <p>고급 대시보드 인터페이스 시연</p>
+                        </div>
+                    </div>
+
+                    <div class="glec-card glec-video-card glec-scroll-animate">
+                        <div class="glec-video-player">
+                            <video id="video5" preload="metadata">
+                                <source src="assets/videos/화면 기록 2025-08-14 오후 5.36.28.mov" type="video/quicktime">
+                            </video>
+                            <div class="glec-play-overlay" onclick="playVideo('video5')">
+                                <div class="glec-play-button">▶</div>
+                            </div>
+                        </div>
+                        <div class="glec-video-info">
+                            <h3>대시보드 데모 2</h3>
+                            <p>실시간 모니터링 및 분석 인터페이스</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Gallery Section -->
+        <section id="gallery" class="glec-section">
+            <div class="glec-container">
+                <div class="glec-section-header glec-scroll-animate">
+                    <h2>Product Gallery</h2>
+                    <p>Explore our products in detail</p>
+                </div>
+                <div class="glec-grid glec-grid-cols-1 glec-grid-cols-md-2 glec-grid-cols-lg-3">
+                    <div class="glec-card glec-gallery-card glec-scroll-animate" onclick="showImageDetail('hardware')">
+                        <div class="glec-gallery-image">
+                            <div class="glec-image-placeholder" style="display: flex; align-items: center; justify-content: center; color: var(--glec-gold); font-size: 3rem;">🔧</div>
+                        </div>
+                        <div class="glec-gallery-info">
+                            <h3>Hardware Components</h3>
+                            <p>Detailed view of our hardware components</p>
+                        </div>
+                    </div>
+
+                    <div class="glec-card glec-gallery-card glec-scroll-animate" onclick="showImageDetail('dashboard')">
+                        <div class="glec-gallery-image">
+                            <div class="glec-image-placeholder" style="display: flex; align-items: center; justify-content: center; color: var(--glec-gold); font-size: 3rem;">📱</div>
+                        </div>
+                        <div class="glec-gallery-info">
+                            <h3>Dashboard Interface</h3>
+                            <p>User interface and control systems</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section id="contact" class="glec-section">
+            <div class="glec-container">
+                <div class="glec-section-header glec-scroll-animate">
+                    <h2>Get In Touch</h2>
+                    <p>Ready to revolutionize your operations?</p>
+                </div>
+                <div class="glec-grid glec-grid-cols-1 glec-grid-cols-md-2">
+                    <div class="glec-contact-info glec-scroll-animate">
+                        <h3>Contact Information</h3>
+                        <div class="glec-contact-item">
+                            <div class="glec-contact-icon">📍</div>
+                            <div>
+                                <h4>Address</h4>
+                                <p>123 Innovation Drive<br>Tech City, TC 12345</p>
+                            </div>
+                        </div>
+                        <div class="glec-contact-item">
+                            <div class="glec-contact-icon">📧</div>
+                            <div>
+                                <h4>Email</h4>
+                                <p>info@glec-ai.com</p>
+                            </div>
+                        </div>
+                        <div class="glec-contact-item">
+                            <div class="glec-contact-icon">📞</div>
+                            <div>
+                                <h4>Phone</h4>
+                                <p>+1 (555) 123-4567</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="glec-contact-form glec-scroll-animate">
+                        <form id="contactForm" onsubmit="handleContactForm(event)">
+                            <div class="glec-form-group">
+                                <label for="name" class="glec-form-label">Name</label>
+                                <input type="text" id="name" name="name" class="glec-form-input" required>
+                            </div>
+                            <div class="glec-form-group">
+                                <label for="email" class="glec-form-label">Email</label>
+                                <input type="email" id="email" name="email" class="glec-form-input" required>
+                            </div>
+                            <div class="glec-form-group">
+                                <label for="message" class="glec-form-label">Message</label>
+                                <textarea id="message" name="message" class="glec-form-textarea" required></textarea>
+                            </div>
+                            <button type="submit" class="glec-btn glec-btn-primary glec-btn-lg">
+                                Send Message
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="glec-footer">
+        <div class="glec-container">
+            <div class="glec-footer-content">
+                <div class="glec-footer-logo">
+                    <h3>GLEC AI DTG</h3>
+                    <p>Revolutionizing Digital Twin Generation</p>
+                </div>
+                <div class="glec-footer-links">
+                    <div class="glec-footer-section">
+                        <h4>Products</h4>
+                        <ul>
+                            <li><a href="#products">DTG Device</a></li>
+                            <li><a href="#products">Sensor Array</a></li>
+                            <li><a href="#products">Truck Integration</a></li>
+                        </ul>
+                    </div>
+                    <div class="glec-footer-section">
+                        <h4>Company</h4>
+                        <ul>
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#careers">Careers</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="glec-footer-section">
+                        <h4>Resources</h4>
+                        <ul>
+                            <li><a href="#documentation">Documentation</a></li>
+                            <li><a href="#support">Support</a></li>
+                            <li><a href="#blog">Blog</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="glec-footer-bottom">
+                <p>&copy; 2025 GLEC AI DTG. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Product Detail Modal -->
+    <div class="glec-modal" id="productModal">
+        <div class="glec-modal-content">
+            <div class="glec-modal-header">
+                <h3 class="glec-modal-title" id="modalTitle">Product Details</h3>
+                <button class="glec-modal-close" onclick="closeModal('productModal')">&times;</button>
+            </div>
+            <div class="glec-modal-body" id="modalBody">
+                <!-- Modal content will be populated dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- Image Detail Modal -->
+    <div class="glec-modal" id="imageModal">
+        <div class="glec-modal-content">
+            <div class="glec-modal-header">
+                <h3 class="glec-modal-title" id="imageModalTitle">Image Details</h3>
+                <button class="glec-modal-close" onclick="closeModal('imageModal')">&times;</button>
+            </div>
+            <div class="glec-modal-body" id="imageModalBody">
+                <!-- Image modal content will be populated dynamically -->
+            </div>
+        </div>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="src/lib/animations.js"></script>
+    <script src="src/lib/scroll-effects.js"></script>
+    <script src="src/lib/video-player.js"></script>
+    
+    <!-- Main JavaScript -->
+    <script>
+        // Main Application Logic
+        class GLECShowcase {
+            constructor() {
+                this.currentSection = 'hero';
+                this.isScrolling = false;
+                this.init();
+            }
+
+            init() {
+                this.setupEventListeners();
+                this.setupScrollAnimations();
+                this.hideLoadingScreen();
+                this.updateActiveSection();
+            }
+
+            setupEventListeners() {
+                // Navigation links
+                document.querySelectorAll('.glec-nav-link').forEach(link => {
+                    link.addEventListener('click', (e) => {
+                        e.preventDefault();
+                        const target = link.getAttribute('href').substring(1);
+                        this.scrollToSection(target);
+                    });
+                });
+
+                // Frame indicators
+                document.querySelectorAll('.glec-frame-indicator').forEach(indicator => {
+                    indicator.addEventListener('click', () => {
+                        const target = indicator.getAttribute('data-frame');
+                        this.scrollToSection(target);
+                    });
+                });
+
+                // Scroll events
+                window.addEventListener('scroll', () => {
+                    this.handleScroll();
+                });
+
+                // Form submission
+                document.getElementById('contactForm').addEventListener('submit', (e) => {
+                    e.preventDefault();
+                    this.handleContactForm(e);
+                });
+            }
+
+            setupScrollAnimations() {
+                const observerOptions = {
+                    threshold: 0.1,
+                    rootMargin: '0px 0px -50px 0px'
+                };
+
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach(entry => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add('animate-in');
+                        }
+                    });
+                }, observerOptions);
+
+                document.querySelectorAll('.glec-scroll-animate').forEach(element => {
+                    observer.observe(element);
+                });
+            }
+
+            handleScroll() {
+                if (this.isScrolling) return;
+
+                this.isScrolling = true;
+                requestAnimationFrame(() => {
+                    this.updateScrollProgress();
+                    this.updateActiveSection();
+                    this.updateNavigation();
+                    this.isScrolling = false;
+                });
+            }
+
+            updateScrollProgress() {
+                const scrollTop = window.pageYOffset;
+                const docHeight = document.body.scrollHeight - window.innerHeight;
+                const scrollPercent = (scrollTop / docHeight) * 100;
+                
+                document.getElementById('scrollProgressBar').style.width = scrollPercent + '%';
+            }
+
+            updateActiveSection() {
+                const sections = document.querySelectorAll('section[id]');
+                const scrollPosition = window.pageYOffset + 100;
+
+                sections.forEach(section => {
+                    const sectionTop = section.offsetTop;
+                    const sectionHeight = section.offsetHeight;
+                    const sectionId = section.getAttribute('id');
+
+                    if (scrollPosition >= sectionTop && scrollPosition < sectionTop + sectionHeight) {
+                        this.currentSection = sectionId;
+                        this.updateFrameIndicators(sectionId);
+                        this.updateNavigation(sectionId);
+                    }
+                });
+            }
+
+            updateFrameIndicators(activeSection) {
+                document.querySelectorAll('.glec-frame-indicator').forEach(indicator => {
+                    const frame = indicator.getAttribute('data-frame');
+                    if (frame === activeSection) {
+                        indicator.classList.add('active');
+                    } else {
+                        indicator.classList.remove('active');
+                    }
+                });
+            }
+
+            updateNavigation(activeSection = this.currentSection) {
+                document.querySelectorAll('.glec-nav-link').forEach(link => {
+                    const section = link.getAttribute('data-section');
+                    if (section === activeSection) {
+                        link.classList.add('active');
+                    } else {
+                        link.classList.remove('active');
+                    }
+                });
+            }
+
+            scrollToSection(sectionId) {
+                const section = document.getElementById(sectionId);
+                if (section) {
+                    section.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            }
+
+            hideLoadingScreen() {
+                setTimeout(() => {
+                    const loadingScreen = document.getElementById('loadingScreen');
+                    loadingScreen.classList.add('hidden');
+                    setTimeout(() => {
+                        loadingScreen.style.display = 'none';
+                    }, 500);
+                }, 1000);
+            }
+
+            handleContactForm(event) {
+                event.preventDefault();
+                
+                const formData = new FormData(event.target);
+                const data = Object.fromEntries(formData);
+                
+                // Simulate form submission
+                console.log('Contact form submitted:', data);
+                
+                // Show success notification
+                this.showNotification('Message sent successfully!', 'success');
+                
+                // Reset form
+                event.target.reset();
+            }
+
+            showNotification(message, type = 'success') {
+                const notification = document.createElement('div');
+                notification.className = `glec-notification ${type}`;
+                notification.textContent = message;
+                
+                document.body.appendChild(notification);
+                
+                setTimeout(() => {
+                    notification.classList.add('show');
+                }, 100);
+                
+                setTimeout(() => {
+                    notification.classList.remove('show');
+                    setTimeout(() => {
+                        document.body.removeChild(notification);
+                    }, 300);
+                }, 3000);
+            }
+        }
+
+        // Global functions for HTML onclick handlers
+        function scrollToSection(sectionId) {
+            window.glecShowcase.scrollToSection(sectionId);
+        }
+
+        function playVideo(videoId) {
+            const video = document.getElementById(videoId);
+            const overlay = video.parentElement.querySelector('.glec-play-overlay');
+            
+            if (video.paused) {
+                video.play();
+                overlay.classList.add('playing');
+            } else {
+                video.pause();
+                overlay.classList.remove('playing');
+            }
+        }
+
+        function showProductDetail(productId) {
+            const modal = document.getElementById('productModal');
+            const title = document.getElementById('modalTitle');
+            const body = document.getElementById('modalBody');
+            
+            const productData = {
+                'dtg-device': {
+                    title: 'AI 기반 디지털운행기록장치',
+                    description: '운전자 안전과 수송 탄소 감축을 위한 AI 기반 디지털운행기록장치. 실시간 안전 추론과 데이터 분석으로 운송 효율성을 극대화합니다.',
+                    features: ['AI Processing', 'Real-time Generation', 'High Accuracy', 'Scalable Architecture']
+                },
+                'sensor-array': {
+                    title: '안전 추론 AI 시스템',
+                    description: '다중 센서 퓨전 기술을 활용한 실시간 안전 추론 AI 시스템. 운전자 상태, 차량 상태, 환경 조건을 종합적으로 분석합니다.',
+                    features: ['Multi-sensor Fusion', 'High Precision', 'Real-time Monitoring', 'Environmental Adaptation']
+                },
+                'truck-integration': {
+                    title: 'VCP IoT 플랫폼',
+                    description: '차량 중심 프로토콜(VCP) 기반 IoT 플랫폼. 트럭 IoT 생태계를 위한 표준 프로토콜과 시스템 설계를 제공합니다.',
+                    features: ['Vehicle Integration', 'Telemetry Systems', 'Real-time Monitoring', 'Fleet Management']
+                }
+            };
+            
+            const product = productData[productId];
+            if (product) {
+                title.textContent = product.title;
+                body.innerHTML = `
+                    <p>${product.description}</p>
+                    <h4>Key Features:</h4>
+                    <ul>
+                        ${product.features.map(feature => `<li>${feature}</li>`).join('')}
+                    </ul>
+                `;
+                modal.classList.add('open');
+            }
+        }
+
+        function showImageDetail(imageType) {
+            const modal = document.getElementById('imageModal');
+            const title = document.getElementById('imageModalTitle');
+            const body = document.getElementById('imageModalBody');
+            
+            const imageData = {
+                'hardware': {
+                    title: 'Hardware Components',
+                    description: 'Detailed view of our hardware components and specifications.',
+                    content: 'Hardware components include advanced processors, sensors, and communication modules designed for optimal performance in demanding environments.'
+                },
+                'dashboard': {
+                    title: 'Dashboard Interface',
+                    description: 'User interface and control systems overview.',
+                    content: 'Our dashboard provides intuitive control and monitoring capabilities with real-time data visualization and analytics tools.'
+                }
+            };
+            
+            const data = imageData[imageType];
+            if (data) {
+                title.textContent = data.title;
+                body.innerHTML = `
+                    <p>${data.description}</p>
+                    <p>${data.content}</p>
+                `;
+                modal.classList.add('open');
+            }
+        }
+
+        function closeModal(modalId) {
+            document.getElementById(modalId).classList.remove('open');
+        }
+
+        function view3DModel(productId) {
+            // Placeholder for 3D model viewing functionality
+            console.log('3D model view requested for:', productId);
+            alert('3D model viewing feature coming soon!');
+        }
+
+        // Initialize the application when DOM is loaded
+        document.addEventListener('DOMContentLoaded', () => {
+            window.glecShowcase = new GLECShowcase();
+        });
+
+        // Close modals when clicking outside
+        window.addEventListener('click', (e) => {
+            if (e.target.classList.contains('glec-modal')) {
+                e.target.classList.remove('open');
+            }
+        });
+
+        // Close modals with Escape key
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') {
+                document.querySelectorAll('.glec-modal').forEach(modal => {
+                    modal.classList.remove('open');
+                });
+            }
+        });
+    </script>
+</body>
+</html> 

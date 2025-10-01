@@ -1,0 +1,1143 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GLEC AI Solutions - World-Class AI Transformation Platform</title>
+    <meta name="description" content="GLEC AI DTG & Dashboard - 노후 화물차의 AI Transformation을 위한 세계 최고의 통합 솔루션">
+    
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    
+    <!-- Premium Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400;500;600;700;800;900&family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Inline Critical CSS for Maximum Performance -->
+    <style>
+        /* CSS Variables - Cyberpunk Theme */
+        :root {
+            --glec-black: #000000;
+            --glec-dark: #0a0a0a;
+            --glec-darker: #050505;
+            --glec-cyan: #00ffff;
+            --glec-magenta: #ff00ff;
+            --glec-yellow: #ffff00;
+            --glec-neon-blue: #00f3ff;
+            --glec-neon-pink: #ff0099;
+            --glec-neon-green: #00ff88;
+            --glec-white: #ffffff;
+            --glec-gray-100: #f0f0f0;
+            --glec-gray-200: #e0e0e0;
+            --glec-gray-300: #b0b0b0;
+            --glec-gray-400: #808080;
+            --glec-gray-500: #505050;
+            --glec-gray-600: #303030;
+            --glec-gray-700: #202020;
+            --glec-gray-800: #151515;
+            --glec-gray-900: #0f0f0f;
+            
+            /* Gradient Systems */
+            --glec-gradient-cyber: linear-gradient(135deg, #00ffff 0%, #ff00ff 50%, #ffff00 100%);
+            --glec-gradient-neon: linear-gradient(135deg, #00f3ff 0%, #ff0099 100%);
+            --glec-gradient-dark: linear-gradient(180deg, #000000 0%, #0a0a0a 50%, #000000 100%);
+            --glec-gradient-glow: radial-gradient(circle, rgba(0, 255, 255, 0.3) 0%, transparent 70%);
+            
+            /* Typography */
+            --font-display: 'Orbitron', sans-serif;
+            --font-body: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+            --font-mono: 'JetBrains Mono', monospace;
+            
+            /* Spacing */
+            --space-xs: 0.25rem;
+            --space-sm: 0.5rem;
+            --space-md: 1rem;
+            --space-lg: 1.5rem;
+            --space-xl: 2rem;
+            --space-2xl: 3rem;
+            --space-3xl: 4rem;
+            --space-4xl: 6rem;
+            --space-5xl: 8rem;
+            
+            /* Animation */
+            --ease-out-expo: cubic-bezier(0.16, 1, 0.3, 1);
+            --ease-in-out-expo: cubic-bezier(0.87, 0, 0.13, 1);
+            --duration-fast: 200ms;
+            --duration-normal: 400ms;
+            --duration-slow: 600ms;
+            --duration-slower: 1000ms;
+        }
+        
+        /* Global Reset & Base Styles */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        html {
+            scroll-behavior: smooth;
+            -webkit-font-smoothing: antialiased;
+            -moz-osx-font-smoothing: grayscale;
+        }
+        
+        body {
+            font-family: var(--font-body);
+            background: var(--glec-black);
+            color: var(--glec-white);
+            line-height: 1.6;
+            overflow-x: hidden;
+            position: relative;
+        }
+        
+        /* Cyberpunk Background Effects */
+        body::before {
+            content: '';
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: 
+                repeating-linear-gradient(
+                    0deg,
+                    transparent,
+                    transparent 2px,
+                    rgba(0, 255, 255, 0.03) 2px,
+                    rgba(0, 255, 255, 0.03) 4px
+                ),
+                repeating-linear-gradient(
+                    90deg,
+                    transparent,
+                    transparent 2px,
+                    rgba(255, 0, 255, 0.03) 2px,
+                    rgba(255, 0, 255, 0.03) 4px
+                );
+            pointer-events: none;
+            z-index: 1;
+        }
+        
+        /* Navigation Bar */
+        .nav-container {
+            position: fixed;
+            top: 0;
+            left: 0;
+            right: 0;
+            z-index: 1000;
+            background: linear-gradient(180deg, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.8) 100%);
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(0, 255, 255, 0.2);
+            transition: all var(--duration-normal) var(--ease-out-expo);
+        }
+        
+        .nav-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 1rem 2rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+        .nav-logo {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            text-decoration: none;
+        }
+        
+        .logo-text {
+            font-family: var(--font-display);
+            font-size: 1.8rem;
+            font-weight: 900;
+            background: var(--glec-gradient-cyber);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            position: relative;
+        }
+        
+        .logo-text::after {
+            content: 'AI SOLUTIONS';
+            position: absolute;
+            top: 100%;
+            left: 0;
+            font-size: 0.6rem;
+            letter-spacing: 4px;
+            color: var(--glec-cyan);
+            opacity: 0.8;
+        }
+        
+        .nav-menu {
+            display: flex;
+            gap: 2rem;
+            list-style: none;
+        }
+        
+        .nav-link {
+            color: var(--glec-gray-300);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.95rem;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            position: relative;
+            transition: all var(--duration-fast) var(--ease-out-expo);
+        }
+        
+        .nav-link::after {
+            content: '';
+            position: absolute;
+            bottom: -5px;
+            left: 0;
+            width: 0;
+            height: 2px;
+            background: var(--glec-gradient-neon);
+            transition: width var(--duration-normal) var(--ease-out-expo);
+        }
+        
+        .nav-link:hover {
+            color: var(--glec-cyan);
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+        }
+        
+        .nav-link:hover::after {
+            width: 100%;
+        }
+        
+        /* Hero Section with Cyberpunk Video */
+        .hero-section {
+            position: relative;
+            width: 100%;
+            height: 100vh;
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        
+        .hero-video-container {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 1;
+        }
+        
+        .hero-video {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            filter: brightness(0.4) contrast(1.2) saturate(1.3);
+        }
+        
+        .hero-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: radial-gradient(circle at center, transparent 0%, rgba(0,0,0,0.4) 100%);
+            z-index: 2;
+        }
+        
+        .hero-content {
+            position: relative;
+            z-index: 3;
+            text-align: center;
+            padding: 2rem;
+            max-width: 1200px;
+            animation: heroFadeIn 1.5s var(--ease-out-expo);
+        }
+        
+        @keyframes heroFadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .hero-title {
+            font-family: var(--font-display);
+            font-size: clamp(2.5rem, 8vw, 5rem);
+            font-weight: 900;
+            line-height: 1.1;
+            margin-bottom: 1rem;
+            text-transform: uppercase;
+            letter-spacing: 3px;
+        }
+        
+        .glowing-text {
+            background: linear-gradient(135deg, #00ffff, #ff00ff, #ffff00, #00ffff);
+            background-size: 200% 200%;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: glowingGradient 3s ease infinite;
+            filter: drop-shadow(0 0 20px rgba(0, 255, 255, 0.5));
+        }
+        
+        @keyframes glowingGradient {
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
+        }
+        
+        .hero-subtitle {
+            font-size: clamp(1rem, 3vw, 1.5rem);
+            color: var(--glec-gray-200);
+            margin-bottom: 2rem;
+            font-weight: 300;
+            letter-spacing: 2px;
+        }
+        
+        .hero-description {
+            font-size: 1.1rem;
+            color: var(--glec-gray-300);
+            margin-bottom: 3rem;
+            line-height: 1.8;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        .hero-buttons {
+            display: flex;
+            gap: 1.5rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        
+        .btn {
+            padding: 1rem 2.5rem;
+            font-size: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: none;
+            cursor: pointer;
+            transition: all var(--duration-normal) var(--ease-out-expo);
+            position: relative;
+            overflow: hidden;
+            text-decoration: none;
+            display: inline-block;
+        }
+        
+        .btn-primary {
+            background: linear-gradient(135deg, var(--glec-cyan), var(--glec-neon-blue));
+            color: var(--glec-black);
+            box-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
+        }
+        
+        .btn-primary:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 0 40px rgba(0, 255, 255, 0.7);
+        }
+        
+        .btn-secondary {
+            background: transparent;
+            color: var(--glec-white);
+            border: 2px solid var(--glec-neon-pink);
+            box-shadow: 0 0 20px rgba(255, 0, 153, 0.3);
+        }
+        
+        .btn-secondary:hover {
+            background: var(--glec-neon-pink);
+            color: var(--glec-white);
+            transform: translateY(-2px);
+            box-shadow: 0 0 30px rgba(255, 0, 153, 0.5);
+        }
+        
+        /* AI Transformation Section */
+        .transformation-section {
+            padding: var(--space-5xl) var(--space-xl);
+            position: relative;
+            background: linear-gradient(180deg, var(--glec-black) 0%, var(--glec-darker) 100%);
+        }
+        
+        .section-container {
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+        
+        .section-header {
+            text-align: center;
+            margin-bottom: var(--space-3xl);
+            position: relative;
+        }
+        
+        .section-label {
+            font-family: var(--font-mono);
+            font-size: 0.9rem;
+            color: var(--glec-cyan);
+            text-transform: uppercase;
+            letter-spacing: 3px;
+            margin-bottom: 1rem;
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border: 1px solid var(--glec-cyan);
+            background: rgba(0, 255, 255, 0.1);
+        }
+        
+        .section-title {
+            font-family: var(--font-display);
+            font-size: clamp(2rem, 5vw, 3.5rem);
+            font-weight: 800;
+            margin-bottom: 1rem;
+            background: var(--glec-gradient-neon);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+        
+        .section-description {
+            font-size: 1.2rem;
+            color: var(--glec-gray-300);
+            max-width: 800px;
+            margin: 0 auto;
+            line-height: 1.8;
+        }
+        
+        /* Transformation Video Container */
+        .transformation-video-container {
+            position: relative;
+            width: 100%;
+            max-width: 1200px;
+            margin: 0 auto var(--space-4xl);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 0 50px rgba(0, 255, 255, 0.3);
+        }
+        
+        .transformation-video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        /* Transformation Features Grid */
+        .transformation-features {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: var(--space-2xl);
+            margin-top: var(--space-4xl);
+        }
+        
+        .feature-card {
+            background: linear-gradient(135deg, rgba(0, 255, 255, 0.1) 0%, rgba(255, 0, 255, 0.1) 100%);
+            border: 1px solid rgba(0, 255, 255, 0.3);
+            border-radius: 15px;
+            padding: var(--space-2xl);
+            position: relative;
+            overflow: hidden;
+            transition: all var(--duration-normal) var(--ease-out-expo);
+        }
+        
+        .feature-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(0, 255, 255, 0.1) 0%, transparent 70%);
+            opacity: 0;
+            transition: opacity var(--duration-slow) var(--ease-out-expo);
+        }
+        
+        .feature-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 40px rgba(0, 255, 255, 0.3);
+        }
+        
+        .feature-card:hover::before {
+            opacity: 1;
+        }
+        
+        .feature-icon {
+            width: 60px;
+            height: 60px;
+            margin-bottom: var(--space-lg);
+            background: var(--glec-gradient-neon);
+            border-radius: 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.5rem;
+        }
+        
+        .feature-title {
+            font-size: 1.5rem;
+            font-weight: 700;
+            margin-bottom: var(--space-md);
+            color: var(--glec-white);
+        }
+        
+        .feature-description {
+            color: var(--glec-gray-300);
+            line-height: 1.8;
+        }
+        
+        /* Products Showcase Section */
+        .products-section {
+            padding: var(--space-5xl) var(--space-xl);
+            background: var(--glec-black);
+            position: relative;
+        }
+        
+        .products-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+            gap: var(--space-3xl);
+            margin-top: var(--space-4xl);
+        }
+        
+        .product-card {
+            background: linear-gradient(135deg, var(--glec-gray-900) 0%, var(--glec-gray-800) 100%);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 20px;
+            overflow: hidden;
+            position: relative;
+            transition: all var(--duration-normal) var(--ease-out-expo);
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 60px rgba(0, 255, 255, 0.3);
+            border-color: var(--glec-cyan);
+        }
+        
+        .product-media-container {
+            position: relative;
+            height: 300px;
+            overflow: hidden;
+            background: var(--glec-gradient-dark);
+        }
+        
+        .product-image {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform var(--duration-slow) var(--ease-out-expo);
+        }
+        
+        .product-card:hover .product-image {
+            transform: scale(1.05);
+        }
+        
+        .product-video-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.7);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            opacity: 0;
+            transition: opacity var(--duration-normal) var(--ease-out-expo);
+            cursor: pointer;
+        }
+        
+        .product-card:hover .product-video-overlay {
+            opacity: 1;
+        }
+        
+        .play-button {
+            width: 80px;
+            height: 80px;
+            border: 3px solid var(--glec-cyan);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: rgba(0, 255, 255, 0.1);
+            transition: all var(--duration-normal) var(--ease-out-expo);
+        }
+        
+        .play-button:hover {
+            transform: scale(1.1);
+            background: rgba(0, 255, 255, 0.2);
+            box-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
+        }
+        
+        .play-icon {
+            width: 0;
+            height: 0;
+            border-left: 25px solid var(--glec-cyan);
+            border-top: 15px solid transparent;
+            border-bottom: 15px solid transparent;
+            margin-left: 5px;
+        }
+        
+        .product-content {
+            padding: var(--space-2xl);
+        }
+        
+        .product-label {
+            display: inline-block;
+            padding: 0.3rem 0.8rem;
+            background: var(--glec-gradient-neon);
+            color: var(--glec-white);
+            font-size: 0.8rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border-radius: 5px;
+            margin-bottom: var(--space-md);
+        }
+        
+        .product-title {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 800;
+            margin-bottom: var(--space-md);
+            color: var(--glec-white);
+        }
+        
+        .product-description {
+            color: var(--glec-gray-300);
+            line-height: 1.8;
+            margin-bottom: var(--space-lg);
+        }
+        
+        .product-features {
+            display: flex;
+            flex-wrap: wrap;
+            gap: var(--space-sm);
+            margin-bottom: var(--space-xl);
+        }
+        
+        .feature-tag {
+            padding: 0.5rem 1rem;
+            background: rgba(0, 255, 255, 0.1);
+            border: 1px solid rgba(0, 255, 255, 0.3);
+            color: var(--glec-cyan);
+            font-size: 0.9rem;
+            border-radius: 20px;
+            transition: all var(--duration-fast) var(--ease-out-expo);
+        }
+        
+        .feature-tag:hover {
+            background: rgba(0, 255, 255, 0.2);
+            border-color: var(--glec-cyan);
+            transform: translateY(-2px);
+        }
+        
+        .product-actions {
+            display: flex;
+            gap: var(--space-md);
+        }
+        
+        .product-btn {
+            flex: 1;
+            padding: 1rem;
+            font-weight: 600;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: none;
+            border-radius: 10px;
+            cursor: pointer;
+            transition: all var(--duration-normal) var(--ease-out-expo);
+        }
+        
+        .product-btn-primary {
+            background: var(--glec-gradient-neon);
+            color: var(--glec-white);
+        }
+        
+        .product-btn-secondary {
+            background: transparent;
+            color: var(--glec-cyan);
+            border: 2px solid var(--glec-cyan);
+        }
+        
+        .product-btn:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 30px rgba(0, 255, 255, 0.3);
+        }
+        
+        /* Video Modal */
+        .video-modal {
+            display: none;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.95);
+            z-index: 2000;
+            align-items: center;
+            justify-content: center;
+            padding: var(--space-xl);
+        }
+        
+        .video-modal.active {
+            display: flex;
+        }
+        
+        .modal-content {
+            position: relative;
+            width: 100%;
+            max-width: 1200px;
+            background: var(--glec-black);
+            border: 2px solid var(--glec-cyan);
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 0 50px rgba(0, 255, 255, 0.5);
+        }
+        
+        .modal-video {
+            width: 100%;
+            height: auto;
+            display: block;
+        }
+        
+        .modal-close {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            width: 50px;
+            height: 50px;
+            background: rgba(0, 0, 0, 0.8);
+            border: 2px solid var(--glec-cyan);
+            border-radius: 50%;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all var(--duration-fast) var(--ease-out-expo);
+            z-index: 10;
+        }
+        
+        .modal-close:hover {
+            background: var(--glec-cyan);
+            transform: rotate(90deg);
+        }
+        
+        .modal-close::before,
+        .modal-close::after {
+            content: '';
+            position: absolute;
+            width: 20px;
+            height: 2px;
+            background: var(--glec-white);
+        }
+        
+        .modal-close::before {
+            transform: rotate(45deg);
+        }
+        
+        .modal-close::after {
+            transform: rotate(-45deg);
+        }
+        
+        /* Footer */
+        .footer {
+            padding: var(--space-3xl) var(--space-xl);
+            background: linear-gradient(180deg, var(--glec-darker) 0%, var(--glec-black) 100%);
+            border-top: 1px solid rgba(0, 255, 255, 0.2);
+        }
+        
+        .footer-content {
+            max-width: 1400px;
+            margin: 0 auto;
+            text-align: center;
+        }
+        
+        .footer-logo {
+            font-family: var(--font-display);
+            font-size: 2rem;
+            font-weight: 900;
+            background: var(--glec-gradient-cyber);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            margin-bottom: var(--space-lg);
+        }
+        
+        .footer-text {
+            color: var(--glec-gray-400);
+            font-size: 0.9rem;
+        }
+        
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .nav-menu {
+                display: none;
+            }
+            
+            .hero-title {
+                font-size: 2rem;
+            }
+            
+            .hero-buttons {
+                flex-direction: column;
+                align-items: center;
+            }
+            
+            .products-grid {
+                grid-template-columns: 1fr;
+            }
+            
+            .transformation-features {
+                grid-template-columns: 1fr;
+            }
+        }
+        
+        /* Loading Animation */
+        .loading-screen {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: var(--glec-black);
+            z-index: 3000;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: opacity var(--duration-slow) var(--ease-out-expo);
+        }
+        
+        .loading-screen.hide {
+            opacity: 0;
+            pointer-events: none;
+        }
+        
+        .loading-logo {
+            font-family: var(--font-display);
+            font-size: 3rem;
+            font-weight: 900;
+            background: var(--glec-gradient-cyber);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            animation: pulse 1.5s ease-in-out infinite;
+        }
+        
+        @keyframes pulse {
+            0%, 100% { transform: scale(1); opacity: 1; }
+            50% { transform: scale(1.05); opacity: 0.8; }
+        }
+    </style>
+</head>
+<body>
+    <!-- Loading Screen -->
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loading-logo">GLEC</div>
+    </div>
+    
+    <!-- Navigation -->
+    <nav class="nav-container" id="navbar">
+        <div class="nav-content">
+            <a href="#home" class="nav-logo">
+                <span class="logo-text">GLEC</span>
+            </a>
+            <ul class="nav-menu">
+                <li><a href="#home" class="nav-link">Home</a></li>
+                <li><a href="#transformation" class="nav-link">AI Transformation</a></li>
+                <li><a href="#products" class="nav-link">Products</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+        </div>
+    </nav>
+    
+    <!-- Hero Section with Cyberpunk Video -->
+    <section class="hero-section" id="home">
+        <div class="hero-video-container">
+            <video class="hero-video" autoplay muted loop playsinline>
+                <source src="glec-premium-showcase/public/assets/videos/KakaoTalk_20250814_145521290.mp4" type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+        </div>
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span class="glowing-text">GLEC AI SOLUTIONS</span>
+            </h1>
+            <p class="hero-subtitle">World-Class AI Transformation Platform</p>
+            <p class="hero-description">
+                노후 화물차를 첨단 AI 차량으로 변환하는 세계 최고의 통합 솔루션<br>
+                AI 기반 안전 향상과 국제표준 탄소 측정 및 감축 시스템
+            </p>
+            <div class="hero-buttons">
+                <a href="#products" class="btn btn-primary">Explore Products</a>
+                <a href="#transformation" class="btn btn-secondary">AI Transformation</a>
+            </div>
+        </div>
+    </section>
+    
+    <!-- AI Transformation Section -->
+    <section class="transformation-section" id="transformation">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">AI TRANSFORMATION</span>
+                <h2 class="section-title">노후 화물차의 AI Transformation (AX)</h2>
+                <p class="section-description">
+                    최첨단 AI 기술로 기존 화물차를 스마트 차량으로 업그레이드하여
+                    운전자 안전과 환경 보호를 동시에 실현합니다
+                </p>
+            </div>
+            
+            <!-- Transformation Video -->
+            <div class="transformation-video-container">
+                <video class="transformation-video" controls>
+                    <source src="glec-premium-showcase/public/assets/videos/KakaoTalk_20250814_145511097.mp4" type="video/mp4">
+                </video>
+            </div>
+            
+            <!-- Transformation Features -->
+            <div class="transformation-features">
+                <div class="feature-card">
+                    <div class="feature-icon">🛡️</div>
+                    <h3 class="feature-title">AI 기반 운전자 및 화물 안전 향상</h3>
+                    <p class="feature-description">
+                        실시간 AI 추론을 통해 운전자의 피로도, 졸음, 주의 산만을 감지하고
+                        즉각적인 경고를 제공합니다. 화물 상태를 지속적으로 모니터링하여
+                        사고를 예방하고 안전한 운송을 보장합니다.
+                    </p>
+                </div>
+                
+                <div class="feature-card">
+                    <div class="feature-icon">🌍</div>
+                    <h3 class="feature-title">AI 기반 국제표준 탄소 측정 및 감축</h3>
+                    <p class="feature-description">
+                        ISO 14064 국제표준을 준수하는 정밀한 탄소 배출량 측정 시스템으로
+                        실시간 탄소 배출을 모니터링하고, AI 최적화를 통해 연료 효율을
+                        극대화하여 탄소 배출을 효과적으로 감축합니다.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Products Showcase Section -->
+    <section class="products-section" id="products">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label">PRODUCT SHOWCASE</span>
+                <h2 class="section-title">Revolutionary AI Products</h2>
+                <p class="section-description">
+                    화물 운송의 미래를 재정의하는 GLEC의 혁신적인 AI 솔루션
+                </p>
+            </div>
+            
+            <div class="products-grid">
+                <!-- GLEC AI DTG Product -->
+                <div class="product-card">
+                    <div class="product-media-container">
+                        <img src="assets/hardware/beetle_x31_1080.jpg" alt="GLEC AI DTG" class="product-image">
+                        <div class="product-video-overlay" onclick="openVideoModal('glec-premium-showcase/public/assets/videos/0819.mp4')">
+                            <div class="play-button">
+                                <div class="play-icon"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <span class="product-label">AI Hardware</span>
+                        <h3 class="product-title">GLEC AI DTG</h3>
+                        <p class="product-description">
+                            차세대 AI 디지털운행기록장치로 운전자의 안전과 차량 효율성을
+                            실시간으로 모니터링하고 최적화합니다. 고정밀 센서와 엣지 AI
+                            컴퓨팅으로 즉각적인 위험 감지와 대응이 가능합니다.
+                        </p>
+                        <div class="product-features">
+                            <span class="feature-tag">실시간 AI 추론</span>
+                            <span class="feature-tag">고정밀 센싱</span>
+                            <span class="feature-tag">엣지 컴퓨팅</span>
+                            <span class="feature-tag">5G 연결</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="product-btn product-btn-primary">상세 스펙 보기</button>
+                            <button class="product-btn product-btn-secondary">견적 문의</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- GLEC AI Dashboard Product -->
+                <div class="product-card">
+                    <div class="product-media-container">
+                        <img src="assets/hardware/beetle_x31_B_1080.jpg" alt="GLEC AI Dashboard" class="product-image">
+                        <div class="product-video-overlay" onclick="openVideoModal('glec-premium-showcase/public/assets/videos/화면 기록 2025-08-14 오후 5.51.51.mov')">
+                            <div class="play-button">
+                                <div class="play-icon"></div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="product-content">
+                        <span class="product-label">AI Software</span>
+                        <h3 class="product-title">GLEC AI Dashboard</h3>
+                        <p class="product-description">
+                            통합 AI 대시보드 시스템으로 차량 운행 데이터를 실시간으로
+                            시각화하고 분석합니다. 직관적인 인터페이스로 운전자와 관리자가
+                            모든 정보를 한눈에 파악할 수 있습니다.
+                        </p>
+                        <div class="product-features">
+                            <span class="feature-tag">실시간 모니터링</span>
+                            <span class="feature-tag">AI 분석</span>
+                            <span class="feature-tag">클라우드 연동</span>
+                            <span class="feature-tag">모바일 지원</span>
+                        </div>
+                        <div class="product-actions">
+                            <button class="product-btn product-btn-primary">라이브 데모</button>
+                            <button class="product-btn product-btn-secondary">무료 체험</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Video Modal -->
+    <div class="video-modal" id="videoModal">
+        <div class="modal-content">
+            <div class="modal-close" onclick="closeVideoModal()"></div>
+            <video class="modal-video" id="modalVideo" controls>
+                <source src="" type="video/mp4">
+            </video>
+        </div>
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">GLEC AI SOLUTIONS</div>
+            <p class="footer-text">
+                © 2024 GLEC. All rights reserved. | Transforming Transportation with AI
+            </p>
+        </div>
+    </footer>
+    
+    <!-- JavaScript -->
+    <script>
+        // Loading Screen
+        window.addEventListener('load', () => {
+            setTimeout(() => {
+                document.getElementById('loadingScreen').classList.add('hide');
+            }, 1500);
+        });
+        
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+        
+        // Navbar Scroll Effect
+        let lastScroll = 0;
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 100) {
+                navbar.style.background = 'rgba(0, 0, 0, 0.98)';
+                navbar.style.backdropFilter = 'blur(30px)';
+            } else {
+                navbar.style.background = 'linear-gradient(180deg, rgba(0,0,0,0.95) 0%, rgba(0,0,0,0.8) 100%)';
+                navbar.style.backdropFilter = 'blur(20px)';
+            }
+            
+            lastScroll = currentScroll;
+        });
+        
+        // Video Modal Functions
+        function openVideoModal(videoSrc) {
+            const modal = document.getElementById('videoModal');
+            const video = document.getElementById('modalVideo');
+            video.src = videoSrc;
+            modal.classList.add('active');
+            video.play();
+        }
+        
+        function closeVideoModal() {
+            const modal = document.getElementById('videoModal');
+            const video = document.getElementById('modalVideo');
+            modal.classList.remove('active');
+            video.pause();
+            video.src = '';
+        }
+        
+        // Close modal on outside click
+        document.getElementById('videoModal').addEventListener('click', (e) => {
+            if (e.target === e.currentTarget) {
+                closeVideoModal();
+            }
+        });
+        
+        // Intersection Observer for Animations
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -100px 0px'
+        };
+        
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+        
+        // Observe all feature cards and product cards
+        document.querySelectorAll('.feature-card, .product-card').forEach(card => {
+            card.style.opacity = '0';
+            card.style.transform = 'translateY(30px)';
+            card.style.transition = 'all 0.8s cubic-bezier(0.16, 1, 0.3, 1)';
+            observer.observe(card);
+        });
+        
+        // Parallax Effect for Hero Video
+        window.addEventListener('scroll', () => {
+            const scrolled = window.pageYOffset;
+            const heroVideo = document.querySelector('.hero-video-container');
+            if (heroVideo && scrolled < window.innerHeight) {
+                heroVideo.style.transform = `translateY(${scrolled * 0.5}px)`;
+            }
+        });
+        
+        // Dynamic Text Glow Effect
+        const glowingText = document.querySelector('.glowing-text');
+        if (glowingText) {
+            setInterval(() => {
+                const hue = Math.random() * 360;
+                glowingText.style.filter = `drop-shadow(0 0 20px hsl(${hue}, 100%, 50%))`;
+            }, 3000);
+        }
+        
+        // Performance Optimization - Lazy Load Videos
+        const videos = document.querySelectorAll('video[data-src]');
+        const videoObserver = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const video = entry.target;
+                    video.src = video.dataset.src;
+                    video.load();
+                    videoObserver.unobserve(video);
+                }
+            });
+        });
+        
+        videos.forEach(video => {
+            videoObserver.observe(video);
+        });
+    </script>
+</body>
+</html>

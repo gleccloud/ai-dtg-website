@@ -1,0 +1,106 @@
+/**
+ * SK hynix Rhye Theme Cursor Styles
+ * Perfect clone of the original cursor follower design
+ */
+
+.arts-cursor-follower {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 60px;
+    height: 60px;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+}
+
+.arts-cursor-follower.is-visible {
+    opacity: 1;
+    visibility: visible;
+}
+
+.arts-cursor-follower__inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.arts-cursor-follower__circle {
+    width: 100%;
+    height: 100%;
+    border: 2px solid rgba(0, 255, 255, 0.6);
+    border-radius: 50%;
+    background: rgba(0, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    transition: all 0.3s ease;
+}
+
+.arts-cursor-follower__arrow {
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-right: 2px solid rgba(0, 255, 255, 0.8);
+    border-bottom: 2px solid rgba(0, 255, 255, 0.8);
+    transform: rotate(45deg);
+    opacity: 0;
+    transition: all 0.3s ease;
+}
+
+/* Hover states */
+.arts-cursor-follower.is-hovering .arts-cursor-follower__circle {
+    width: 80px;
+    height: 80px;
+    border-color: rgba(0, 255, 255, 0.9);
+    background: rgba(0, 255, 255, 0.2);
+    transform: scale(1.2);
+}
+
+.arts-cursor-follower.is-hovering .arts-cursor-follower__arrow {
+    opacity: 1;
+    transform: rotate(45deg) scale(1.2);
+}
+
+/* Drag states */
+.arts-cursor-follower.is-dragging .arts-cursor-follower__circle {
+    width: 100px;
+    height: 100px;
+    border-color: rgba(255, 0, 255, 0.9);
+    background: rgba(255, 0, 255, 0.2);
+    transform: scale(1.5);
+}
+
+.arts-cursor-follower.is-dragging .arts-cursor-follower__arrow {
+    opacity: 1;
+    transform: rotate(45deg) scale(1.5);
+    border-color: rgba(255, 0, 255, 0.8);
+}
+
+/* Slider specific states */
+.slider-images_touched .arts-cursor-follower__circle {
+    border-color: rgba(255, 255, 0, 0.9);
+    background: rgba(255, 255, 0, 0.2);
+}
+
+/* Mobile optimizations */
+@media (max-width: 768px) {
+    .arts-cursor-follower {
+        display: none;
+    }
+}
+
+/* High DPI displays */
+@media (-webkit-min-device-pixel-ratio: 2), (min-resolution: 192dpi) {
+    .arts-cursor-follower__circle {
+        border-width: 1px;
+    }
+    
+    .arts-cursor-follower__arrow {
+        border-width: 1px;
+    }
+} 

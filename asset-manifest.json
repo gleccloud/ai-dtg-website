@@ -1,0 +1,80 @@
+{
+  "version": "1.0.0",
+  "lastUpdated": "2025-08-19T12:00:44.078Z",
+  "assets": {
+    "videos": {
+      "hero": {
+        "src": "assets/videos/hero-cyberpunk-optimized.mp4",
+        "type": "video/mp4",
+        "usage": "Hero section background",
+        "autoplay": true,
+        "muted": true,
+        "loop": true,
+        "optimized": true
+      },
+      "transformation": {
+        "src": "assets/videos/ai-transformation-intro.mp4",
+        "type": "video/mp4",
+        "usage": "AI Transformation section",
+        "controls": true,
+        "optimized": true
+      },
+      "dtgDemo": {
+        "src": "assets/videos/glec-dtg-product-demo.mp4",
+        "type": "video/mp4",
+        "usage": "DTG product demonstration",
+        "modal": true,
+        "optimized": true
+      },
+      "dashboardDemo": {
+        "src": "assets/videos/glec-dashboard-demo.mp4",
+        "type": "video/mp4",
+        "usage": "Dashboard demonstration",
+        "modal": true,
+        "optimized": true
+      }
+    },
+    "images": {
+      "dtgHero": {
+        "src": "assets/images/glec-dtg-hero.webp",
+        "fallback": "assets/images/glec-dtg-hero.jpg",
+        "sizes": [
+          "400w",
+          "600w",
+          "800w"
+        ],
+        "usage": "DTG product hero image",
+        "lazyLoad": true
+      },
+      "dtgDetail": {
+        "src": "assets/images/glec-dtg-detail.webp",
+        "fallback": "assets/images/glec-dtg-detail.jpg",
+        "usage": "DTG product detail image",
+        "lazyLoad": true
+      },
+      "dashboardHero": {
+        "src": "assets/images/glec-dashboard-hero.webp",
+        "fallback": "assets/images/glec-dashboard-hero.jpg",
+        "sizes": [
+          "400w",
+          "600w",
+          "800w"
+        ],
+        "usage": "Dashboard product hero image",
+        "lazyLoad": true
+      },
+      "dashboardDetail": {
+        "src": "assets/images/glec-dashboard-detail.webp",
+        "fallback": "assets/images/glec-dashboard-detail.jpg",
+        "usage": "Dashboard product detail image",
+        "lazyLoad": true
+      }
+    }
+  },
+  "optimization": {
+    "totalSavings": "Expected 50-70% file size reduction",
+    "performanceGain": "Expected 40-60% faster loading",
+    "qualityRetention": "90%+ visual quality maintained",
+    "browserCompatibility": "95%+ modern browser support"
+  }
+}

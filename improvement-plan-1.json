@@ -1,0 +1,100 @@
+[
+  {
+    "category": "styles",
+    "key": "backgroundColor",
+    "original": "rgb(0, 0, 0)",
+    "clone": "rgba(0, 0, 0, 0)",
+    "priority": 100
+  },
+  {
+    "category": "styles",
+    "key": "color",
+    "original": "rgb(38, 38, 38)",
+    "clone": "rgb(0, 0, 0)",
+    "priority": 90
+  },
+  {
+    "category": "styles",
+    "key": "fontFamily",
+    "original": "Roboto",
+    "clone": "\"Apple SD Gothic Neo\"",
+    "priority": 50
+  },
+  {
+    "category": "styles",
+    "key": "lineHeight",
+    "original": "28.8px",
+    "clone": "normal",
+    "priority": 50
+  },
+  {
+    "category": "styles",
+    "key": "margin",
+    "original": "0px",
+    "clone": "8px",
+    "priority": 50
+  },
+  {
+    "category": "assets",
+    "key": "cssSheets",
+    "original": 31,
+    "clone": 28,
+    "priority": 49
+  },
+  {
+    "category": "assets",
+    "key": "jsScripts",
+    "original": 36,
+    "clone": 37,
+    "priority": 49
+  },
+  {
+    "category": "assets",
+    "key": "fonts",
+    "original": 281,
+    "clone": 96,
+    "priority": 35
+  },
+  {
+    "category": "metadata",
+    "key": "title",
+    "original": "Beetle X31 SSD – SK hynix SSD",
+    "clone": "Beetle X31 SSD – SK hynix SSD Perfect Clone",
+    "priority": 32
+  },
+  {
+    "category": "layout",
+    "key": "width",
+    "original": 1920,
+    "clone": 1889,
+    "priority": 30
+  },
+  {
+    "category": "layout",
+    "key": "height",
+    "original": 1080,
+    "clone": 27663,
+    "priority": 30
+  },
+  {
+    "category": "layout",
+    "key": "scrollWidth",
+    "original": 1920,
+    "clone": 1905,
+    "priority": 30
+  },
+  {
+    "category": "layout",
+    "key": "scrollHeight",
+    "original": 1080,
+    "clone": 27679,
+    "priority": 30
+  },
+  {
+    "category": "metadata",
+    "key": "favicon",
+    "original": "https://ssd.skhynix.com/wp-content/uploads/2021/06/cropped-siteicon-32x32.png",
+    "clone": "http://localhost:8081/wp-content/uploads/2021/06/cropped-siteicon-32x32.png",
+    "priority": 20
+  }
+]

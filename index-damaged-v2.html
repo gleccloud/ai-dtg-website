@@ -1,0 +1,259 @@
+<html lang="en" class=" supports no-touchevents backgroundblendmode csstransforms3d mediaqueries"><head><link rel="preload" href="/wp-content/plugins/rhye-core/modules/sectionSliderImages/sectionSliderImages.min.js?ver=2.3.0" as="script" type="text/javascript"><link rel="preload" href="/wp-content/themes/rhye/js/swiper.min.js?ver=6.4.15" as="script" type="text/javascript"><link rel="preload" href="/wp-content/plugins/rhye-core/modules/slider/slider.min.css?ver=2.3.0" as="style" type="text/css"><link rel="preload" href="/wp-content/plugins/rhye-core/modules/slider/slider.min.js?ver=2.3.0" as="script" type="text/javascript"><link rel="stylesheet" type="text/css" href="/wp-content/plugins/rhye-core/modules/slider/slider.min.css?ver=2.3.0"><link rel="preload" href="/wp-content/plugins/rhye-core/modules/sectionContent/sectionContent.min.css?ver=2.3.0" as="style" type="text/css"><link rel="preload" href="/wp-content/plugins/rhye-core/modules/sectionContent/sectionContent.min.js?ver=2.3.0" as="script" type="text/javascript"><link rel="stylesheet" type="text/css" href="/wp-content/plugins/rhye-core/modules/sectionContent/sectionContent.min.css?ver=2.3.0"><link rel="preload" href="/wp-content/themes/rhye/modules/cursor/cursor.min.css?ver=2.5.1" as="style" type="text/css"><link rel="preload" href="/wp-content/themes/rhye/modules/cursor/cursor.min.js?ver=2.5.1" as="script" type="text/javascript"><link rel="preload" href="/wp-content/themes/rhye/modules/smoothScroll/smoothScroll.min.js?ver=2.5.1" as="script" type="text/javascript">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>Beetle X31 SSD – SK hynix SSD</title>
+<meta name="robots" content="max-image-preview:large">
+<link rel="dns-prefetch" href="//use.fontawesome.com">
+<link rel="dns-prefetch" href="//s.w.org">
+<link href="https://fonts.gstatic.com/" crossorigin="" rel="preconnect">
+<link rel="alternate" type="application/rss+xml" title="SK hynix SSD » Feed" href="/feed/">
+<link rel="alternate" type="application/rss+xml" title="SK hynix SSD » Comments Feed" href="/comments/feed/">
+
+    <script>
+    // 7차 개선: 강력한 뷰포트 크기 강제 적용
+    function forceViewportSize() {
+        // HTML과 Body 강제 설정
+        document.documentElement.style.width = '1920px';
+        document.documentElement.style.minWidth = '1920px';
+        document.documentElement.style.maxWidth = '1920px';
+        document.documentElement.style.height = 'auto';
+        document.documentElement.style.minHeight = '100vh';
+        
+        document.body.style.width = '1920px';
+        document.body.style.minWidth = '1920px';
+        document.body.style.maxWidth = '1920px';
+        document.body.style.height = 'auto';
+        document.body.style.minHeight = '100vh';
+        
+        // 뷰포트 강제 설정
+        if (window.resizeTo) {
+            window.resizeTo(1920, 1080);
+        }
+        
+        // 스크롤바 숨김
+        document.documentElement.style.overflowX = 'hidden';
+        document.body.style.overflowX = 'hidden';
+        
+        console.log('7차 개선: 뷰포트 크기 강제 적용 완료');
+    }
+    
+    // 즉시 실행
+    forceViewportSize();
+    
+    // 주기적 실행
+    setInterval(forceViewportSize, 100);
+    
+    // 리사이즈 이벤트 리스너
+    window.addEventListener('resize', forceViewportSize);
+    window.addEventListener('orientationchange', forceViewportSize);
+    
+    // DOM 로드 완료 후 실행
+    document.addEventListener('DOMContentLoaded', forceViewportSize);
+    </script>
+    <script src="assets/js/cursor.js"></script>
+    <script src="assets/js/slider.js"></script>
+    <script src="assets/js/main.js"></script>
+    <script src="assets/js/animations.js"></script>
+    <script src="assets/js/effects.js"></script>
+    <script src="assets/js/viewport.js"></script>
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/gsap.min.js"></script>
+    <script src="assets/js/ScrollTrigger.min.js"></script>
+    <script src="assets/js/utils.js"></script>
+    <script src="assets/js/helpers.js"></script>
+    <script src="assets/js/plugins.js"></script>
+    <script src="assets/js/extensions.js"></script>
+    <script src="assets/js/modules.js"></script>
+    <script src="assets/js/core.js"></script>
+    <script src="assets/js/app.js"></script>
+    <script src="assets/js/bootstrap.js"></script>
+    <script src="assets/js/vendor.js"></script>
+    <script src="assets/js/custom.js"></script>
+
+    <script>
+    // 7차 개선: 완벽한 애니메이션 초기화 시스템
+    function initAnimations() {
+        console.log('7차 개선: 애니메이션 초기화 시작');
+        
+        // 1. 스크롤 애니메이션 초기화
+        const scrollElements = document.querySelectorAll('.scroll-animation');
+        if (scrollElements.length > 0) {
+            const observer = new IntersectionObserver((entries) => {
+                entries.forEach(entry => {
+                    if (entry.isIntersecting) {
+                        entry.target.style.opacity = '1';
+                        entry.target.style.transform = 'translateY(0)';
+                        entry.target.classList.add('animated');
+                    }
+                });
+            }, { threshold: 0.1 });
+            
+            scrollElements.forEach(el => {
+                el.style.opacity = '0';
+                el.style.transform = 'translateY(50px)';
+                el.style.transition = 'all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+                observer.observe(el);
+            });
+        }
+        
+        // 2. 호버 효과 초기화
+        const hoverElements = document.querySelectorAll('.hover-effect');
+        hoverElements.forEach(el => {
+            el.addEventListener('mouseenter', function() {
+                this.style.transform = 'scale(1.05)';
+                this.style.transition = 'transform 0.3s ease';
+            });
+            
+            el.addEventListener('mouseleave', function() {
+                this.style.transform = 'scale(1)';
+            });
+        });
+        
+        // 3. 텍스트 애니메이션 초기화
+        const textElements = document.querySelectorAll('.text-animation');
+        textElements.forEach((el, index) => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease';
+            
+            setTimeout(() => {
+                el.style.opacity = '1';
+                el.style.transform = 'translateY(0)';
+            }, index * 200);
+        });
+        
+        // 4. 이미지 애니메이션 초기화
+        const imageElements = document.querySelectorAll('.image-animation');
+        imageElements.forEach((el, index) => {
+            el.style.opacity = '0';
+            el.style.transform = 'scale(0.8) rotate(-5deg)';
+            el.style.transition = 'all 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94)';
+            
+            setTimeout(() => {
+                el.style.opacity = '1';
+                el.style.transform = 'scale(1) rotate(0deg)';
+            }, index * 300);
+        });
+        
+        // 5. 배경 애니메이션 초기화
+        const backgroundElements = document.querySelectorAll('.background-animation');
+        backgroundElements.forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'scale(1.1)';
+            el.style.transition = 'all 1.2s ease';
+            
+            setTimeout(() => {
+                el.style.opacity = '1';
+                el.style.transform = 'scale(1)';
+            }, 500);
+        });
+        
+        // 6. 히어로 섹션 애니메이션 초기화
+        const heroElements = document.querySelectorAll('.hero-section');
+        heroElements.forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(-50px)';
+            el.style.transition = 'all 1s ease';
+            
+            setTimeout(() => {
+                el.style.opacity = '1';
+                el.style.transform = 'translateY(0)';
+            }, 200);
+        });
+        
+        console.log('7차 개선: 애니메이션 초기화 완료');
+        console.log('   - Scroll animations:', scrollElements.length);
+        console.log('   - Hover effects:', hoverElements.length);
+        console.log('   - Text animations:', textElements.length);
+        console.log('   - Image animations:', imageElements.length);
+        console.log('   - Background animations:', backgroundElements.length);
+        console.log('   - Hero sections:', heroElements.length);
+    }
+    
+    // DOM 로드 완료 후 실행
+    document.addEventListener('DOMContentLoaded', function() {
+        console.log('7차 개선: DOM 로드 완료, 애니메이션 초기화 시작');
+        initAnimations();
+        
+        // 추가 초기화 함수들도 실행
+        if (typeof initScrollProgress === 'function') initScrollProgress();
+        if (typeof initCustomCursor === 'function') initCustomCursor();
+        if (typeof initGSAPAnimations === 'function') initGSAPAnimations();
+        if (typeof initSwiperSliders === 'function') initSwiperSliders();
+        if (typeof forceViewportSize === 'function') forceViewportSize();
+    });
+    
+    // 페이지 로드 완료 후 추가 실행
+    window.addEventListener('load', function() {
+        console.log('7차 개선: 페이지 로드 완료, 추가 애니메이션 초기화');
+        setTimeout(initAnimations, 100);
+    });
+    </script>
+
+    <script>
+    // 7차 개선: 성능 최적화 강화
+    console.log('7차 개선: 성능 최적화 시작');
+    
+    // 1. 이미지 지연 로딩
+    function initLazyLoading() {
+        const images = document.querySelectorAll('img[data-src]');
+        const imageObserver = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    const img = entry.target;
+                    img.src = img.dataset.src;
+                    img.classList.remove('lazy');
+                    observer.unobserve(img);
+                }
+            });
+        });
+        
+        images.forEach(img => imageObserver.observe(img));
+    }
+    
+    // 2. 폰트 최적화
+    function optimizeFonts() {
+        if ('fonts' in document) {
+            document.fonts.ready.then(() => {
+                console.log('7차 개선: 폰트 최적화 완료');
+            });
+        }
+    }
+    
+    // 3. 스크롤 성능 최적화
+    function optimizeScroll() {
+        let ticking = false;
+        
+        function updateScroll() {
+            ticking = false;
+        }
+        
+        function requestTick() {
+            if (!ticking) {
+                requestAnimationFrame(updateScroll);
+                ticking = true;
+            }
+        }
+        
+        window.addEventListener('scroll', requestTick, { passive: true });
+    }
+    
+    // 4. 메모리 최적화
+    function optimizeMemory() {
+        // 이벤트 리스너 정리
+        window.addEventListener('beforeunload', () => {
+            // 메모리 정리
+        });
+    }
+    
+    // 성능 최적화 실행
+    document.addEventListener('DOMContentLoaded', function() {
+        initLazyLoading();
+        optimizeFonts();
+        optimizeScroll();
+        optimizeMemory();
+        console.log('7차 개선: 성능 최적화 완료');
+    });
+    </script>
+</body></html>

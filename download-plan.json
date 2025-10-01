@@ -1,0 +1,294 @@
+{
+  "css": [
+    {
+      "url": "https://ssd.skhynix.com/wp-content/plugins/rhye-core/modules/slider/slider.min.css?ver=2.3.0",
+      "filename": "assets/css/slider.min.css"
+    },
+    {
+      "url": "https://ssd.skhynix.com/wp-content/plugins/rhye-core/modules/sectionContent/sectionContent.min.css?ver=2.3.0",
+      "filename": "assets/css/sectionContent.min.css"
+    },
+    {
+      "url": "https://ssd.skhynix.com/wp-content/themes/rhye/modules/cursor/cursor.min.css?ver=2.5.1",
+      "filename": "assets/css/cursor.min.css"
+    },
+    {
+      "url": "https://ssd.skhynix.com/wp-content/themes/rhye/css/rhye-icons.css?ver=2.5.1",
+      "filename": "assets/css/rhye-icons.css"
+    },
+    {
+      "url": "https://ssd.skhynix.com/wp-includes/css/dist/block-library/style.min.css?ver=5.8",
+      "filename": "assets/css/style.min.css"
+    },
+    {
+      "url": "https://ssd.skhynix.com/wp-content/plugins/simple-floating-menu/assets/css/all.css?ver=1.0.0",
+      "filename": "assets/css/all.css"
+    },
+    {
+      "url": "https://ssd.skhynix.com/wp-content/plugins/simple-floating-menu/assets/css/eleganticons.css?ver=1.0.0",
+      "filename": "assets/css/eleganticons.css"
+    },
+    {
+      "url": "https://ssd.skhynix.com/wp-content/plugins/simple-floating-menu/assets/css/essentialicon.css?ver=1.0.0",
+      "filename": "assets/css/essentialicon.css"
+    },
+    {
+      "url": "https://ssd.skhynix.com/wp-content/plugins/simple-floating-menu/assets/css/icofont.css?ver=1.0.0",
+      "filename": "assets/css/icofont.css"
+    },
+    {
+      "url": "https://ssd.skhynix.com/wp-content/plugins/simple-floating-menu/assets/css/materialdesignicons.css?ver=1.0.0",
+      "filename": "assets/css/materialdesignicons.css"
+    },
+    {
+      "url": "https://ssd.skhynix.com/wp-content/plugins/simple-floating-menu/assets/css/style.css?ver=1.0.0",
+      "filename": "assets/css/style.css"
+    },
+    {
+      "url": "https://ssd.skhynix.com/wp-content/plugins/contact-form-7/includes/css/styles.css?ver=5.4.1",
+      "filename": "assets/css/styles.css"
+    },
+    {
+      "url": "https://ssd.skhynix.com/wp-content/uploads/elementor/css/custom-frontend.min.css?ver=1627007723",
+      "filename": "assets/css/custom-frontend.min.css"
+    },
+    {
+      "url": "https://ssd.skhynix.com/wp-content/uploads/elementor/css/custom-pro-frontend.min.css?ver=1627007723",
+      "filename": "assets/css/custom-pro-frontend.min.css"
+    },
+    {
+      "url": "https://ssd.skhynix.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/all.min.css?ver=3.3.1",
+      "filename": "assets/css/all.min.css"
+    },
+    {
+      "url": "https://ssd.skhynix.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/v4-shims.min.css?ver=3.3.1",
+      "filename": "assets/css/v4-shims.min.css"
+    },
+    {
+      "url": "https://ssd.skhynix.com/wp-content/themes/rhye/css/bootstrap-grid.css?ver=4.1.3",
+      "filename": "assets/css/bootstrap-grid.css"
+    },
+    {
+      "url": "https://ssd.skhynix.com/wp-content/themes/rhye/css/bootstrap-reboot.css?ver=4.1.3",
+      "filename": "assets/css/bootstrap-reboot.css"
+    },
+    {
+      "url": "https://ssd.skhynix.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/fontawesome.min.css?ver=5.15.3",
+      "filename": "assets/css/fontawesome.min.css"
+    },
+    {
+      "url": "https://ssd.skhynix.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/brands.min.css?ver=5.15.3",
+      "filename": "assets/css/brands.min.css"
+    },
+    {
+      "url": "https://ssd.skhynix.com/wp-content/plugins/elementor/assets/lib/font-awesome/css/solid.min.css?ver=5.15.3",
+      "filename": "assets/css/solid.min.css"
+    },
+    {
+      "url": "https://ssd.skhynix.com/wp-content/themes/rhye/css/material-icons.css?ver=3.0.1",
+      "filename": "assets/css/material-icons.css"
+    },
+    {
+      "url": "https://ssd.skhynix.com/wp-content/themes/rhye/css/main.css?ver=2.5.1",
+      "filename": "assets/css/main.css"
+    },
+    {
+      "url": "https://ssd.skhynix.com/wp-content/themes/rhye/css/common.css",
+      "filename": "assets/css/common.css"
+    },
+    {
+      "url": "https://ssd.skhynix.com/wp-content/themes/rhye/style.css?ver=2.5.1",
+      "filename": "assets/css/style.css"
+    },
+    {
+      "url": "https://ssd.skhynix.com/wp-content/themes/rhye/css/elementor-post-holder.css?ver=2.5.1",
+      "filename": "assets/css/elementor-post-holder.css"
+    }
+  ],
+  "js": [
+    {
+      "url": "https://ssd.skhynix.com/wp-includes/js/wp-emoji-release.min.js?ver=5.8",
+      "filename": "assets/js/wp-emoji-release.min.js"
+    },
+    {
+      "url": "https://ssd.skhynix.com/wp-includes/js/jquery/jquery.min.js?ver=3.6.0",
+      "filename": "assets/js/jquery.min.js"
+    },
+    {
+      "url": "https://ssd.skhynix.com/wp-includes/js/jquery/jquery-migrate.min.js?ver=3.3.2",
+      "filename": "assets/js/jquery-migrate.min.js"
+    },
+    {
+      "url": "https://ssd.skhynix.com/wp-content/plugins/elementor/assets/lib/font-awesome/js/v4-shims.min.js?ver=3.3.1",
+      "filename": "assets/js/v4-shims.min.js"
+    },
+    {
+      "url": "https://ssd.skhynix.com/wp-content/themes/rhye/js/language-redirector.js",
+      "filename": "assets/js/language-redirector.js"
+    },
+    {
+      "url": "https://ssd.skhynix.com/wp-content/themes/rhye/js/language-links.js",
+      "filename": "assets/js/language-links.js"
+    },
+    {
+      "url": "https://ssd.skhynix.com/wp-content/plugins/simple-floating-menu/assets/js/custom-scripts.js?ver=1.0.0",
+      "filename": "assets/js/custom-scripts.js"
+    },
+    {
+      "url": "https://ssd.skhynix.com/wp-content/plugins/simply-static-pro/assets/ssp-form-webhook-public.js?ver=1.0",
+      "filename": "assets/js/ssp-form-webhook-public.js"
+    },
+    {
+      "url": "https://ssd.skhynix.com/wp-content/plugins/include-lottie-animation-for-elementor/assets/js/extra/lottie.min.js?ver=1.4.0",
+      "filename": "assets/js/lottie.min.js"
+    },
+    {
+      "url": "https://ssd.skhynix.com/wp-content/plugins/include-lottie-animation-for-elementor/assets/js/main/jbafe_script.js?ver=1.4.0",
+      "filename": "assets/js/jbafe_script.js"
+    },
+    {
+      "url": "https://ssd.skhynix.com/wp-includes/js/imagesloaded.min.js?ver=4.1.4",
+      "filename": "assets/js/imagesloaded.min.js"
+    },
+    {
+      "url": "https://ssd.skhynix.com/wp-content/themes/rhye/js/gsap.min.js?ver=3.6.0",
+      "filename": "assets/js/gsap.min.js"
+    },
+    {
+      "url": "https://ssd.skhynix.com/wp-content/themes/rhye/js/DrawSVGPlugin.min.js?ver=3.4.2",
+      "filename": "assets/js/DrawSVGPlugin.min.js"
+    },
+    {
+      "url": "https://ssd.skhynix.com/wp-content/themes/rhye/js/jquery.lazy.min.js?ver=1.7.10",
+      "filename": "assets/js/jquery.lazy.min.js"
+    },
+    {
+      "url": "https://ssd.skhynix.com/wp-content/themes/rhye/js/jquery.lazy.plugins.min.js?ver=1.7.10",
+      "filename": "assets/js/jquery.lazy.plugins.min.js"
+    },
+    {
+      "url": "https://ssd.skhynix.com/wp-content/themes/rhye/js/MorphSVGPlugin.min.js?ver=3.6.0",
+      "filename": "assets/js/MorphSVGPlugin.min.js"
+    },
+    {
+      "url": "https://ssd.skhynix.com/wp-content/themes/rhye/js/SplitText.min.js?ver=3.6.0",
+      "filename": "assets/js/SplitText.min.js"
+    },
+    {
+      "url": "https://ssd.skhynix.com/wp-content/themes/rhye/js/ScrollTrigger.min.js?ver=3.6.0",
+      "filename": "assets/js/ScrollTrigger.min.js"
+    },
+    {
+      "url": "https://ssd.skhynix.com/wp-content/themes/rhye/modules/base/base.min.js?ver=2.5.1",
+      "filename": "assets/js/base.min.js"
+    },
+    {
+      "url": "https://ssd.skhynix.com/wp-content/themes/rhye/js/components.js?ver=2.5.1",
+      "filename": "assets/js/components.js"
+    },
+    {
+      "url": "https://ssd.skhynix.com/wp-content/plugins/rhye-core/modules/elementorInit/elementorInit.min.js?ver=2.3.0",
+      "filename": "assets/js/elementorInit.min.js"
+    },
+    {
+      "url": "https://ssd.skhynix.com/wp-includes/js/wp-embed.min.js?ver=5.8",
+      "filename": "assets/js/wp-embed.min.js"
+    },
+    {
+      "url": "https://ssd.skhynix.com/wp-content/plugins/elementor-pro/assets/js/webpack-pro.runtime.min.js?ver=3.3.4",
+      "filename": "assets/js/webpack-pro.runtime.min.js"
+    },
+    {
+      "url": "https://ssd.skhynix.com/wp-content/plugins/elementor/assets/js/webpack.runtime.min.js?ver=3.3.1",
+      "filename": "assets/js/webpack.runtime.min.js"
+    },
+    {
+      "url": "https://ssd.skhynix.com/wp-content/plugins/elementor/assets/js/frontend-modules.min.js?ver=3.3.1",
+      "filename": "assets/js/frontend-modules.min.js"
+    },
+    {
+      "url": "https://ssd.skhynix.com/wp-content/plugins/elementor-pro/assets/js/frontend.min.js?ver=3.3.4",
+      "filename": "assets/js/frontend.min.js"
+    },
+    {
+      "url": "https://ssd.skhynix.com/wp-content/plugins/elementor/assets/lib/waypoints/waypoints.min.js?ver=4.0.2",
+      "filename": "assets/js/waypoints.min.js"
+    },
+    {
+      "url": "https://ssd.skhynix.com/wp-includes/js/jquery/ui/core.min.js?ver=1.12.1",
+      "filename": "assets/js/core.min.js"
+    },
+    {
+      "url": "https://ssd.skhynix.com/wp-content/plugins/elementor/assets/js/frontend.min.js?ver=3.3.1",
+      "filename": "assets/js/frontend.min.js"
+    },
+    {
+      "url": "https://ssd.skhynix.com/wp-content/plugins/elementor-pro/assets/js/elements-handlers.min.js?ver=3.3.4",
+      "filename": "assets/js/elements-handlers.min.js"
+    },
+    {
+      "url": "https://ssd.skhynix.com/wp-content/themes/rhye/modules/smoothScroll/smoothScroll.min.js?ver=2.5.1",
+      "filename": "assets/js/smoothScroll.min.js"
+    },
+    {
+      "url": "https://ssd.skhynix.com/wp-content/themes/rhye/modules/cursor/cursor.min.js?ver=2.5.1",
+      "filename": "assets/js/cursor.min.js"
+    },
+    {
+      "url": "https://ssd.skhynix.com/wp-content/plugins/rhye-core/modules/sectionContent/sectionContent.min.js?ver=2.3.0",
+      "filename": "assets/js/sectionContent.min.js"
+    },
+    {
+      "url": "https://ssd.skhynix.com/wp-content/plugins/rhye-core/modules/slider/slider.min.js?ver=2.3.0",
+      "filename": "assets/js/slider.min.js"
+    },
+    {
+      "url": "https://ssd.skhynix.com/wp-content/themes/rhye/js/swiper.min.js?ver=6.4.15",
+      "filename": "assets/js/swiper.min.js"
+    },
+    {
+      "url": "https://ssd.skhynix.com/wp-content/plugins/rhye-core/modules/sectionSliderImages/sectionSliderImages.min.js?ver=2.3.0",
+      "filename": "assets/js/sectionSliderImages.min.js"
+    }
+  ],
+  "images": [
+    {
+      "url": "https://ssd.skhynix.com/wp-content/uploads/2021/06/logo.png",
+      "filename": "assets/images/logo.png"
+    },
+    {
+      "url": "https://ssd.skhynix.com/wp-content/uploads/2021/07/x31_speed_mobile.jpg",
+      "filename": "assets/images/x31_speed_mobile.jpg"
+    },
+    {
+      "url": "https://ssd.skhynix.com/wp-content/uploads/2021/07/p41_efficiency_mobile.jpg",
+      "filename": "assets/images/p41_efficiency_mobile.jpg"
+    },
+    {
+      "url": "https://ssd.skhynix.com/wp-content/uploads/2021/07/beetle_x31_1080.jpg",
+      "filename": "assets/images/beetle_x31_1080.jpg"
+    },
+    {
+      "url": "https://ssd.skhynix.com/wp-content/uploads/2021/07/beetle_x31_B_1080.jpg",
+      "filename": "assets/images/beetle_x31_B_1080.jpg"
+    },
+    {
+      "url": "https://ssd.skhynix.com/wp-content/uploads/2021/07/beetle_x31_S_1080.jpg",
+      "filename": "assets/images/beetle_x31_S_1080.jpg"
+    },
+    {
+      "url": "https://ssd.skhynix.com/wp-content/uploads/2021/07/beetle_x31_P_1080.jpg",
+      "filename": "assets/images/beetle_x31_P_1080.jpg"
+    }
+  ],
+  "videos": [
+    {
+      "url": "https://ssd.skhynix.com/wp-content/uploads/2021/07/x31_head_movie.mp4",
+      "filename": "assets/videos/x31_head_movie.mp4"
+    },
+    {
+      "url": "https://ssd.skhynix.com/wp-content/uploads/2021/07/x31_head_movie_mobile.mp4",
+      "filename": "assets/videos/x31_head_movie_mobile.mp4"
+    }
+  ]
+}

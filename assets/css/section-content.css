@@ -1,0 +1,159 @@
+/**
+ * SK hynix Rhye Theme Section Content Styles
+ * Perfect clone of the original section content design
+ */
+
+/* Section Base */
+.section {
+    position: relative;
+    width: 100%;
+}
+
+.section-masthead {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #111111;
+    color: #ffffff;
+}
+
+.section-slider-images {
+    padding: 6rem 0;
+    background: #001122;
+}
+
+.section-features {
+    padding: 6rem 0;
+    background: #002244;
+}
+
+/* Container */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 2rem;
+}
+
+/* Elementor Structure */
+.elementor-section-wrap {
+    width: 100%;
+}
+
+.elementor-section {
+    position: relative;
+    width: 100%;
+}
+
+.elementor-section-fullwidth {
+    width: 100vw;
+    margin-left: calc(-50vw + 50%);
+}
+
+.elementor-container {
+    display: flex;
+    flex-wrap: wrap;
+    margin: 0 -1rem;
+}
+
+.elementor-column {
+    padding: 0 1rem;
+}
+
+.elementor-col-100 {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.elementor-widget-wrap {
+    width: 100%;
+}
+
+.elementor-widget {
+    margin-bottom: 2rem;
+}
+
+.elementor-widget-container {
+    width: 100%;
+}
+
+/* Section Content */
+.section-content {
+    position: relative;
+    width: 100%;
+}
+
+.section-content__inner {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    text-align: center;
+}
+
+.section-content__wrapper-heading {
+    margin-bottom: 2rem;
+}
+
+.section-content__wrapper-content {
+    margin-bottom: 2rem;
+}
+
+.section__headline {
+    display: none;
+}
+
+/* Typography */
+.h1 {
+    font-size: 4rem;
+    font-weight: 900;
+    line-height: 1.1;
+    margin: 0;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+}
+
+.h2 {
+    font-size: 3rem;
+    font-weight: 700;
+    line-height: 1.2;
+    margin: 0;
+    color: #ffffff;
+    font-family: 'Roboto', sans-serif;
+}
+
+.section-content__text p {
+    font-size: 1.25rem;
+    line-height: 1.6;
+    color: #cccccc;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* Utilities */
+.mb-1 { margin-bottom: 1rem; }
+.mb-2 { margin-bottom: 2rem; }
+.mb-md-2 { margin-bottom: 2rem; }
+.pb-medium { padding-bottom: 3rem; }
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .h1 { font-size: 3rem; }
+    .h2 { font-size: 2.5rem; }
+    .container { padding: 0 1.5rem; }
+}
+
+@media (max-width: 768px) {
+    .h1 { font-size: 2.5rem; }
+    .h2 { font-size: 2rem; }
+    .section-content__text p { font-size: 1.1rem; }
+    .container { padding: 0 1rem; }
+    .section-slider-images,
+    .section-features { padding: 4rem 0; }
+}
+
+@media (max-width: 480px) {
+    .h1 { font-size: 2rem; }
+    .h2 { font-size: 1.75rem; }
+    .section-content__text p { font-size: 1rem; }
+} 

@@ -1,0 +1,291 @@
+/**
+ * SK hynix Rhye Theme Slider Styles
+ * Perfect clone of the original slider design
+ */
+
+/* Slider Container */
+.slider-images {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+
+.slider-images_vertical-centered {
+    display: flex;
+    align-items: center;
+    min-height: 600px;
+}
+
+.slider-images__container {
+    width: 100%;
+    position: relative;
+}
+
+.slider-images__slider-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+/* Swiper Container */
+.js-slider-images__slider {
+    width: 100%;
+    height: auto;
+    position: relative;
+}
+
+.swiper-container-initialized {
+    overflow: visible;
+}
+
+/* Swiper Slides */
+.swiper-slide {
+    position: relative;
+    overflow: hidden;
+    border-radius: 16px;
+    transition: all 0.5s ease;
+}
+
+.swiper-slide.overflow {
+    overflow: hidden;
+}
+
+.swiper-slide.d-flex-centered {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.swiper-slide.text-center {
+    text-align: center;
+}
+
+/* Slider Item */
+.slider-images__item {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.slider-images__item img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 16px;
+    transition: transform 0.5s ease;
+}
+
+.slider-images__item:hover img {
+    transform: scale(1.05);
+}
+
+/* Placeholder for 3D model */
+.slider-images__placeholder {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 400px;
+    background: linear-gradient(135deg, #001122 0%, #002244 100%);
+    border: 2px solid rgba(0, 255, 255, 0.3);
+    border-radius: 16px;
+    color: #00ffff;
+    transition: all 0.3s ease;
+}
+
+.slider-images__placeholder:hover {
+    border-color: #00ffff;
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.3);
+}
+
+.slider-images__placeholder i {
+    font-size: 4rem;
+    margin-bottom: 1rem;
+    animation: pulse 2s infinite;
+}
+
+.slider-images__placeholder span {
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-align: center;
+}
+
+/* Swiper Navigation */
+.swiper-button-next,
+.swiper-button-prev {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 50px;
+    height: 50px;
+    background: rgba(0, 17, 34, 0.8);
+    border: 2px solid rgba(0, 255, 255, 0.3);
+    border-radius: 50%;
+    color: #00ffff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    z-index: 10;
+}
+
+.swiper-button-next:hover,
+.swiper-button-prev:hover {
+    background: #00ffff;
+    color: #001122;
+    border-color: #00ffff;
+    transform: translateY(-50%) scale(1.1);
+}
+
+.swiper-button-next {
+    right: 20px;
+}
+
+.swiper-button-prev {
+    left: 20px;
+}
+
+.swiper-button-next::after,
+.swiper-button-prev::after {
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+/* Swiper Pagination */
+.swiper-pagination {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+    z-index: 10;
+}
+
+.swiper-pagination-bullet {
+    width: 12px;
+    height: 12px;
+    background: rgba(0, 255, 255, 0.3);
+    border: 2px solid rgba(0, 255, 255, 0.5);
+    border-radius: 50%;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.swiper-pagination-bullet:hover,
+.swiper-pagination-bullet.swiper-pagination-bullet-active {
+    background: #00ffff;
+    border-color: #00ffff;
+    transform: scale(1.2);
+}
+
+/* Slider States */
+.slider-images_touched .swiper-slide {
+    transform: scale(0.98);
+}
+
+.slider-images_draggable {
+    cursor: grab;
+}
+
+.slider-images_draggable:active {
+    cursor: grabbing;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+    .slider-images_vertical-centered {
+        min-height: 500px;
+    }
+    
+    .swiper-button-next,
+    .swiper-button-prev {
+        width: 40px;
+        height: 40px;
+    }
+    
+    .swiper-button-next::after,
+    .swiper-button-prev::after {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 768px) {
+    .slider-images_vertical-centered {
+        min-height: 400px;
+    }
+    
+    .swiper-button-next,
+    .swiper-button-prev {
+        width: 35px;
+        height: 35px;
+    }
+    
+    .swiper-pagination {
+        bottom: 15px;
+    }
+    
+    .swiper-pagination-bullet {
+        width: 10px;
+        height: 10px;
+    }
+}
+
+@media (max-width: 480px) {
+    .slider-images_vertical-centered {
+        min-height: 300px;
+    }
+    
+    .swiper-button-next,
+    .swiper-button-prev {
+        display: none;
+    }
+}
+
+/* Animations */
+@keyframes pulse {
+    0%, 100% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    50% {
+        opacity: 0.7;
+        transform: scale(1.1);
+    }
+}
+
+/* Lazy Loading */
+.swiper-lazy {
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.swiper-lazy-loaded {
+    opacity: 1;
+}
+
+/* Active Slide */
+.swiper-slide-active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+.swiper-slide-visible {
+    opacity: 0.8;
+    transform: scale(0.95);
+}
+
+/* Slide Transitions */
+.swiper-slide {
+    transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.swiper-slide.swiper-slide-prev,
+.swiper-slide.swiper-slide-next {
+    opacity: 0.6;
+    transform: scale(0.9);
+} 

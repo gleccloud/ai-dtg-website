@@ -20,17 +20,10 @@
     <!-- Navigation -->
     <nav class="nav-container" id="navbar">
         <div class="nav-content">
-            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </button>
             <a href="index.html" class="nav-logo">
                 <span class="logo-text">GLEC</span>
             </a>
-            <ul class="nav-menu" id="navMenu">
+            <ul class="nav-menu">
                 <li><a href="index.html" class="nav-link" data-translate="nav_home">Home</a></li>
 
                 <!-- Our Solutions Dropdown -->
@@ -457,25 +450,12 @@
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-logo" data-translate="footer_logo">GLEC AI DTG SOLUTIONS</div>
-            <div class="footer-contact">
-                <p class="footer-contact-item">
-                    <span class="footer-label" data-translate="footer_email_label">Email:</span>
-                    <a href="mailto:admin@glec.io" class="footer-link">admin@glec.io</a>
-                </p>
-                <p class="footer-contact-item">
-                    <span class="footer-label" data-translate="footer_business_label">Business Number:</span>
-                    <span>459-86-02830</span>
-                </p>
-                <p class="footer-contact-item">
-                    <span class="footer-label" data-translate="footer_address_label">Address:</span>
-                    <span data-translate="footer_address">Incheon Startup Park, 315-ho, 204 Convensia-daero, Yeonsu-gu, Incheon, Republic of Korea</span>
-                </p>
-            </div>
             <p class="footer-text" data-translate="footer_text">
                 © 2024 GLEC. All rights reserved. | Transforming Transportation with AI
             </p>
         </div>
     </footer>
+
     <!-- JavaScript -->
     <script src="js/main.js"></script>
 </body>

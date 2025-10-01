@@ -15,15 +15,23 @@
 
     <!-- Shared Styles -->
     <link rel="stylesheet" href="css/shared-styles.css">
+    <link rel="stylesheet" href="css/home-problems-solutions.css">
 </head>
 <body>
     <!-- Navigation -->
     <nav class="nav-container" id="navbar">
         <div class="nav-content">
+            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
+                <div class="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </div>
+            </button>
             <a href="index.html" class="nav-logo">
                 <span class="logo-text">GLEC</span>
             </a>
-            <ul class="nav-menu">
+            <ul class="nav-menu" id="navMenu">
                 <li><a href="index.html" class="nav-link" data-translate="nav_home">Home</a></li>
 
                 <!-- Our Solutions Dropdown -->
@@ -97,6 +105,236 @@
             </div>
         </div>
     </section>
+
+    <!-- Problems & Solutions Section -->
+    <section class="problems-section" id="problems">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label" data-translate="problems_label">INDUSTRY CHALLENGES</span>
+                <h2 class="section-title" data-translate="problems_title">Critical Problems in Logistics</h2>
+                <p class="section-description" data-translate="problems_description">
+                    The logistics industry faces critical challenges that hinder carbon reduction and safety improvements
+                </p>
+            </div>
+
+            <div class="problems-grid">
+                <!-- Problem 1: Data Collection -->
+                <div class="problem-card">
+                    <div class="problem-number">01</div>
+                    <div class="problem-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="80" height="80">
+                            <defs>
+                                <linearGradient id="problem1Gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#ef4444;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#dc2626;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <circle cx="100" cy="100" r="90" fill="rgba(239, 68, 68, 0.1)" stroke="url(#problem1Gradient)" stroke-width="3"/>
+                            <path d="M100 50 L100 130 M70 100 L130 100" stroke="url(#problem1Gradient)" stroke-width="8" stroke-linecap="round"/>
+                            <circle cx="100" cy="150" r="8" fill="url(#problem1Gradient)"/>
+                        </svg>
+                    </div>
+                    <h3 class="problem-title" data-translate="problem1_title">Data Collection Impossibility</h3>
+                    <p class="problem-description" data-translate="problem1_desc">
+                        Due to lease contract structures, logistics companies cannot collect truck data from owner-operators who refuse cooperation, making carbon emission calculation impossible
+                    </p>
+                    <div class="problem-impact">
+                        <span class="impact-label" data-translate="problem1_impact_label">Impact:</span>
+                        <span class="impact-text" data-translate="problem1_impact">No carbon data = No emission reduction</span>
+                    </div>
+                </div>
+
+                <!-- Problem 2: Safety Accidents -->
+                <div class="problem-card">
+                    <div class="problem-number">02</div>
+                    <div class="problem-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="80" height="80">
+                            <defs>
+                                <linearGradient id="problem2Gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#f97316;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#ea580c;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <circle cx="100" cy="100" r="90" fill="rgba(249, 115, 22, 0.1)" stroke="url(#problem2Gradient)" stroke-width="3"/>
+                            <path d="M100 60 L130 120 L70 120 Z" fill="none" stroke="url(#problem2Gradient)" stroke-width="6"/>
+                            <line x1="100" y1="80" x2="100" y2="105" stroke="url(#problem2Gradient)" stroke-width="5" stroke-linecap="round"/>
+                            <circle cx="100" cy="115" r="4" fill="url(#problem2Gradient)"/>
+                            <path d="M60 140 L140 140" stroke="url(#problem2Gradient)" stroke-width="4" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="problem-title" data-translate="problem2_title">Unpreventable Safety Accidents</h3>
+                    <p class="problem-description" data-translate="problem2_desc">
+                        Without real-time monitoring systems, driver fatigue and drowsiness cannot be detected, resulting in massive cargo damages and casualties every year
+                    </p>
+                    <div class="problem-impact">
+                        <span class="impact-label" data-translate="problem2_impact_label">Impact:</span>
+                        <span class="impact-text" data-translate="problem2_impact">Annual billions in cargo damage</span>
+                    </div>
+                </div>
+
+                <!-- Problem 3: Unfair Carbon Calculation -->
+                <div class="problem-card">
+                    <div class="problem-number">03</div>
+                    <div class="problem-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="80" height="80">
+                            <defs>
+                                <linearGradient id="problem3Gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#7c3aed;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <circle cx="100" cy="100" r="90" fill="rgba(139, 92, 246, 0.1)" stroke="url(#problem3Gradient)" stroke-width="3"/>
+                            <rect x="50" y="70" width="100" height="60" fill="none" stroke="url(#problem3Gradient)" stroke-width="5" rx="5"/>
+                            <line x1="50" y1="100" x2="150" y2="100" stroke="url(#problem3Gradient)" stroke-width="5"/>
+                            <line x1="100" y1="70" x2="100" y2="130" stroke="url(#problem3Gradient)" stroke-width="5"/>
+                            <path d="M60 85 L90 115 M110 85 L140 115" stroke="url(#problem3Gradient)" stroke-width="4" stroke-linecap="round"/>
+                        </svg>
+                    </div>
+                    <h3 class="problem-title" data-translate="problem3_title">Unfair Carbon Allocation</h3>
+                    <p class="problem-description" data-translate="problem3_desc">
+                        Logistics companies allocate emissions by revenue ratio instead of using ISO-14083 standard, causing premium service providers to show inflated per-ton-km emissions, resulting in carbon loss
+                    </p>
+                    <div class="problem-impact">
+                        <span class="impact-label" data-translate="problem3_impact_label">Impact:</span>
+                        <span class="impact-text" data-translate="problem3_impact">Unfair competition & carbon injustice</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Solutions Section -->
+    <section class="solutions-glec-section" id="solutions-glec">
+        <div class="section-container">
+            <div class="section-header">
+                <span class="section-label glec-solution" data-translate="solutions_glec_label">GLEC SOLUTIONS</span>
+                <h2 class="section-title" data-translate="solutions_glec_title">How GLEC Solves These Problems</h2>
+                <p class="section-description" data-translate="solutions_glec_description">
+                    Comprehensive solutions for data collection, safety monitoring, and fair carbon calculation
+                </p>
+            </div>
+
+            <div class="solutions-glec-grid">
+                <!-- Solution 1: GLEC Tachograph -->
+                <div class="solution-glec-card">
+                    <div class="solution-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        <span data-translate="solution_badge">SOLUTION</span>
+                    </div>
+                    <div class="solution-glec-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100" height="100">
+                            <defs>
+                                <linearGradient id="solution1Gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#22c55e;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#16a34a;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <circle cx="100" cy="100" r="90" fill="rgba(34, 197, 94, 0.1)" stroke="url(#solution1Gradient)" stroke-width="3"/>
+                            <rect x="60" y="70" width="80" height="60" fill="none" stroke="url(#solution1Gradient)" stroke-width="4" rx="8"/>
+                            <circle cx="85" cy="90" r="8" fill="url(#solution1Gradient)"/>
+                            <circle cx="115" cy="90" r="8" fill="url(#solution1Gradient)"/>
+                            <path d="M75 110 Q100 120 125 110" stroke="url(#solution1Gradient)" stroke-width="4" fill="none"/>
+                        </svg>
+                    </div>
+                    <h3 class="solution-glec-title" data-translate="solution1_title">GLEC Tachograph (DTG)</h3>
+                    <p class="solution-glec-description" data-translate="solution1_desc">
+                        Legal compliance device with LTE communication for automatic data collection without driver cooperation
+                    </p>
+                    <ul class="solution-features-list">
+                        <li data-translate="solution1_feature1">Real-time automatic data collection via LTE</li>
+                        <li data-translate="solution1_feature2">Driver fatigue & drowsiness AI detection</li>
+                        <li data-translate="solution1_feature3">Carbon emission measurement per trip</li>
+                    </ul>
+                    <div class="solution-solves">
+                        <span class="solves-label" data-translate="solves_label">Solves:</span>
+                        <span class="solves-problems" data-translate="solution1_solves">Problems #1 & #2</span>
+                    </div>
+                </div>
+
+                <!-- Solution 2: Fleet Monitoring Service -->
+                <div class="solution-glec-card">
+                    <div class="solution-badge">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                            <polyline points="20 6 9 17 4 12"></polyline>
+                        </svg>
+                        <span data-translate="solution_badge">SOLUTION</span>
+                    </div>
+                    <div class="solution-glec-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100" height="100">
+                            <defs>
+                                <linearGradient id="solution2Gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#0891b2;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <circle cx="100" cy="100" r="90" fill="rgba(6, 182, 212, 0.1)" stroke="url(#solution2Gradient)" stroke-width="3"/>
+                            <rect x="50" y="60" width="100" height="70" fill="none" stroke="url(#solution2Gradient)" stroke-width="4" rx="8"/>
+                            <line x1="70" y1="80" x2="130" y2="80" stroke="url(#solution2Gradient)" stroke-width="3"/>
+                            <line x1="70" y1="95" x2="120" y2="95" stroke="url(#solution2Gradient)" stroke-width="3"/>
+                            <line x1="70" y1="110" x2="110" y2="110" stroke="url(#solution2Gradient)" stroke-width="3"/>
+                            <circle cx="130" cy="100" r="15" fill="url(#solution2Gradient)" opacity="0.3"/>
+                        </svg>
+                    </div>
+                    <h3 class="solution-glec-title" data-translate="solution2_title">GLEC Fleet Carbon Monitoring Service</h3>
+                    <p class="solution-glec-description" data-translate="solution2_desc">
+                        Real-time fleet monitoring and carbon emission control service using DTG data and LTE communication
+                    </p>
+                    <ul class="solution-features-list">
+                        <li data-translate="solution2_feature1">Real-time vehicle status monitoring</li>
+                        <li data-translate="solution2_feature2">Trip-by-trip carbon emission tracking</li>
+                        <li data-translate="solution2_feature3">Driver safety alert system</li>
+                    </ul>
+                    <div class="solution-solves">
+                        <span class="solves-label" data-translate="solves_label">Solves:</span>
+                        <span class="solves-problems" data-translate="solution2_solves">Problems #1 & #2</span>
+                    </div>
+                </div>
+
+                <!-- Solution 3: Carbon API Console -->
+                <div class="solution-glec-card featured">
+                    <div class="solution-badge premium">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" width="20" height="20" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M12 2L15.09 8.26L22 9.27L17 14.14L18.18 21.02L12 17.77L5.82 21.02L7 14.14L2 9.27L8.91 8.26L12 2Z"></path>
+                        </svg>
+                        <span data-translate="solution_premium_badge">ISO-14083 STANDARD</span>
+                    </div>
+                    <div class="solution-glec-icon">
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="100" height="100">
+                            <defs>
+                                <linearGradient id="solution3Gradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                    <stop offset="0%" style="stop-color:#fbbf24;stop-opacity:1" />
+                                    <stop offset="100%" style="stop-color:#f59e0b;stop-opacity:1" />
+                                </linearGradient>
+                            </defs>
+                            <circle cx="100" cy="100" r="90" fill="rgba(251, 191, 36, 0.1)" stroke="url(#solution3Gradient)" stroke-width="3"/>
+                            <rect x="60" y="70" width="80" height="60" fill="none" stroke="url(#solution3Gradient)" stroke-width="4" rx="8"/>
+                            <text x="100" y="105" font-size="40" fill="url(#solution3Gradient)" text-anchor="middle" font-weight="bold">API</text>
+                            <circle cx="75" cy="85" r="4" fill="url(#solution3Gradient)"/>
+                            <circle cx="125" cy="85" r="4" fill="url(#solution3Gradient)"/>
+                            <circle cx="75" cy="120" r="4" fill="url(#solution3Gradient)"/>
+                            <circle cx="125" cy="120" r="4" fill="url(#solution3Gradient)"/>
+                        </svg>
+                    </div>
+                    <h3 class="solution-glec-title" data-translate="solution3_title">Carbon API Console</h3>
+                    <p class="solution-glec-description" data-translate="solution3_desc">
+                        Upgrade logistics company systems to international standards with ISO-14083 compliant carbon calculation API
+                    </p>
+                    <ul class="solution-features-list">
+                        <li data-translate="solution3_feature1">48+ ISO-14083 standard APIs</li>
+                        <li data-translate="solution3_feature2">0.5 sec response time for real-time calculation</li>
+                        <li data-translate="solution3_feature3">Fair ton-km based emission allocation</li>
+                    </ul>
+                    <div class="solution-solves">
+                        <span class="solves-label" data-translate="solves_label">Solves:</span>
+                        <span class="solves-problems" data-translate="solution3_solves">Problem #3</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
 <section class="cta-section" id="cta">
         <div class="cta-content">
             <h2 class="cta-title" data-translate="cta_title">Ready to Transform Your Fleet?</h2>
@@ -113,6 +351,20 @@
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-logo" data-translate="footer_logo">GLEC AI DTG SOLUTIONS</div>
+            <div class="footer-contact">
+                <p class="footer-contact-item">
+                    <span class="footer-label" data-translate="footer_email_label">Email:</span>
+                    <a href="mailto:admin@glec.io" class="footer-link">admin@glec.io</a>
+                </p>
+                <p class="footer-contact-item">
+                    <span class="footer-label" data-translate="footer_business_label">Business Number:</span>
+                    <span>459-86-02830</span>
+                </p>
+                <p class="footer-contact-item">
+                    <span class="footer-label" data-translate="footer_address_label">Address:</span>
+                    <span data-translate="footer_address">Incheon Startup Park, 315-ho, 204 Convensia-daero, Yeonsu-gu, Incheon, Republic of Korea</span>
+                </p>
+            </div>
             <p class="footer-text" data-translate="footer_text">
                 © 2024 GLEC. All rights reserved. | Transforming Transportation with AI
             </p>

@@ -20,17 +20,10 @@
     <!-- Navigation -->
     <nav class="nav-container" id="navbar">
         <div class="nav-content">
-            <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Toggle menu">
-                <div class="hamburger">
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </button>
             <a href="index.html" class="nav-logo">
                 <span class="logo-text">GLEC</span>
             </a>
-            <ul class="nav-menu" id="navMenu">
+            <ul class="nav-menu">
                 <li><a href="index.html" class="nav-link" data-translate="nav_home">Home</a></li>
 
                 <!-- Our Solutions Dropdown -->
@@ -178,7 +171,7 @@
                 </div>
                 <div class="team-stat-card">
                     <div class="stat-number">3</div>
-                    <div class="stat-label" data-translate="team_stat_phds">Professional Network</div>
+                    <div class="stat-label" data-translate="team_stat_phds">PhDs</div>
                 </div>
                 <div class="team-stat-card">
                     <div class="stat-number">100%</div>
@@ -190,28 +183,29 @@
                 <!-- Leadership -->
                 <div class="role-category">
                     <h3 class="role-category-title" data-translate="team_leadership">Leadership</h3>
-                    <div class="role-grid role-grid-three">
+                    <div class="role-grid">
                         <div class="role-card">
                             <div class="role-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="80" height="80">
                                     <defs>
-                                        <linearGradient id="ceoKevinGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <linearGradient id="ceoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
                                             <stop offset="0%" style="stop-color:#8b5cf6;stop-opacity:1" />
                                             <stop offset="100%" style="stop-color:#6366f1;stop-opacity:1" />
                                         </linearGradient>
                                     </defs>
-                                    <circle cx="100" cy="100" r="90" fill="rgba(139, 92, 246, 0.1)" stroke="url(#ceoKevinGradient)" stroke-width="2"/>
-                                    <circle cx="100" cy="75" r="25" fill="url(#ceoKevinGradient)"/>
-                                    <path d="M60 140 Q100 110 140 140 L140 160 L60 160 Z" fill="url(#ceoKevinGradient)"/>
+                                    <circle cx="100" cy="100" r="90" fill="rgba(139, 92, 246, 0.1)" stroke="url(#ceoGradient)" stroke-width="2"/>
+                                    <!-- Person silhouette -->
+                                    <circle cx="100" cy="75" r="25" fill="url(#ceoGradient)"/>
+                                    <path d="M60 140 Q100 110 140 140 L140 160 L60 160 Z" fill="url(#ceoGradient)"/>
+                                    <!-- Crown/leadership symbol -->
                                     <path d="M85 50 L90 60 L100 55 L110 60 L115 50 L112 70 L88 70 Z" fill="#fbbf24" opacity="0.9"/>
                                 </svg>
                             </div>
-                            <h4 class="role-title" data-translate="role_ceo_kevin">Co-CEO (Technology)</h4>
-                            <p class="role-name" data-translate="role_ceo_kevin_name">Kang Deok-ho (Kevin)</p>
+                            <h4 class="role-title" data-translate="role_ceo">CEO</h4>
                             <ul class="role-responsibilities">
-                                <li data-translate="role_ceo_kevin_1">13 years tech startup experience</li>
-                                <li data-translate="role_ceo_kevin_2">IPO preparation, M&A EXIT experience</li>
-                                <li data-translate="role_ceo_kevin_3">16 Swiss patent filings, national tech representative</li>
+                                <li data-translate="role_ceo_1">Strategic direction & vision</li>
+                                <li data-translate="role_ceo_2">Government relations & partnerships</li>
+                                <li data-translate="role_ceo_3">Business development</li>
                             </ul>
                         </div>
 
@@ -219,38 +213,16 @@
                             <div class="role-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="80" height="80">
                                     <defs>
-                                        <linearGradient id="ceoStellaGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                                            <stop offset="0%" style="stop-color:#ec4899;stop-opacity:1" />
-                                            <stop offset="100%" style="stop-color:#d946ef;stop-opacity:1" />
-                                        </linearGradient>
-                                    </defs>
-                                    <circle cx="100" cy="100" r="90" fill="rgba(236, 72, 153, 0.1)" stroke="url(#ceoStellaGradient)" stroke-width="2"/>
-                                    <circle cx="100" cy="75" r="25" fill="url(#ceoStellaGradient)"/>
-                                    <path d="M60 140 Q100 110 140 140 L140 160 L60 160 Z" fill="url(#ceoStellaGradient)"/>
-                                    <path d="M85 50 L90 60 L100 55 L110 60 L115 50 L112 70 L88 70 Z" fill="#fbbf24" opacity="0.9"/>
-                                </svg>
-                            </div>
-                            <h4 class="role-title" data-translate="role_ceo_stella">Co-CEO (Operations)</h4>
-                            <p class="role-name" data-translate="role_ceo_stella_name">Kim Eun-woo (Stella)</p>
-                            <ul class="role-responsibilities">
-                                <li data-translate="role_ceo_stella_1">12 years operations & strategy expert</li>
-                                <li data-translate="role_ceo_stella_2">KAIST ESG KEEP School graduate</li>
-                                <li data-translate="role_ceo_stella_3">SFC Korea Advisory Committee member</li>
-                            </ul>
-                        </div>
-
-                        <div class="role-card">
-                            <div class="role-icon">
-                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="80" height="80">
-                                    <defs>
-                                        <linearGradient id="ctoBrianGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <linearGradient id="ctoGradient" x1="0%" y1="0%" x2="100%" y2="100%">
                                             <stop offset="0%" style="stop-color:#06b6d4;stop-opacity:1" />
                                             <stop offset="100%" style="stop-color:#0891b2;stop-opacity:1" />
                                         </linearGradient>
                                     </defs>
-                                    <circle cx="100" cy="100" r="90" fill="rgba(6, 182, 212, 0.1)" stroke="url(#ctoBrianGradient)" stroke-width="2"/>
-                                    <circle cx="100" cy="75" r="25" fill="url(#ctoBrianGradient)"/>
-                                    <path d="M60 140 Q100 110 140 140 L140 160 L60 160 Z" fill="url(#ctoBrianGradient)"/>
+                                    <circle cx="100" cy="100" r="90" fill="rgba(6, 182, 212, 0.1)" stroke="url(#ctoGradient)" stroke-width="2"/>
+                                    <!-- Person silhouette -->
+                                    <circle cx="100" cy="75" r="25" fill="url(#ctoGradient)"/>
+                                    <path d="M60 140 Q100 110 140 140 L140 160 L60 160 Z" fill="url(#ctoGradient)"/>
+                                    <!-- Chip/tech symbol -->
                                     <rect x="85" y="40" width="30" height="30" fill="none" stroke="#22d3ee" stroke-width="3" rx="3"/>
                                     <circle cx="91" cy="46" r="2" fill="#22d3ee"/>
                                     <circle cx="109" cy="46" r="2" fill="#22d3ee"/>
@@ -258,12 +230,11 @@
                                     <circle cx="109" cy="64" r="2" fill="#22d3ee"/>
                                 </svg>
                             </div>
-                            <h4 class="role-title" data-translate="role_cto_brian">CTO</h4>
-                            <p class="role-name" data-translate="role_cto_brian_name">Kim Ji-won (Brian)</p>
+                            <h4 class="role-title" data-translate="role_cto">CTO</h4>
                             <ul class="role-responsibilities">
-                                <li data-translate="role_cto_brian_1">IoT device development lead</li>
-                                <li data-translate="role_cto_brian_2">Hardware & firmware architecture</li>
-                                <li data-translate="role_cto_brian_3">R&D director</li>
+                                <li data-translate="role_cto_1">Technology strategy & R&D</li>
+                                <li data-translate="role_cto_2">ISO-14083 compliance oversight</li>
+                                <li data-translate="role_cto_3">Technical architecture</li>
                             </ul>
                         </div>
                     </div>
@@ -295,12 +266,11 @@
                                     <circle cx="105" cy="115" r="4" fill="#ffffff" opacity="0.6"/>
                                 </svg>
                             </div>
-                            <h4 class="role-title" data-translate="role_carbon">IoT Device Lead</h4>
-                            <p class="role-name" data-translate="role_carbon_name">Kim Ji-won</p>
+                            <h4 class="role-title" data-translate="role_carbon">Carbon Emission Specialist</h4>
                             <ul class="role-responsibilities">
-                                <li data-translate="role_carbon_1">IoT equipment development</li>
-                                <li data-translate="role_carbon_2">Hardware integration</li>
-                                <li data-translate="role_carbon_3">Sensor technology R&D</li>
+                                <li data-translate="role_carbon_1">WTW emission factor research</li>
+                                <li data-translate="role_carbon_2">ISO-14083 algorithm development</li>
+                                <li data-translate="role_carbon_3">Carbon calculation engine</li>
                             </ul>
                         </div>
 
@@ -329,12 +299,11 @@
                                     <circle cx="115" cy="110" r="2" fill="#22d3ee"/>
                                 </svg>
                             </div>
-                            <h4 class="role-title" data-translate="role_ai">Frontend Developer</h4>
-                            <p class="role-name" data-translate="role_ai_name">Shim Jun</p>
+                            <h4 class="role-title" data-translate="role_ai">AI Engineer</h4>
                             <ul class="role-responsibilities">
-                                <li data-translate="role_ai_1">Dashboard UI/UX development</li>
-                                <li data-translate="role_ai_2">Real-time data visualization</li>
-                                <li data-translate="role_ai_3">Customer-facing applications</li>
+                                <li data-translate="role_ai_1">AI inference model development</li>
+                                <li data-translate="role_ai_2">Edge computing optimization</li>
+                                <li data-translate="role_ai_3">Driver safety AI systems</li>
                             </ul>
                         </div>
 
@@ -362,34 +331,35 @@
                                     <rect x="120" y="120" width="10" height="10" fill="url(#hwGradient)" transform="rotate(-45 125 125)"/>
                                 </svg>
                             </div>
-                            <h4 class="role-title" data-translate="role_hw">Backend Developer</h4>
-                            <p class="role-name" data-translate="role_hw_name">Kim Kyung-jae</p>
+                            <h4 class="role-title" data-translate="role_hw">Hardware Engineer</h4>
                             <ul class="role-responsibilities">
-                                <li data-translate="role_hw_1">B2B logistics/ERP development</li>
-                                <li data-translate="role_hw_2">API infrastructure</li>
-                                <li data-translate="role_hw_3">Senior backend developer</li>
+                                <li data-translate="role_hw_1">DTG hardware design</li>
+                                <li data-translate="role_hw_2">Sensor integration</li>
+                                <li data-translate="role_hw_3">Manufacturing & quality control</li>
                             </ul>
                         </div>
                     </div>
                 </div>
 
-                <!-- Additional Team Members -->
+                <!-- Software Team -->
                 <div class="role-category">
-                    <h3 class="role-category-title" data-translate="team_additional">Additional Team</h3>
+                    <h3 class="role-category-title" data-translate="team_software">Software Development</h3>
                     <div class="role-grid">
                         <div class="role-card">
                             <div class="role-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="80" height="80">
                                     <defs>
-                                        <linearGradient id="backendBangGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <linearGradient id="backendGradient" x1="0%" y1="0%" x2="100%" y2="100%">
                                             <stop offset="0%" style="stop-color:#3b82f6;stop-opacity:1" />
                                             <stop offset="100%" style="stop-color:#2563eb;stop-opacity:1" />
                                         </linearGradient>
                                     </defs>
-                                    <circle cx="100" cy="100" r="90" fill="rgba(59, 130, 246, 0.1)" stroke="url(#backendBangGradient)" stroke-width="2"/>
-                                    <rect x="60" y="70" width="80" height="20" fill="url(#backendBangGradient)" rx="3"/>
-                                    <rect x="60" y="95" width="80" height="20" fill="url(#backendBangGradient)" rx="3"/>
-                                    <rect x="60" y="120" width="80" height="20" fill="url(#backendBangGradient)" rx="3"/>
+                                    <circle cx="100" cy="100" r="90" fill="rgba(59, 130, 246, 0.1)" stroke="url(#backendGradient)" stroke-width="2"/>
+                                    <!-- Server stack -->
+                                    <rect x="60" y="70" width="80" height="20" fill="url(#backendGradient)" rx="3"/>
+                                    <rect x="60" y="95" width="80" height="20" fill="url(#backendGradient)" rx="3"/>
+                                    <rect x="60" y="120" width="80" height="20" fill="url(#backendGradient)" rx="3"/>
+                                    <!-- Status lights -->
                                     <circle cx="70" cy="80" r="3" fill="#22c55e"/>
                                     <circle cx="80" cy="80" r="3" fill="#22c55e"/>
                                     <circle cx="70" cy="105" r="3" fill="#22c55e"/>
@@ -398,12 +368,11 @@
                                     <circle cx="80" cy="130" r="3" fill="#22c55e"/>
                                 </svg>
                             </div>
-                            <h4 class="role-title" data-translate="role_backend_bang">Backend Developer</h4>
-                            <p class="role-name" data-translate="role_backend_bang_name">Bang Ah-hyun</p>
+                            <h4 class="role-title" data-translate="role_backend">Backend Developer</h4>
                             <ul class="role-responsibilities">
-                                <li data-translate="role_backend_bang_1">Senior backend developer</li>
-                                <li data-translate="role_backend_bang_2">API development</li>
-                                <li data-translate="role_backend_bang_3">System architecture</li>
+                                <li data-translate="role_backend_1">Carbon API development</li>
+                                <li data-translate="role_backend_2">Cloud infrastructure</li>
+                                <li data-translate="role_backend_3">Database architecture</li>
                             </ul>
                         </div>
 
@@ -411,28 +380,31 @@
                             <div class="role-icon">
                                 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 200 200" width="80" height="80">
                                     <defs>
-                                        <linearGradient id="serviceGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                                        <linearGradient id="frontendGradient" x1="0%" y1="0%" x2="100%" y2="100%">
                                             <stop offset="0%" style="stop-color:#a855f7;stop-opacity:1" />
                                             <stop offset="100%" style="stop-color:#9333ea;stop-opacity:1" />
                                         </linearGradient>
                                     </defs>
-                                    <circle cx="100" cy="100" r="90" fill="rgba(168, 85, 247, 0.1)" stroke="url(#serviceGradient)" stroke-width="2"/>
-                                    <rect x="50" y="60" width="100" height="80" fill="none" stroke="url(#serviceGradient)" stroke-width="3" rx="5"/>
-                                    <rect x="50" y="60" width="100" height="15" fill="url(#serviceGradient)" rx="5"/>
+                                    <circle cx="100" cy="100" r="90" fill="rgba(168, 85, 247, 0.1)" stroke="url(#frontendGradient)" stroke-width="2"/>
+                                    <!-- Browser window -->
+                                    <rect x="50" y="60" width="100" height="80" fill="none" stroke="url(#frontendGradient)" stroke-width="3" rx="5"/>
+                                    <!-- Browser top bar -->
+                                    <rect x="50" y="60" width="100" height="15" fill="url(#frontendGradient)" rx="5"/>
+                                    <!-- Browser buttons -->
                                     <circle cx="60" cy="67.5" r="2.5" fill="#ef4444"/>
                                     <circle cx="70" cy="67.5" r="2.5" fill="#fbbf24"/>
                                     <circle cx="80" cy="67.5" r="2.5" fill="#22c55e"/>
+                                    <!-- Code/design elements -->
                                     <path d="M70 95 L80 105 L70 115" stroke="#a855f7" stroke-width="2" fill="none"/>
                                     <path d="M130 95 L120 105 L130 115" stroke="#a855f7" stroke-width="2" fill="none"/>
                                     <line x1="90" y1="95" x2="110" y2="115" stroke="#a855f7" stroke-width="2"/>
                                 </svg>
                             </div>
-                            <h4 class="role-title" data-translate="role_service">Service Planning</h4>
-                            <p class="role-name" data-translate="role_service_name">Ji Jae-won</p>
+                            <h4 class="role-title" data-translate="role_frontend">Frontend Developer</h4>
                             <ul class="role-responsibilities">
-                                <li data-translate="role_service_1">Service planning & strategy</li>
-                                <li data-translate="role_service_2">Product management</li>
-                                <li data-translate="role_service_3">Customer experience design</li>
+                                <li data-translate="role_frontend_1">eFuel dashboard development</li>
+                                <li data-translate="role_frontend_2">Real-time data visualization</li>
+                                <li data-translate="role_frontend_3">UX/UI design implementation</li>
                             </ul>
                         </div>
                     </div>
@@ -440,16 +412,16 @@
             </div>
 
             <div class="team-expertise">
-                <h3 class="expertise-title" data-translate="team_expertise_title">Professional Network & Expertise</h3>
+                <h3 class="expertise-title" data-translate="team_expertise_title">Collective Expertise</h3>
                 <div class="expertise-tags">
-                    <span class="expertise-tag" data-translate="expertise_inha">Inha University Logistics Professors (Advisors)</span>
-                    <span class="expertise-tag" data-translate="expertise_kila">Korea Integrated Logistics Association Network</span>
-                    <span class="expertise-tag" data-translate="expertise_keep">KAIST ESG C-Level KEEP Program Graduate</span>
                     <span class="expertise-tag" data-translate="expertise_iso">ISO-14083 International Standards</span>
                     <span class="expertise-tag" data-translate="expertise_ai">AI & Machine Learning</span>
                     <span class="expertise-tag" data-translate="expertise_carbon">Carbon Emission Calculation</span>
                     <span class="expertise-tag" data-translate="expertise_logistics">Logistics & Transportation</span>
                     <span class="expertise-tag" data-translate="expertise_iot">IoT & Embedded Systems</span>
+                    <span class="expertise-tag" data-translate="expertise_cloud">Cloud Architecture</span>
+                    <span class="expertise-tag" data-translate="expertise_hardware">Hardware Design & Manufacturing</span>
+                    <span class="expertise-tag" data-translate="expertise_govt">Government R&D Programs</span>
                 </div>
             </div>
         </div>
@@ -875,25 +847,12 @@
     <footer class="footer">
         <div class="footer-content">
             <div class="footer-logo" data-translate="footer_logo">GLEC AI DTG SOLUTIONS</div>
-            <div class="footer-contact">
-                <p class="footer-contact-item">
-                    <span class="footer-label" data-translate="footer_email_label">Email:</span>
-                    <a href="mailto:admin@glec.io" class="footer-link">admin@glec.io</a>
-                </p>
-                <p class="footer-contact-item">
-                    <span class="footer-label" data-translate="footer_business_label">Business Number:</span>
-                    <span>459-86-02830</span>
-                </p>
-                <p class="footer-contact-item">
-                    <span class="footer-label" data-translate="footer_address_label">Address:</span>
-                    <span data-translate="footer_address">Incheon Startup Park, 315-ho, 204 Convensia-daero, Yeonsu-gu, Incheon, Republic of Korea</span>
-                </p>
-            </div>
             <p class="footer-text" data-translate="footer_text">
                 © 2024 GLEC. All rights reserved. | Transforming Transportation with AI
             </p>
         </div>
     </footer>
+
     <!-- JavaScript -->
     <script src="js/main.js"></script>
 </body>

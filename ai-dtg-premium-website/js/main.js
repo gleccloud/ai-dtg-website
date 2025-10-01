@@ -265,7 +265,15 @@ const translations = {
         contact_message_label: "메시지",
         contact_message_placeholder: "문의 내용을 입력하세요",
         contact_submit_btn: "메시지 보내기",
-        contact_company_info: "회사 정보"
+        contact_company_info: "회사 정보",
+        // CTA Section
+        cta_title: "차량을 혁신할 준비가 되셨나요?",
+        cta_description: "AI 기반 운송 혁명에 동참하세요. GLEC AI DTG 솔루션으로 세계 최고 수준의 안전성, 효율성, 환경적 이점을 경험하세요. 지금 문의하여 디지털 혁신 여정을 시작하세요.",
+        cta_btn_start: "지금 시작하기",
+        cta_btn_solutions: "솔루션 보기",
+        // Footer
+        footer_logo: "GLEC AI DTG 솔루션",
+        footer_text: "© 2024 GLEC. All rights reserved. | AI로 운송을 혁신합니다"
     },
     en: {
         nav_home: "Home",
@@ -531,7 +539,15 @@ const translations = {
         contact_message_label: "Message",
         contact_message_placeholder: "Tell us about your inquiry",
         contact_submit_btn: "Send Message",
-        contact_company_info: "Company Information"
+        contact_company_info: "Company Information",
+        // CTA Section
+        cta_title: "Ready to Transform Your Fleet?",
+        cta_description: "Join the AI revolution in transportation. Experience world-class safety, efficiency, and environmental benefits with GLEC AI DTG solutions. Contact us today to start your digital transformation journey.",
+        cta_btn_start: "Get Started Today",
+        cta_btn_solutions: "View Solutions",
+        // Footer
+        footer_logo: "GLEC AI DTG SOLUTIONS",
+        footer_text: "© 2024 GLEC. All rights reserved. | Transforming Transportation with AI"
     },
     zh: {
         nav_home: "主页",
@@ -797,7 +813,15 @@ const translations = {
         contact_message_label: "留言",
         contact_message_placeholder: "告诉我们您的咨询",
         contact_submit_btn: "发送消息",
-        contact_company_info: "公司信息"
+        contact_company_info: "公司信息",
+        // CTA Section
+        cta_title: "准备好改造您的车队了吗？",
+        cta_description: "加入AI运输革命。使用GLEC AI DTG解决方案体验世界级的安全性、效率和环境效益。立即联系我们，开启您的数字化转型之旅。",
+        cta_btn_start: "立即开始",
+        cta_btn_solutions: "查看解决方案",
+        // Footer
+        footer_logo: "GLEC AI DTG 解决方案",
+        footer_text: "© 2024 GLEC. 保留所有权利 | 用AI改造运输业"
     }
 };
 

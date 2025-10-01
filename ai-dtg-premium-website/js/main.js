@@ -1330,13 +1330,12 @@ window.addEventListener('load', function() {
             console.log('Email:', email);
 
             if (email) {
-                // Show success popup first
-                console.log('Showing popup');
-                cesPopup.style.display = 'block';
-
-                // Create mailto link
-                const subject = encodeURIComponent('CES 2026 Invitation Request from GLEC Website');
-                const body = encodeURIComponent(`Hello GLEC Team,
+                // Send email via EmailJS
+                const templateParams = {
+                    to_email: 'contact@glec.io',
+                    from_email: email,
+                    subject: 'CES 2026 Invitation Request',
+                    message: `Hello GLEC Team,
 
 I would like to request an invitation to meet GLEC at CES 2026.
 
@@ -1345,17 +1344,32 @@ Date requested: ${new Date().toLocaleDateString()}
 
 Please send me the details about your booth location and meeting schedule.
 
-Thank you!`);
+Thank you!`,
+                    user_email: email
+                };
 
-                const mailtoLink = `mailto:contact@glec.io?subject=${subject}&body=${body}`;
+                // Show loading state
+                const submitBtn = cesForm.querySelector('button[type="submit"]');
+                const originalText = submitBtn.textContent;
+                submitBtn.textContent = 'Sending...';
+                submitBtn.disabled = true;
 
-                // Open mailto with delay
-                setTimeout(() => {
-                    window.location.href = mailtoLink;
-                }, 1000);
-
-                // Reset form
-                cesForm.reset();
+                // Send using EmailJS
+                emailjs.send('service_glec', 'template_ces2026', templateParams)
+                    .then(function(response) {
+                        console.log('SUCCESS!', response.status, response.text);
+                        // Show success popup
+                        cesPopup.style.display = 'block';
+                        // Reset form
+                        cesForm.reset();
+                        submitBtn.textContent = originalText;
+                        submitBtn.disabled = false;
+                    }, function(error) {
+                        console.log('FAILED...', error);
+                        alert('Failed to send invitation request. Please try again or contact us directly at contact@glec.io');
+                        submitBtn.textContent = originalText;
+                        submitBtn.disabled = false;
+                    });
             }
         });
     } else {
@@ -1426,5 +1440,48 @@ if (mobileMenuToggle && navMenu) {
                 dropdown.classList.remove('active');
             });
         }
+    });
+}
+
+// Contact Form Handler with EmailJS
+const contactForm = document.getElementById('contactForm');
+if (contactForm) {
+    contactForm.addEventListener('submit', function(e) {
+        e.preventDefault();
+
+        const name = document.getElementById('contactName').value;
+        const email = document.getElementById('contactEmail').value;
+        const company = document.getElementById('contactCompany').value;
+        const message = document.getElementById('contactMessage').value;
+
+        const templateParams = {
+            to_email: 'contact@glec.io',
+            from_name: name,
+            from_email: email,
+            company: company || 'Not provided',
+            message: message,
+            subject: 'New Contact Form Submission'
+        };
+
+        // Show loading state
+        const submitBtn = contactForm.querySelector('button[type="submit"]');
+        const originalText = submitBtn.textContent;
+        submitBtn.textContent = 'Sending...';
+        submitBtn.disabled = true;
+
+        // Send using EmailJS
+        emailjs.send('service_glec', 'template_contact', templateParams)
+            .then(function(response) {
+                console.log('SUCCESS!', response.status, response.text);
+                alert('Thank you! Your message has been sent successfully. We will get back to you soon.');
+                contactForm.reset();
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            }, function(error) {
+                console.log('FAILED...', error);
+                alert('Failed to send message. Please try again or contact us directly at contact@glec.io');
+                submitBtn.textContent = originalText;
+                submitBtn.disabled = false;
+            });
     });
 }

@@ -1330,32 +1330,14 @@ window.addEventListener('load', function() {
             console.log('Email:', email);
 
             if (email) {
-                // Send email via EmailJS
-                const templateParams = {
-                    to_email: 'contact@glec.io',
-                    from_email: email,
-                    subject: 'CES 2026 Invitation Request',
-                    message: `Hello GLEC Team,
-
-I would like to request an invitation to meet GLEC at CES 2026.
-
-My email address: ${email}
-Date requested: ${new Date().toLocaleDateString()}
-
-Please send me the details about your booth location and meeting schedule.
-
-Thank you!`,
-                    user_email: email
-                };
-
                 // Show loading state
                 const submitBtn = cesForm.querySelector('button[type="submit"]');
                 const originalText = submitBtn.textContent;
                 submitBtn.textContent = 'Sending...';
                 submitBtn.disabled = true;
 
-                // Send using EmailJS
-                emailjs.send('service_glec', 'template_ces2026', templateParams)
+                // Send using EmailJS with sendForm
+                emailjs.sendForm('service_8dmz5ca', 'template_ces_invitation', cesForm)
                     .then(function(response) {
                         console.log('SUCCESS!', response.status, response.text);
                         // Show success popup
@@ -1449,28 +1431,14 @@ if (contactForm) {
     contactForm.addEventListener('submit', function(e) {
         e.preventDefault();
 
-        const name = document.getElementById('contactName').value;
-        const email = document.getElementById('contactEmail').value;
-        const company = document.getElementById('contactCompany').value;
-        const message = document.getElementById('contactMessage').value;
-
-        const templateParams = {
-            to_email: 'contact@glec.io',
-            from_name: name,
-            from_email: email,
-            company: company || 'Not provided',
-            message: message,
-            subject: 'New Contact Form Submission'
-        };
-
         // Show loading state
         const submitBtn = contactForm.querySelector('button[type="submit"]');
         const originalText = submitBtn.textContent;
         submitBtn.textContent = 'Sending...';
         submitBtn.disabled = true;
 
-        // Send using EmailJS
-        emailjs.send('service_glec', 'template_contact', templateParams)
+        // Send using EmailJS with sendForm
+        emailjs.sendForm('service_8dmz5ca', 'template_contact_form', contactForm)
             .then(function(response) {
                 console.log('SUCCESS!', response.status, response.text);
                 alert('Thank you! Your message has been sent successfully. We will get back to you soon.');

@@ -207,7 +207,91 @@
         .nav-link:hover::after {
             width: 100%;
         }
-        
+
+        /* Navigation Dropdown Menus */
+        .nav-dropdown {
+            position: relative;
+        }
+
+        .dropdown-toggle {
+            display: flex;
+            align-items: center;
+            gap: 0.5rem;
+            cursor: pointer;
+        }
+
+        .dropdown-arrow {
+            font-size: 0.7rem;
+            transition: transform var(--duration-fast) var(--ease-out-expo);
+        }
+
+        .nav-dropdown:hover .dropdown-arrow {
+            transform: rotate(180deg);
+        }
+
+        .dropdown-menu {
+            position: absolute;
+            top: 100%;
+            left: 0;
+            margin-top: 1rem;
+            min-width: 220px;
+            background: rgba(10, 14, 26, 0.98);
+            border: 1px solid rgba(0, 255, 255, 0.2);
+            border-radius: var(--border-radius-md);
+            padding: 0.5rem 0;
+            list-style: none;
+            opacity: 0;
+            visibility: hidden;
+            transform: translateY(-10px);
+            transition: all var(--duration-fast) var(--ease-out-expo);
+            z-index: 9999;
+            backdrop-filter: blur(20px);
+            -webkit-backdrop-filter: blur(20px);
+            box-shadow: 0 10px 40px rgba(0, 255, 255, 0.1),
+                        0 0 20px rgba(0, 255, 255, 0.05);
+        }
+
+        .nav-dropdown:hover .dropdown-menu {
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0);
+            pointer-events: all;
+        }
+
+        .dropdown-menu li {
+            margin: 0;
+        }
+
+        .dropdown-link {
+            display: block;
+            padding: 0.75rem 1.5rem;
+            color: var(--glec-gray-300);
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 0.9rem;
+            text-transform: none;
+            letter-spacing: 0.5px;
+            transition: all var(--duration-fast) var(--ease-out-expo);
+            border-left: 3px solid transparent;
+        }
+
+        .dropdown-link:hover {
+            background: rgba(0, 255, 255, 0.1);
+            color: var(--glec-cyan);
+            border-left-color: var(--glec-cyan);
+            padding-left: 1.75rem;
+            text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+        }
+
+        /* Ensure dropdown is above other elements */
+        .nav-menu > li {
+            z-index: 1;
+        }
+
+        .nav-dropdown:hover {
+            z-index: 10000;
+        }
+
         /* Language Selector */
         .language-selector {
             position: relative;
@@ -2365,12 +2449,39 @@
             </a>
             <ul class="nav-menu">
                 <li><a href="#home" class="nav-link" data-translate="nav_home">Home</a></li>
-                <li><a href="#transformation" class="nav-link" data-translate="nav_transformation">AI Transformation</a></li>
-                <li><a href="#ai-dtg" class="nav-link" data-translate="nav_dtg">AI DTG</a></li>
-                <li><a href="#ai-dashboard" class="nav-link" data-translate="nav_dashboard">AI Dashboard</a></li>
-                <li><a href="#technology" class="nav-link" data-translate="nav_technology">CORE TECHNOLOGY</a></li>
-                <li><a href="#cta" class="nav-link" data-translate="nav_contact">Contact</a></li>
+
+                <!-- Our Solutions Dropdown -->
+                <li class="nav-dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-translate="nav_solutions">
+                        Our Solutions
+                        <span class="dropdown-arrow">▼</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#transformation" class="dropdown-link" data-translate="nav_transformation">AI Transformation</a></li>
+                        <li><a href="#ai-dtg" class="dropdown-link" data-translate="nav_dtg">AI DTG Hardware</a></li>
+                        <li><a href="#ai-dashboard" class="dropdown-link" data-translate="nav_dashboard">AI Dashboard</a></li>
+                        <li><a href="#technology" class="dropdown-link" data-translate="nav_technology">Core Technology</a></li>
+                        <li><a href="#solutions" class="dropdown-link" data-translate="nav_solutions_status">Solutions Status</a></li>
+                    </ul>
+                </li>
+
+                <!-- Who We Are Dropdown -->
+                <li class="nav-dropdown">
+                    <a href="#" class="nav-link dropdown-toggle" data-translate="nav_who_we_are">
+                        Who We Are
+                        <span class="dropdown-arrow">▼</span>
+                    </a>
+                    <ul class="dropdown-menu">
+                        <li><a href="#company-overview" class="dropdown-link" data-translate="nav_company">Company Overview</a></li>
+                        <li><a href="#team" class="dropdown-link" data-translate="nav_team">Our Team</a></li>
+                        <li><a href="#timeline" class="dropdown-link" data-translate="nav_timeline">Development Timeline</a></li>
+                        <li><a href="#certifications" class="dropdown-link" data-translate="nav_certifications">Certifications & Awards</a></li>
+                        <li><a href="#tech-differentiation" class="dropdown-link" data-translate="nav_tech_diff">Technical Differentiation</a></li>
+                    </ul>
+                </li>
+
                 <li><a href="#ces2026" class="nav-link" data-translate="nav_ces2026">CES 2026</a></li>
+                <li><a href="#cta" class="nav-link" data-translate="nav_contact">Contact</a></li>
             </ul>
             
             <!-- Language Selector -->
@@ -3364,9 +3475,17 @@
             ko: {
                 // Navigation
                 nav_home: "Home",
+                nav_solutions: "솔루션",
+                nav_who_we_are: "회사 소개",
                 nav_transformation: "AI Transformation",
-                nav_dtg: "AI DTG", 
+                nav_dtg: "AI DTG",
                 nav_dashboard: "AI Dashboard",
+                nav_solutions_status: "솔루션 현황",
+                nav_company: "회사 개요",
+                nav_team: "우리 팀",
+                nav_timeline: "개발 타임라인",
+                nav_certifications: "인증 및 수상",
+                nav_tech_diff: "기술적 차별화",
                 hero_subtitle: "World-Class AI Transformation Platform",
                 hero_description: "노후 화물차를 첨단 AI 차량으로 변환하는 세계 최고의 통합 솔루션<br>AI 기반 안전 향상과 국제표준 탄소 측정 및 감축 시스템",
                 btn_explore: "Explore Products",
@@ -3609,9 +3728,17 @@
             },
             en: {
                 nav_home: "Home",
+                nav_solutions: "Our Solutions",
+                nav_who_we_are: "Who We Are",
                 nav_transformation: "AI Transformation",
-                nav_dtg: "AI DTG", 
+                nav_dtg: "AI DTG",
                 nav_dashboard: "AI Dashboard",
+                nav_solutions_status: "Solutions Status",
+                nav_company: "Company Overview",
+                nav_team: "Our Team",
+                nav_timeline: "Development Timeline",
+                nav_certifications: "Certifications & Awards",
+                nav_tech_diff: "Technical Differentiation",
                 hero_subtitle: "World-Class AI Transformation Platform",
                 hero_description: "World's leading integrated solution for transforming old freight trucks into advanced AI vehicles<br>AI-based safety enhancement and international standard carbon measurement and reduction system",
                 btn_explore: "Explore Products",
@@ -3854,9 +3981,17 @@
             },
             zh: {
                 nav_home: "主页",
+                nav_solutions: "解决方案",
+                nav_who_we_are: "关于我们",
                 nav_transformation: "AI 转换",
-                nav_dtg: "AI DTG", 
+                nav_dtg: "AI DTG",
                 nav_dashboard: "AI 仪表板",
+                nav_solutions_status: "解决方案状态",
+                nav_company: "公司概况",
+                nav_team: "我们的团队",
+                nav_timeline: "发展历程",
+                nav_certifications: "认证与奖项",
+                nav_tech_diff: "技术差异化",
                 hero_subtitle: "世界级AI转型平台",
                 hero_description: "将老旧货车转换为先进AI车辆的世界领先综合解决方案<br>基于AI的安全提升和国际标准碳测量及减排系统",
                 btn_explore: "探索产品",
